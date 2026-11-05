@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>○○군지역사회보장협의체</title>
+<meta name="description" content="함께 돌보는 따뜻한 지역공동체, ○○군지역사회보장협의체 공식 홈페이지">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --brand:#1f7a5c; --brand-dark:#155a43; --brand-soft:#e6f2ec;
+  --accent:#ef8a2b; --accent-soft:#fdf0e3;
+  --bg:#f6f7f4; --surface:#ffffff; --line:#e2e6e0;
+  --text:#1c2520; --muted:#5d6a63;
+  --radius:14px; --shadow:0 6px 24px rgba(20,40,30,.08);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:"Pretendard",-apple-system,"Malgun Gothic",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;word-break:keep-all;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:10px 16px;z-index:999}
+.skip:focus{left:10px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* 상단 유틸 */
+.util{background:var(--brand-dark);color:#dfeee7;font-size:.82rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:12px}
+.util a:hover{color:#fff}
+.util .links{display:flex;gap:16px}
+.fontctl{display:flex;align-items:center;gap:6px}
+.fontctl button{width:24px;height:24px;border:1px solid rgba(255,255,255,.35);border-radius:6px;font-size:.8rem}
+
+/* 헤더 */
+header.site{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.02em;flex-shrink:0}
+.logo small{display:block;font-size:.7rem;font-weight:500;color:var(--muted);letter-spacing:0}
+.gnb{display:flex;gap:4px}
+.gnb>li{list-style:none;position:relative}
+.gnb>li>a{display:block;padding:26px 18px;font-weight:700;font-size:1.02rem}
+.gnb>li>a:hover,.gnb>li.on>a{color:var(--brand)}
+.gnb .sub{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px;min-width:170px;display:none}
+.gnb>li:hover .sub,.gnb>li:focus-within .sub{display:block}
+.gnb .sub a{display:block;padding:8px 12px;border-radius:8px;font-size:.92rem;white-space:nowrap}
+.gnb .sub a:hover{background:var(--brand-soft);color:var(--brand)}
+.report-btn{background:var(--accent);color:#fff;font-weight:700;padding:10px 16px;border-radius:999px;font-size:.92rem;white-space:nowrap}
+.report-btn:hover{filter:brightness(.95)}
+.menu-btn{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line)}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--text);margin:4px auto}
+
+/* 모바일 메뉴 */
+.mnav{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:100;display:none}
+.mnav.open{display:block}
+.mnav .panel{position:absolute;right:0;top:0;bottom:0;width:min(86vw,340px);background:var(--surface);overflow-y:auto;padding:20px}
+.mnav .close{float:right;font-size:1.6rem;line-height:1}
+.mnav h3{margin:22px 0 6px;color:var(--brand);font-size:1rem}
+.mnav a{display:block;padding:8px 4px;border-bottom:1px solid var(--line)}
+
+/* 히어로 */
+.hero{background:linear-gradient(135deg,#1f7a5c 0%,#2f9471 55%,#5fb08d 100%);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding-top:64px;padding-bottom:84px}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.25;letter-spacing:-.03em;font-weight:800}
+.hero h1 em{font-style:normal;color:#ffe2b8}
+.hero p{margin-top:16px;font-size:1.06rem;opacity:.92;max-width:520px}
+.hero .cta{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:12px 20px;border-radius:999px;font-weight:700}
+.btn.w{background:#fff;color:var(--brand-dark)}
+.btn.o{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn.g{background:var(--brand);color:#fff}
+.hero-art{justify-self:center;width:100%;max-width:400px}
+.hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:50px}
+
+/* 퀵메뉴 */
+.quick{margin-top:-46px;position:relative;z-index:2}
+.quick ul{display:grid;grid-template-columns:repeat(6,1fr);background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:10px;list-style:none}
+.quick a{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 6px;border-radius:14px;text-align:center;font-weight:600;font-size:.93rem}
+.quick a:hover{background:var(--brand-soft)}
+.quick .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand)}
+.quick li:nth-child(1) .ic{background:var(--accent-soft);color:var(--accent)}
+
+section.blk{padding:64px 0 0}
+.blk-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px;gap:12px}
+.blk-head h2{font-size:1.6rem;letter-spacing:-.03em}
+.blk-head p{color:var(--muted);font-size:.95rem}
+.more{color:var(--brand);font-weight:700;font-size:.92rem;white-space:nowrap}
+
+/* 소식 + 위기가구 */
+.news-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px}
+.news-grid>*,.biz>*,.gal>*,.grid2>*,.grid3>*{min-width:0}
+.card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--line);padding:24px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.tabs button{padding:10px 14px;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected=true]{color:var(--brand);border-color:var(--brand)}
+.nlist{list-style:none}
+.nlist li a{display:flex;justify-content:space-between;gap:14px;padding:12px 2px;border-bottom:1px dashed var(--line)}
+.nlist li:last-child a{border:0}
+.nlist .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nlist a:hover .t{color:var(--brand);text-decoration:underline}
+.nlist .d{color:var(--muted);font-size:.88rem;flex-shrink:0}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--brand-soft);color:var(--brand);margin-right:6px;vertical-align:1px}
+.badge.new{background:var(--accent-soft);color:var(--accent)}
+.sos{background:linear-gradient(160deg,#fff6ec,#fde6cd);border:1px solid #f6d3ad}
+.sos h3{font-size:1.25rem;letter-spacing:-.02em}
+.sos p{color:#6d4a2b;font-size:.93rem;margin:8px 0 16px}
+.sos .tel{display:flex;align-items:center;gap:12px;background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.sos .tel b{font-size:1.4rem;color:var(--accent);letter-spacing:-.02em}
+.sos .tel span{font-size:.85rem;color:var(--muted)}
+
+/* 주요사업 */
+.biz{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.biz a{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.biz a:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.biz .thumb{height:130px;display:grid;place-items:center}
+.biz .body{padding:18px}
+.biz h3{font-size:1.06rem;margin-bottom:6px}
+.biz p{color:var(--muted);font-size:.9rem}
+
+/* 통계 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--brand-dark);color:#fff;border-radius:20px;padding:30px 10px}
+.stats div{text-align:center;padding:6px;border-right:1px solid rgba(255,255,255,.15)}
+.stats div:last-child{border:0}
+.stats b{display:block;font-size:2.1rem;letter-spacing:-.03em}
+.stats span{font-size:.9rem;opacity:.8}
+
+/* 갤러리 */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gal a{display:block}
+.gal .ph{aspect-ratio:4/3;border-radius:var(--radius);display:grid;place-items:center;overflow:hidden}
+.gal h4{margin-top:10px;font-size:.98rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gal span{color:var(--muted);font-size:.85rem}
+
+/* 협력기관 */
+.partners{display:flex;flex-wrap:wrap;gap:10px}
+.partners a{flex:1 1 180px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;font-weight:600;font-size:.92rem;color:var(--muted)}
+.partners a:hover{color:var(--brand);border-color:var(--brand)}
+
+/* 서브페이지 */
+.sub-hero{background:linear-gradient(135deg,#1f7a5c,#3a9a77);color:#fff;padding:46px 0 40px}
+.sub-hero h1{font-size:clamp(1.6rem,3.6vw,2.2rem);letter-spacing:-.03em}
+.crumb{font-size:.85rem;opacity:.85;margin-bottom:6px}
+.sub-wrap{display:grid;grid-template-columns:230px 1fr;gap:36px;padding-top:36px;padding-bottom:20px}
+.lnb{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;align-self:start;position:sticky;top:96px}
+.lnb h2{background:var(--brand);color:#fff;font-size:1.05rem;padding:18px 20px}
+.lnb a{display:block;padding:12px 20px;border-top:1px solid var(--line);font-weight:600;font-size:.95rem}
+.lnb a.on,.lnb a:hover{color:var(--brand);background:var(--brand-soft)}
+.content{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:36px;min-width:0}
+.content h2{font-size:1.45rem;letter-spacing:-.03em;padding-bottom:14px;margin-bottom:24px;border-bottom:2px solid var(--text)}
+.content h3{font-size:1.15rem;margin:30px 0 12px;padding-left:12px;border-left:4px solid var(--brand)}
+.content h3:first-of-type{margin-top:0}
+.content p{margin-bottom:12px}
+.content ul.dot{list-style:none;margin-bottom:12px}
+.content ul.dot li{position:relative;padding-left:14px;margin-bottom:6px}
+.content ul.dot li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--brand)}
+.note{background:var(--brand-soft);border-radius:12px;padding:16px 18px;color:var(--brand-dark);font-size:.93rem;margin:16px 0}
+.greet{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start}
+.portrait{aspect-ratio:3/4;border-radius:var(--radius);background:linear-gradient(160deg,var(--brand-soft),#cfe6da);display:grid;place-items:center;color:var(--brand);font-size:.85rem;text-align:center}
+.greet .lead{font-size:1.3rem;font-weight:700;color:var(--brand-dark);line-height:1.45;margin-bottom:18px;letter-spacing:-.02em}
+.sign{text-align:right;margin-top:24px;font-weight:700}
+.sign span{display:block;font-weight:500;color:var(--muted);font-size:.9rem}
+
+.tbl-wrap{overflow-x:auto;margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:520px}
+th,td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:center}
+thead th{background:#f1f4f0;border-top:2px solid var(--text);font-weight:700}
+td.l{text-align:left}
+tbody tr:hover{background:#fafbf9}
+
+.timeline{list-style:none;border-left:2px solid var(--brand-soft);margin-left:8px}
+.timeline li{position:relative;padding:0 0 22px 24px}
+.timeline li::before{content:"";position:absolute;left:-8px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--brand)}
+.timeline b{color:var(--brand);display:block}
+
+.org{display:flex;flex-direction:column;align-items:center;gap:0}
+.org .box{background:var(--brand);color:#fff;border-radius:12px;padding:14px 22px;font-weight:700;text-align:center;min-width:240px}
+.org .box small{display:block;font-weight:500;opacity:.85;font-size:.82rem}
+.org .box.lt{background:var(--brand-soft);color:var(--brand-dark)}
+.org .box.ac{background:var(--accent)}
+.org .vline{width:2px;height:26px;background:#b9d5c7}
+.org .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:720px}
+.org .row .box{min-width:0;flex:1 1 130px;padding:12px 10px;font-size:.92rem}
+.org-side{display:flex;align-items:center;gap:10px}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:20px}
+.tile h4{font-size:1.04rem;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tile p{color:var(--muted);font-size:.92rem;margin:0}
+.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:.85rem;flex-shrink:0}
+
+.board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px;flex-wrap:wrap}
+.board-top .cnt{color:var(--muted);font-size:.9rem}
+.board-top .cnt b{color:var(--brand)}
+.search{display:flex;gap:6px}
+.search input{border:1px solid var(--line);border-radius:10px;padding:9px 12px;font:inherit;min-width:0;width:200px}
+.search button{background:var(--text);color:#fff;border-radius:10px;padding:9px 16px;font-weight:600}
+.view-head{border-top:2px solid var(--text);border-bottom:1px solid var(--line);padding:18px 4px}
+.view-head h3{border:0;padding:0;margin:0 0 6px;font-size:1.25rem}
+.view-head .meta{color:var(--muted);font-size:.88rem;display:flex;gap:16px;flex-wrap:wrap}
+.view-body{padding:28px 4px;border-bottom:1px solid var(--line);min-height:160px;white-space:pre-line}
+.attach{padding:14px 4px;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.view-foot{display:flex;justify-content:center;margin-top:24px}
+
+.form .row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.form .row:first-of-type{border-top:2px solid var(--text)}
+.form label{background:#f1f4f0;padding:14px;font-weight:700;font-size:.92rem}
+.form .f{padding:10px 14px}
+.form input[type=text],.form input[type=tel],.form select,.form textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font:inherit}
+.form textarea{min-height:120px;resize:vertical}
+.agree{margin:18px 0;border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.9rem;color:var(--muted)}
+.agree label{display:flex;gap:8px;align-items:center;color:var(--text);font-weight:600;margin-top:10px}
+
+.map{aspect-ratio:16/8;border-radius:var(--radius);background:repeating-linear-gradient(45deg,#eef3ee 0 12px,#e5ece6 12px 24px);display:grid;place-items:center;color:var(--muted);margin-bottom:20px;text-align:center;padding:20px}
+
+/* 푸터 */
+footer.site{margin-top:80px;background:#1b2420;color:#b8c4be;font-size:.88rem}
+footer .fl{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+footer .fl a{color:#fff;font-weight:600}
+footer .fl a.pp{color:#ffcf96}
+footer .fi{display:flex;justify-content:space-between;gap:20px;padding:26px 0 40px;flex-wrap:wrap}
+footer .fi p{margin-bottom:4px}
+footer .copy{margin-top:10px;color:#7f8c86}
+
+/* 반응형 */
+@media (max-width:1080px){
+  .gnb>li>a{padding:26px 11px;font-size:.96rem}
+}
+@media (max-width:960px){
+  .gnb,.report-btn.d{display:none}
+  .menu-btn{display:block}
+  .hero .wrap{grid-template-columns:1fr;padding-top:44px}
+  .hero-art{max-width:300px;justify-self:start;display:none}
+  .quick ul{grid-template-columns:repeat(3,1fr)}
+  .news-grid{grid-template-columns:minmax(0,1fr)}
+  .biz,.gal{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr);row-gap:20px}
+  .stats div:nth-child(2){border:0}
+  .sub-wrap{grid-template-columns:1fr;gap:18px}
+  .lnb{position:static;display:flex;overflow-x:auto}
+  .lnb h2{display:none}
+  .lnb a{border-top:0;white-space:nowrap;border-right:1px solid var(--line)}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .util .links a:not(:first-child){display:none}
+  header.site .wrap{height:64px}
+  .logo{font-size:1rem}
+  .logo svg{width:34px;height:34px}
+  .quick ul{grid-template-columns:repeat(3,1fr);padding:6px}
+  .quick a{padding:12px 2px;font-size:.82rem}
+  .quick .ic{width:44px;height:44px}
+  .biz,.gal,.grid2,.grid3{grid-template-columns:1fr}
+  .content{padding:22px 18px}
+  .greet{grid-template-columns:1fr}
+  .portrait{max-width:180px}
+  .form .row{grid-template-columns:1fr}
+  .form label{padding:10px 12px}
+  .search input{width:140px}
+  .stats b{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<div class="util">
+  <div class="wrap">
+    <div class="links">
+      <a href="#/" data-k="home">홈</a>
+      <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로</a>
+      <a href="#/info/map">찾아오시는 길</a>
+    </div>
+    <div class="fontctl" aria-label="글자 크기 조절">
+      <span>글자크기</span>
+      <button type="button" data-fs="-1" aria-label="글자 작게">−</button>
+      <button type="button" data-fs="0" aria-label="기본 크기">0</button>
+      <button type="button" data-fs="1" aria-label="글자 크게">+</button>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#/" aria-label="홈으로">
+      <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#1f7a5c"/>
+        <path d="M12 25 L24 14 L36 25" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 23v11h16V23" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M24 32c-3-2.2-5-3.8-5-6a2.6 2.6 0 0 1 5-1 2.6 2.6 0 0 1 5 1c0 2.2-2 3.8-5 6z" fill="#ef8a2b"/>
+      </svg>
+      <span><span data-name></span><small>Community Social Security Council</small></span>
+    </a>
+    <ul class="gnb" id="gnb"></ul>
+    <a class="report-btn d" href="#/join/report">위기가구 알리기</a>
+    <button class="menu-btn" type="button" aria-label="전체 메뉴 열기" id="menuOpen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="panel" role="dialog" aria-label="전체 메뉴">
+    <button class="close" type="button" aria-label="메뉴 닫기" id="menuClose">×</button>
+    <div id="mnavList" style="clear:both"></div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fl">
+      <a href="#/info/privacy" class="pp">개인정보처리방침</a>
+      <a href="#/info/email">이메일무단수집거부</a>
+      <a href="#/info/map">찾아오시는 길</a>
+    </div>
+    <div class="fi">
+      <div>
+        <p><b style="color:#fff" data-name></b> 사무국</p>
+        <p data-addr></p>
+        <p>전화 <span data-tel></span> · 팩스 <span data-fax></span> · 이메일 <span data-email></span></p>
+        <p class="copy">Copyright © <span data-year></span> <span data-name></span>. All rights reserved.</p>
+      </div>
+      <div>
+        <p>복지 위기 상담 <b style="color:#fff">국번 없이 129</b></p>
+        <p>평일 09:00 ~ 18:00 (주말·공휴일 휴무)</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   ▼▼ 여기만 고치면 사이트 전체에 반영됩니다 ▼▼
+   ========================================================= */
+const SITE = {
+  region: "○○군",
+  name: "○○군지역사회보장협의체",
+  addr: "(우)00000 ○○도 ○○군 ○○읍 군청길 00, ○○군청 주민복지과",
+  tel: "000-000-0000",
+  fax: "000-000-0000",
+  email: "welfare@example.go.kr",
+  chairPublic: "○○○ (○○군수)",
+  chairPrivate: "○○○",
+  founded: "2015",
+  stats: [ ["위원 수", "248", "명"], ["읍·면 협의체", "12", "개"], ["올해 연계 가구", "1,320", "가구"], ["특화사업", "18", "개"] ],
+  towns: ["중앙읍","동산면","서림면","남천면","북계면","가람면","솔뫼면","하늘면","풍양면","보문면","용궁면","은풍면"]
+};
+
+const NOTICES = [
+  {id:12, cat:"공지", title:"2026년 하반기 읍·면 지역사회보장협의체 위원 역량강화 교육 안내", date:"2026-11-03", views:84,
+   body:"읍·면 협의체 위원 역량강화 교육을 아래와 같이 실시하오니 위원님들의 많은 참여 바랍니다.\n\n○ 일시: 2026. 11. 20.(금) 14:00 ~ 16:30\n○ 장소: ○○군청 대회의실\n○ 대상: 읍·면 지역사회보장협의체 위원\n○ 내용: 복지 사각지대 발굴 사례 공유, 인적안전망 활동 안내\n\n문의: 주민복지과 희망복지지원팀 " },
+  {id:11, cat:"모집", title:"2026 연말 이웃돕기 '사랑의 김장 나눔' 자원봉사자 모집", date:"2026-10-28", views:132,
+   body:"올해도 이웃과 함께하는 김장 나눔 행사를 개최합니다.\n\n○ 일시: 2026. 11. 28.(토) 09:00 ~\n○ 장소: ○○군 종합자원봉사센터 앞 광장\n○ 모집인원: 80명 (선착순)\n○ 신청방법: 전화 또는 읍·면 행정복지센터 방문 접수" },
+  {id:10, cat:"회의", title:"2026년 제3차 실무협의체 회의 결과 안내", date:"2026-10-15", views:57,
+   body:"2026년 제3차 실무협의체 회의 결과를 안내드립니다.\n\n○ 안건 1: 2027년 지역사회보장 연차별 시행계획(안) 사전 검토\n○ 안건 2: 특화사업 추진 실적 점검\n\n회의록은 자료실에서 확인하실 수 있습니다." },
+  {id:9, cat:"공지", title:"제6기 지역사회보장계획(2027~2030) 주민 의견 수렴", date:"2026-09-30", views:201,
+   body:"제6기 지역사회보장계획 수립을 위해 군민 여러분의 의견을 듣고자 합니다.\n\n○ 기간: 2026. 10. 1. ~ 10. 31.\n○ 방법: 읍·면 행정복지센터 비치 설문지 또는 이메일 제출\n○ 내용: 우리 지역에 꼭 필요한 복지 서비스" },
+  {id:8, cat:"소식", title:"실무협의체 위원 위촉식 및 지역사회보장계획 최종보고회 개최", date:"2026-09-04", views:96,
+   body:"관내 사회보장 분야 실무 전문가를 실무협의체 위원으로 위촉하고, 지역사회보장계획 최종보고회를 함께 개최하였습니다." },
+  {id:7, cat:"모집", title:"찾아가는 이동 목욕 서비스 대상자 신청 안내", date:"2026-08-20", views:143,
+   body:"거동이 불편한 어르신과 장애인 가구를 직접 찾아가는 이동 목욕 서비스를 운영합니다. 가까운 읍·면 행정복지센터로 신청해 주세요." }
+];
+
+const GALLERY = [
+  {title:"사랑의 김장 나눔 행사", date:"2025-11-29", hue:28},
+  {title:"읍·면 협의체 위원 워크숍", date:"2026-06-12", hue:150},
+  {title:"홀몸 어르신 안부살피기 활동", date:"2026-05-08", hue:200},
+  {title:"청소년 문화한마당", date:"2026-04-25", hue:330},
+  {title:"행복 밑반찬 나눔", date:"2026-03-17", hue:45},
+  {title:"주거환경 개선 봉사", date:"2026-02-21", hue:100},
+  {title:"대표협의체 위원 위촉식", date:"2026-07-10", hue:170},
+  {title:"복지박람회 벤치마킹", date:"2026-09-22", hue:260}
+];
+
+const PROJECTS = [
+  {key:"care", title:"이웃 안부살피기", desc:"홀몸 어르신·중장년 1인 가구를 정기적으로 방문하고 안부를 확인합니다.", hue:150, icon:"heart",
+   detail:["읍·면 협의체 위원이 담당 가구를 정해 월 2회 이상 방문·전화","위기 징후 발견 시 행정복지센터에 즉시 연계","명절·폭염·한파 시기 집중 안부 확인"]},
+  {key:"house", title:"행복 보금자리", desc:"주거 취약 가구의 도배·장판, 단열, 안전손잡이 설치를 지원합니다.", hue:30, icon:"home",
+   detail:["저소득 가구 주거환경 개선 (도배·장판·전기·보일러 점검)","어르신 가구 낙상 예방 안전손잡이 설치","지역 업체·봉사단체와 재능 나눔 연계"]},
+  {key:"bath", title:"찾아가는 목욕 서비스", desc:"교통이 불편한 지역 어르신께 목욕 차량과 이동 목욕을 지원합니다.", hue:200, icon:"drop",
+   detail:["대중교통 소외지역 어르신 단체 목욕 차량 지원","거동 불편 가구 이동 목욕 서비스","이용 후 건강 상태 확인 및 보건소 연계"]},
+  {key:"fund", title:"연합 모금·나눔", desc:"지역 기관·단체가 함께 모금하여 긴급 생계·의료비를 지원합니다.", hue:340, icon:"gift",
+   detail:["협의체 연합 모금으로 긴급 생계비·주거비·의료비 지원","공적 지원에서 제외된 사각지대 가구 우선 지원","후원 물품 나눔 창고 운영"]}
+];
+
+const MENU = [
+  {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","설립목적·기능"],["history","연혁"],["org","조직도"],["map","찾아오시는 길"]]},
+  {k:"group", t:"협의체 구성", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["town","읍·면 협의체"]]},
+  {k:"biz", t:"주요사업", items:[["plan","지역사회보장계획"],["special","특화사업"]]},
+  {k:"news", t:"알림마당", items:[["notice","공지사항"],["data","회의록·자료실"],["gallery","활동 갤러리"]]},
+  {k:"join", t:"참여마당", items:[["report","위기가구 알리기"],["donate","후원·나눔 참여"],["services","복지서비스 안내"]]}
+];
+/* ========================================================= */
+
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fill = () => {
+  document.querySelectorAll("[data-name]").forEach(e => e.textContent = SITE.name);
+  document.querySelectorAll("[data-addr]").forEach(e => e.textContent = SITE.addr);
+  document.querySelectorAll("[data-tel]").forEach(e => e.textContent = SITE.tel);
+  document.querySelectorAll("[data-fax]").forEach(e => e.textContent = SITE.fax);
+  document.querySelectorAll("[data-email]").forEach(e => e.textContent = SITE.email);
+  document.querySelectorAll("[data-year]").forEach(e => e.textContent = new Date().getFullYear());
+  document.title = SITE.name;
+};
+
+const ICONS = {
+  heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  home:'<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
+  drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  gift:'<rect x="4" y="9" width="16" height="11" rx="1"/><path d="M12 9v11M4 13h16M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/>',
+  sos:'<circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>',
+  search:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+  people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
+  doc:'<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/>',
+  map:'<path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',
+  photo:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/>'
+};
+const icon = (n, s=26) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
+const ph = (hue, ic="photo", label="") => `<div class="ph" style="background:linear-gradient(140deg,hsl(${hue} 55% 88%),hsl(${hue} 45% 74%));color:hsl(${hue} 45% 32%)"><div style="text-align:center">${icon(ic,40)}${label?`<div style="font-size:.8rem;margin-top:6px">${label}</div>`:""}</div></div>`;
+
+/* 메뉴 생성 */
+function buildMenu(){
+  $("#gnb").innerHTML = MENU.map(m => `<li data-k="${m.k}"><a href="#/${m.k}/${m.items[0][0]}">${m.t}</a><div class="sub">${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}</div></li>`).join("");
+  $("#mnavList").innerHTML = `<a href="#/join/report" class="report-btn" style="display:block;text-align:center;border:0;margin-top:10px">위기가구 알리기</a>` +
+    MENU.map(m => `<h3>${m.t}</h3>${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}`).join("");
+}
+const mnav = $("#mnav");
+const setMenu = open => { mnav.classList.toggle("open", open); mnav.setAttribute("aria-hidden", !open); document.body.style.overflow = open ? "hidden" : ""; };
+$("#menuOpen").onclick = () => setMenu(true);
+$("#menuClose").onclick = () => setMenu(false);
+mnav.addEventListener("click", e => { if (e.target === mnav || e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+/* 글자 크기 */
+let fs = 16;
+document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
+  const d = +b.dataset.fs; fs = d === 0 ? 16 : Math.min(20, Math.max(14, fs + d));
+  document.documentElement.style.fontSize = fs + "px";
+});
+
+/* ---------------- 페이지 ---------------- */
+function home(){
+  const n = NOTICES;
+  const list = cat => n.filter(x => !cat || x.cat === cat).slice(0,5).map(x => `<li><a href="#/news/notice/${x.id}"><span class="t"><span class="badge ${isNew(x.date)?"new":""}">${isNew(x.date)?"NEW":x.cat}</span>${esc(x.title)}</span><span class="d">${x.date.slice(5).replace("-",".")}</span></a></li>`).join("");
+  return `
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">${SITE.name}</span>
+        <h1>이웃이 이웃을 돌보는<br><em>따뜻한 ${SITE.region}</em>을 만듭니다</h1>
+        <p>민·관이 함께 복지 사각지대를 찾고, 필요한 도움을 연결합니다. 한 사람도 소외되지 않는 지역공동체, 협의체가 함께하겠습니다.</p>
+        <div class="cta">
+          <a class="btn w" href="#/about/greeting">협의체 소개</a>
+          <a class="btn o" href="#/join/report">도움이 필요한 이웃 알리기</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 400 300" aria-hidden="true">
+        <circle cx="200" cy="150" r="130" fill="rgba(255,255,255,.12)"/>
+        <circle cx="200" cy="150" r="92" fill="rgba(255,255,255,.12)"/>
+        <g fill="#fff">
+          <circle cx="140" cy="120" r="22"/><path d="M100 220c0-30 18-55 40-55s40 25 40 55z"/>
+          <circle cx="262" cy="120" r="22"/><path d="M222 220c0-30 18-55 40-55s40 25 40 55z"/>
+          <circle cx="201" cy="150" r="16" fill="#ffe2b8"/><path d="M172 225c0-24 13-44 29-44s29 20 29 44z" fill="#ffe2b8"/>
+        </g>
+        <path d="M200 92c-7-6-17-4-17 5 0 8 17 18 17 18s17-10 17-18c0-9-10-11-17-5z" fill="#ef8a2b"/>
+      </svg>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C360 60 1080 0 1440 30 L1440 50 L0 50z" fill="#f6f7f4"/></svg>
+  </section>
+
+  <nav class="quick wrap" aria-label="바로가기">
+    <ul>
+      <li><a href="#/join/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
+      <li><a href="#/join/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
+      <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
+      <li><a href="#/join/donate"><span class="ic">${icon("gift")}</span>후원·나눔</a></li>
+      <li><a href="#/news/data"><span class="ic">${icon("doc")}</span>회의록·자료실</a></li>
+      <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
+    </ul>
+  </nav>
+
+  <section class="blk wrap">
+    <div class="news-grid">
+      <div class="card">
+        <div class="blk-head" style="margin-bottom:6px"><h2>협의체 소식</h2><a class="more" href="#/news/notice">더보기 +</a></div>
+        <div class="tabs" role="tablist">
+          ${["전체","공지","모집","회의"].map((t,i)=>`<button role="tab" aria-selected="${i===0}" data-cat="${i?t:""}">${t}</button>`).join("")}
+        </div>
+        <ul class="nlist" id="homeList">${list("")}</ul>
+      </div>
+      <div class="card sos">
+        <h3>주변에 도움이 필요한 이웃이 있나요?</h3>
+        <p>연락이 끊긴 어르신, 끼니를 거르는 아이, 갑작스러운 실직으로 어려운 이웃… 작은 관심이 한 사람을 살립니다.</p>
+        <div class="tel">${icon("sos",30)}<div><b>129</b><br><span>보건복지상담센터 (24시간)</span></div></div>
+        <div class="tel">${icon("people",30)}<div><b style="font-size:1.15rem">${SITE.tel}</b><br><span>${SITE.region} 주민복지과 · 가까운 읍·면 행정복지센터</span></div></div>
+        <a class="btn g" href="#/join/report" style="margin-top:6px">온라인으로 알리기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="blk-head"><div><h2>주요 특화사업</h2><p>지역 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
+    <div class="biz">
+      ${PROJECTS.map(p=>`<a href="#/biz/special"><div class="thumb" style="background:linear-gradient(140deg,hsl(${p.hue} 60% 92%),hsl(${p.hue} 50% 80%));color:hsl(${p.hue} 45% 32%)">${icon(p.icon,46)}</div><div class="body"><h3>${p.title}</h3><p>${p.desc}</p></div></a>`).join("")}
+    </div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="stats">
+      ${SITE.stats.map(s=>`<div><b>${s[1]}<small style="font-size:1rem;font-weight:600"> ${s[2]}</small></b><span>${s[0]}</span></div>`).join("")}
+    </div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
+    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="blk-head"><h2>함께하는 기관</h2></div>
+    <div class="partners">
+      <a href="https://www.mohw.go.kr" target="_blank" rel="noopener">보건복지부</a>
+      <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로</a>
+      <a href="https://www.ssis.or.kr" target="_blank" rel="noopener">한국사회보장정보원</a>
+      <a href="https://chest.or.kr" target="_blank" rel="noopener">사회복지공동모금회</a>
+      <a href="https://www.1365.go.kr" target="_blank" rel="noopener">1365 자원봉사포털</a>
+    </div>
+  </section>`;
+}
+const isNew = d => (Date.now() - new Date(d)) / 864e5 < 7;
+
+const P = {
+  about:{
+    greeting:()=>`
+      <div class="greet">
+        <div class="portrait">민간위원장<br>사진 자리</div>
+        <div>
+          <p class="lead">“이웃의 안부를 묻는 일에서<br>복지는 시작됩니다.”</p>
+          <p>${SITE.name} 홈페이지를 찾아주신 여러분, 반갑습니다.</p>
+          <p>우리 협의체는 공공과 민간이 함께 지역의 복지 문제를 논의하고, 필요한 자원을 연결하는 지역 복지의 중심 기구입니다. 대표협의체와 실무협의체, 실무분과, 그리고 ${SITE.towns.length}개 읍·면 협의체의 위원들이 각자의 자리에서 이웃을 살피고 있습니다.</p>
+          <p>복지 사각지대는 행정의 손길만으로는 다 찾기 어렵습니다. 마을 사정을 가장 잘 아는 주민 한 분 한 분이 곧 가장 든든한 복지 안전망입니다. 앞으로도 군민 여러분의 목소리에 귀 기울이며, 누구나 살기 좋은 ${SITE.region}을 만들어 가겠습니다.</p>
+          <p>따뜻한 관심과 참여를 부탁드립니다. 감사합니다.</p>
+          <p class="sign"><span>${SITE.name}</span>민간위원장 ${SITE.chairPrivate}</p>
+        </div>
+      </div>`,
+    purpose:()=>`
+      <h3>설립 목적</h3>
+      <p>지역사회보장협의체는 「사회보장급여의 이용·제공 및 수급권자 발굴에 관한 법률」 제41조에 따라 설치된 민·관 협력 기구입니다. 지역의 사회보장 증진을 위해 공공과 민간이 함께 지역 복지 문제를 논의하고, 자원을 발굴·연계하여 주민 누구나 필요한 서비스를 받을 수 있도록 합니다.</p>
+      <div class="note">“주민이 체감하는 복지, 민·관이 함께 만드는 지역사회보장”</div>
+      <h3>주요 기능</h3>
+      <div class="grid2">
+        ${[["지역사회보장계획 심의·자문","4년 단위 지역사회보장계획과 연차별 시행계획의 수립·시행·평가를 심의합니다."],
+           ["사회보장급여 제공 심의·자문","지역 주민에게 제공되는 사회보장급여와 서비스 제공에 관한 사항을 논의합니다."],
+           ["복지 사각지대 발굴·지원","읍·면 협의체를 중심으로 위기가구를 찾고 공공·민간 자원을 연계합니다."],
+           ["민·관 협력 네트워크","보건·복지·고용·주거·교육 등 다양한 분야 기관 간 연계와 협력을 강화합니다."]]
+           .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>비전</h3>
+      <ul class="dot"><li>함께 돌보는 따뜻한 마을공동체</li><li>빈틈없는 복지 안전망 구축</li><li>주민이 참여하는 지역 복지</li></ul>`,
+    history:()=>`
+      <ul class="timeline">
+        ${[["2026","제6기 지역사회보장계획(2027~2030) 수립 · 실무협의체 위원 위촉"],
+           ["2024","제10기 대표협의체 구성 · 연합 모금 사업 확대"],
+           ["2022","제5기 지역사회보장계획(2023~2026) 수립"],
+           ["2019","찾아가는 목욕 서비스 · 행복 보금자리 특화사업 시작"],
+           ["2016","읍·면 지역사회보장협의체 전면 구성"],
+           [SITE.founded,`${SITE.name} 출범 (지역사회복지협의체에서 전환)`]]
+           .map(h=>`<li><b>${h[0]}</b>${h[1]}</li>`).join("")}
+      </ul>
+      <p class="note">※ 연혁은 샘플입니다. 실제 협의체 연혁으로 바꿔 주세요.</p>`,
+    org:()=>`
+      <div class="org">
+        <div class="box">대표협의체<small>공동위원장 · 공공 ${SITE.chairPublic} / 민간 ${SITE.chairPrivate}</small></div>
+        <div class="vline"></div>
+        <div class="org-side"><div class="box lt">실무협의체<small>대표협의체 안건 사전 검토·조정</small></div></div>
+        <div class="vline"></div>
+        <div class="row">${["아동·청소년","노인","장애인","저소득·주거","보건·의료","고용·자활"].map(t=>`<div class="box lt">${t}<small>분과</small></div>`).join("")}</div>
+        <div class="vline"></div>
+        <div class="box ac">읍·면 지역사회보장협의체<small>${SITE.towns.length}개 읍·면 · 복지 사각지대 발굴</small></div>
+      </div>
+      <p class="note" style="margin-top:28px">사무국: ${SITE.region}청 주민복지과 희망복지지원팀 · ${SITE.tel}</p>`,
+    map:()=>`
+      <div class="map"><div>${icon("map",40)}<p style="margin-top:8px">지도 자리<br><small>카카오맵·네이버지도 퍼가기 코드를 넣으면 됩니다</small></p></div></div>
+      <div class="tbl-wrap"><table><tbody>
+        <tr><th>주소</th><td class="l">${SITE.addr}</td></tr>
+        <tr><th>전화</th><td class="l">${SITE.tel}</td></tr>
+        <tr><th>팩스</th><td class="l">${SITE.fax}</td></tr>
+        <tr><th>운영시간</th><td class="l">평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00)</td></tr>
+        <tr><th>대중교통</th><td class="l">○○터미널에서 농어촌버스 ○번 이용, ‘군청’ 정류장 하차</td></tr>
+      </tbody></table></div>`
+  },
+  group:{
+    rep:()=>`
+      <h3>구성 및 역할</h3>
+      <p>대표협의체는 공공위원장(군수)과 민간위원장을 공동위원장으로 하여, 사회보장 관련 기관·단체 대표, 학계 전문가, 지역 주민 대표 등으로 구성됩니다. 지역사회보장계획과 주요 복지 정책을 심의·자문합니다.</p>
+      <ul class="dot"><li>지역사회보장계획 수립·시행 및 평가에 관한 사항</li><li>사회보장급여 제공에 관한 사항</li><li>사회보장 추진에 관한 사항</li><li>읍·면 지역사회보장협의체 운영에 관한 사항</li></ul>
+      <h3>위원 현황</h3>
+      <div class="tbl-wrap"><table><thead><tr><th>구분</th><th>성명</th><th>소속·직위</th></tr></thead><tbody>
+        <tr><td>공공위원장</td><td>${SITE.chairPublic.split(" ")[0]}</td><td>${SITE.region}수</td></tr>
+        <tr><td>민간위원장</td><td>${SITE.chairPrivate}</td><td>○○종합자원봉사센터장</td></tr>
+        ${["○○군 사회복지협의회장","○○노인복지관장","○○지역아동센터장","○○군 보건소장","○○교육지원청 교육장"].map(r=>`<tr><td>위원</td><td>○○○</td><td>${r}</td></tr>`).join("")}
+      </tbody></table></div>
+      <p class="note">임기: 2년 (연임 가능) · 위원 명단은 샘플입니다.</p>`,
+    work:()=>`
+      <h3>구성 및 역할</h3>
+      <p>실무협의체는 관내 사회보장 분야 실무 전문가로 구성되며, 대표협의체에 올라갈 안건을 미리 검토·조정하고 지역사회보장계획의 세부사업 실행을 점검합니다.</p>
+      <div class="grid3">
+        ${[["안건 사전 검토","대표협의체 심의 안건을 사전에 검토·조정"],["계획 실행·점검","지역사회보장계획 세부사업 실행과 모니터링"],["분과 연계","실무분과 운영 및 분과 간 협력 조정"]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>회의 운영</h3>
+      <ul class="dot"><li>정기회의: 분기 1회</li><li>임시회의: 위원장이 필요하다고 인정할 때</li><li>회의 결과는 <a href="#/news/data" style="color:var(--brand);text-decoration:underline">회의록·자료실</a>에 공개합니다.</li></ul>`,
+    team:()=>`
+      <p>실무분과는 대상·분야별로 나뉘어 현장의 문제를 구체적으로 논의하고 특화사업을 발굴합니다.</p>
+      <div class="grid2" style="margin-top:16px">
+        ${[["아동·청소년분과","돌봄 공백 해소, 청소년 문화·교육 지원"],["노인분과","홀몸 어르신 안부 확인, 이동·목욕 지원"],["장애인분과","장애인 이동권·일상생활 지원"],["저소득·주거분과","긴급 생계 지원, 주거환경 개선"],["보건·의료분과","의료 취약계층 연계, 정신건강 지원"],["고용·자활분과","일자리 연계, 자활 기반 마련"]]
+          .map(t=>`<div class="tile"><h4>${icon("people",22)}${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>`,
+    town:()=>`
+      <p>읍·면 지역사회보장협의체는 마을 사정을 가장 잘 아는 이장, 부녀회장, 종교·봉사단체 회원 등 주민으로 구성되어, 이웃의 어려움을 가장 먼저 발견하고 돕는 <b>우리 동네 복지 안전망</b>입니다.</p>
+      <h3>주요 활동</h3>
+      <ul class="dot"><li>복지 사각지대 위기가구 발굴 및 행정복지센터 연계</li><li>읍·면 특화사업 기획·운영 (밑반찬 나눔, 안부살피기 등)</li><li>지역 자원 발굴 및 나눔 문화 확산</li></ul>
+      <h3>읍·면 협의체 현황</h3>
+      <div class="tbl-wrap"><table><thead><tr><th>읍·면</th><th>위원 수</th><th>대표 특화사업</th><th>연락처</th></tr></thead><tbody>
+        ${SITE.towns.map((t,i)=>`<tr><td>${t}</td><td>${14 + (i*3)%9}명</td><td class="l">${["행복 밑반찬 나눔","어르신 안부살피기","희망 꾸러미 전달","이불 빨래 서비스","생일상 차려드리기","안전손잡이 설치"][i%6]}</td><td>${t} 행정복지센터</td></tr>`).join("")}
+      </tbody></table></div>
+      <p class="note">※ 읍·면 이름과 수치는 샘플입니다.</p>`
+  },
+  biz:{
+    plan:()=>`
+      <h3>지역사회보장계획이란?</h3>
+      <p>지역 주민의 복지 욕구와 지역 자원을 조사하여, 4년마다 수립하는 법정 중·장기 계획입니다. 매년 연차별 시행계획을 세우고 그 결과를 평가합니다.</p>
+      <div class="grid3">
+        ${[["지역사회보장조사","주민 욕구·자원 조사"],["계획 수립","협의체 심의 후 의회 보고"],["시행·평가","연차별 시행 및 결과 평가"]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>제6기 계획 (2027~2030) 추진 방향</h3>
+      <ul class="dot"><li>촘촘한 돌봄: 어르신·1인 가구 통합 돌봄 체계 구축</li><li>든든한 안전망: 위기가구 조기 발굴과 신속한 지원</li><li>함께하는 공동체: 주민 참여와 민·관 협력 강화</li><li>건강한 삶: 보건·의료·정신건강 서비스 연계</li></ul>`,
+    special:()=>`
+      <p>협의체가 지역 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
+      ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>`).join("")}`
+  },
+  news:{
+    notice:(id, q)=> id ? noticeView(id) : noticeList(q),
+    data:()=>`
+      <div class="tbl-wrap"><table><thead><tr><th>번호</th><th>제목</th><th>첨부</th><th>등록일</th></tr></thead><tbody>
+        ${[["2026년 제3차 실무협의체 회의록","2026-10-15"],["2026년 제1차 대표협의체 회의록","2026-07-10"],["2026년 지역사회보장 연차별 시행계획","2026-02-27"],["2025년 지역사회보장 시행결과 보고서","2026-02-10"],["협의체 운영 규정 (개정)","2025-12-19"]]
+          .map((r,i,a)=>`<tr><td>${a.length-i}</td><td class="l">${r[0]}</td><td>${icon("doc",18)}</td><td>${r[1]}</td></tr>`).join("")}
+      </tbody></table></div>
+      <p class="note">파일을 올릴 때는 개인정보(위원 연락처, 대상자 정보 등)가 들어가지 않았는지 꼭 확인해 주세요.</p>`,
+    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>
+      <p class="note" style="margin-top:20px">※ 사진 자리입니다. 실제 활동 사진으로 바꿔 주세요. 사진 속 대상자 얼굴은 동의 없이 공개하지 않도록 주의해 주세요.</p>`
+  },
+  join:{
+    report:()=>`
+      <div class="note" style="background:var(--accent-soft);color:#7a4517"><b>긴급한 상황이라면 지금 바로 전화해 주세요.</b><br>보건복지상담센터 <b>129</b> (24시간) · 생명이 위급하면 <b>112 / 119</b></div>
+      <p>주변에 생활이 어렵거나 도움이 필요한 이웃이 있다면 알려 주세요. 담당 공무원과 읍·면 협의체 위원이 직접 찾아가 상황을 확인하고 필요한 지원을 연결합니다. <b>알려주신 분의 정보는 철저히 비밀로 보호됩니다.</b></p>
+      <form class="form" id="reportForm" style="margin-top:20px">
+        <div class="row"><label for="rf1">도움이 필요한 분 거주지</label><div class="f"><select id="rf1" required><option value="">읍·면 선택</option>${SITE.towns.map(t=>`<option>${t}</option>`).join("")}</select></div></div>
+        <div class="row"><label for="rf2">상세 위치</label><div class="f"><input type="text" id="rf2" placeholder="예: ○○리 마을회관 근처 (아는 만큼만)"></div></div>
+        <div class="row"><label for="rf3">어려운 상황</label><div class="f"><textarea id="rf3" required placeholder="예: 홀로 사시는 어르신이 며칠째 보이지 않습니다."></textarea></div></div>
+        <div class="row"><label for="rf4">알려주신 분 연락처 (선택)</label><div class="f"><input type="tel" id="rf4" placeholder="확인 연락이 필요할 때만 사용합니다"></div></div>
+        <div class="agree">입력하신 정보는 위기가구 확인과 지원 목적으로만 사용되며, 처리가 끝나면 지체 없이 파기합니다.
+          <label><input type="checkbox" required> 개인정보 수집·이용에 동의합니다.</label></div>
+        <div style="text-align:center"><button class="btn g" type="submit">알리기</button></div>
+      </form>`,
+    donate:()=>`
+      <p>여러분의 나눔은 협의체를 통해 도움이 꼭 필요한 이웃에게 전달됩니다.</p>
+      <div class="grid3" style="margin-top:16px">
+        ${[["gift","정기·일시 후원","성금은 연합 모금을 통해 긴급 생계·의료비로 쓰입니다."],["people","재능 나눔","도배, 집수리, 이미용, 법률 상담 등 재능으로 함께해 주세요."],["heart","자원봉사","김장·밑반찬 나눔, 안부살피기 활동에 참여할 수 있습니다."]]
+          .map(t=>`<div class="tile"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></div>`).join("")}
+      </div>
+      <h3 style="margin-top:30px">참여 방법</h3>
+      <ul class="dot"><li>전화 문의: ${SITE.tel} (주민복지과)</li><li>방문 접수: 가까운 읍·면 행정복지센터</li><li>자원봉사 신청: <a href="https://www.1365.go.kr" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:underline">1365 자원봉사포털</a></li></ul>`,
+    services:()=>`
+      <p>받을 수 있는 복지서비스를 쉽게 찾아보세요.</p>
+      <div class="grid2" style="margin-top:16px">
+        ${[["복지로","내게 맞는 복지서비스 찾기·온라인 신청","https://www.bokjiro.go.kr"],["보건복지상담센터 129","복지 제도 안내와 긴급 상담 (24시간)","tel:129"],["정부24","각종 민원 신청과 증명서 발급","https://www.gov.kr"],["워크넷","일자리 정보와 취업 지원","https://www.work24.go.kr"]]
+          .map(t=>`<a class="tile" href="${t[2]}" target="_blank" rel="noopener"><h4>${icon("search",22)}${t[0]}</h4><p>${t[1]}</p></a>`).join("")}
+      </div>
+      <h3 style="margin-top:30px">대상별 주요 서비스</h3>
+      <div class="tbl-wrap"><table><thead><tr><th>대상</th><th class="l">주요 서비스</th></tr></thead><tbody>
+        <tr><td>어르신</td><td class="l">기초연금, 노인맞춤돌봄서비스, 장기요양보험</td></tr>
+        <tr><td>아동·청소년</td><td class="l">아동수당, 드림스타트, 지역아동센터</td></tr>
+        <tr><td>장애인</td><td class="l">장애인연금, 활동지원서비스, 보조기기 지원</td></tr>
+        <tr><td>저소득층</td><td class="l">기초생활보장, 긴급복지지원, 자활사업</td></tr>
+      </tbody></table></div>`
+  },
+  info:{
+    privacy:()=>`<p>${SITE.name}(이하 ‘협의체’)는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 둡니다.</p>
+      <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계</p>
+      <h3>2. 처리 항목</h3><p>대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)</p>
+      <h3>3. 보유 기간</h3><p>처리 완료 후 지체 없이 파기</p>
+      <h3>4. 개인정보 보호책임자</h3><p>${SITE.region}청 주민복지과장 · ${SITE.tel}</p>
+      <p class="note">※ 실제 운영 전 기관의 개인정보 담당자 검토를 받아 내용을 확정해 주세요.</p>`,
+    email:()=>`<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반하면 「정보통신망법」에 따라 처벌받을 수 있습니다.</p>`
+  }
+};
+P.info.map = P.about.map;
+
+function noticeList(q=""){
+  const rows = NOTICES.filter(n => !q || n.title.includes(q));
+  return `
+    <div class="board-top">
+      <span class="cnt">전체 <b>${rows.length}</b>건</span>
+      <form class="search" id="nSearch" role="search"><input type="search" placeholder="제목 검색" value="${esc(q)}" aria-label="검색어"><button>검색</button></form>
+    </div>
+    <div class="tbl-wrap"><table><thead><tr><th style="width:70px">번호</th><th style="width:80px">분류</th><th>제목</th><th style="width:110px">등록일</th><th style="width:70px">조회</th></tr></thead><tbody>
+      ${rows.map(n=>`<tr><td>${n.id}</td><td><span class="badge">${n.cat}</span></td><td class="l"><a href="#/news/notice/${n.id}">${esc(n.title)}</a>${isNew(n.date)?' <span class="badge new">NEW</span>':""}</td><td>${n.date}</td><td>${n.views}</td></tr>`).join("") || `<tr><td colspan="5">검색 결과가 없습니다.</td></tr>`}
+    </tbody></table></div>`;
+}
+function noticeView(id){
+  const n = NOTICES.find(x => x.id == id);
+  if (!n) return `<p>게시글을 찾을 수 없습니다.</p>`;
+  return `
+    <div class="view-head"><h3>${esc(n.title)}</h3><div class="meta"><span>분류 ${n.cat}</span><span>작성자 사무국</span><span>등록일 ${n.date}</span><span>조회 ${n.views}</span></div></div>
+    <div class="view-body">${esc(n.body)}${n.body.trim().endsWith("팀")?" "+SITE.tel:""}</div>
+    <div class="attach">첨부파일 없음</div>
+    <div class="view-foot"><a class="btn g" href="#/news/notice">목록</a></div>`;
+}
+
+/* ---------------- 라우터 ---------------- */
+function render(){
+  const [, k, s, id] = (location.hash.replace(/^#/, "") || "/").split("/").map(decodeURIComponent);
+  const main = $("#main");
+  document.querySelectorAll(".gnb>li").forEach(li => li.classList.toggle("on", li.dataset.k === k));
+  if (!k){ main.innerHTML = home(); bindHome(); }
+  else {
+    const grp = MENU.find(m => m.k === k) || (k === "info" ? {k:"info", t:"이용안내", items:[["privacy","개인정보처리방침"],["email","이메일무단수집거부"],["map","찾아오시는 길"]]} : null);
+    const page = grp && P[k] && P[k][s];
+    if (!page){ main.innerHTML = `<div class="wrap" style="padding:80px 20px;text-align:center"><h1>페이지를 찾을 수 없습니다</h1><p style="margin:12px 0 24px;color:var(--muted)">주소를 다시 확인해 주세요.</p><a class="btn g" href="#/">홈으로</a></div>`; return; }
+    const title = grp.items.find(i => i[0] === s)[1];
+    main.innerHTML = `
+      <div class="sub-hero"><div class="wrap"><p class="crumb">홈 › ${grp.t} › ${title}</p><h1>${title}</h1></div></div>
+      <div class="wrap sub-wrap">
+        <nav class="lnb" aria-label="${grp.t} 하위 메뉴"><h2>${grp.t}</h2>${grp.items.map(i=>`<a href="#/${k}/${i[0]}" class="${i[0]===s?"on":""}" ${i[0]===s?'aria-current="page"':""}>${i[1]}</a>`).join("")}</nav>
+        <article class="content"><h2>${title}</h2>${page(id, sessionQ)}</article>
+      </div>`;
+    bindSub();
+  }
+  window.scrollTo({top:0, behavior:"instant"});
+}
+let sessionQ = "";
+function bindHome(){
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+    const cat = b.dataset.cat;
+    $("#homeList").innerHTML = NOTICES.filter(x => !cat || x.cat === cat).slice(0,5).map(x => `<li><a href="#/news/notice/${x.id}"><span class="t"><span class="badge ${isNew(x.date)?"new":""}">${isNew(x.date)?"NEW":x.cat}</span>${esc(x.title)}</span><span class="d">${x.date.slice(5).replace("-",".")}</span></a></li>`).join("") || `<li style="padding:12px 2px;color:var(--muted)">등록된 글이 없습니다.</li>`;
+  });
+}
+function bindSub(){
+  const f = $("#nSearch");
+  if (f) f.onsubmit = e => { e.preventDefault(); sessionQ = f.querySelector("input").value.trim(); render(); sessionQ = ""; };
+  const r = $("#reportForm");
+  if (r) r.onsubmit = e => {
+    e.preventDefault();
+    alert("현재는 시범 화면이라 온라인 접수가 아직 연결되지 않았습니다.\n\n보건복지상담센터 129 또는 " + SITE.tel + "(주민복지과)로 전화해 주시면 바로 확인해 드립니다.");
+  };
+}
+
+fill(); buildMenu(); render();
+window.addEventListener("hashchange", render);
+</script>
+</body>
+</html>

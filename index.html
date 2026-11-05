@@ -3,8 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>○○군지역사회보장협의체</title>
-<meta name="description" content="함께 돌보는 따뜻한 지역공동체, ○○군지역사회보장협의체 공식 홈페이지">
+<title>봉화군지역사회보장협의체</title>
+<meta name="description" content="봉화군지역사회보장협의체 홈페이지. 민·관이 함께 복지 사각지대를 발굴하고 봉화군 지역사회보장계획을 심의·점검합니다. 경북 봉화군 봉화읍 내성로5길 13 봉화군평생학습관 3층, 054-673-6076">
+<meta name="keywords" content="봉화군지역사회보장협의체,봉화군 지역사회보장협의체,봉화지사협,봉화군,지역사회보장협의체,지역사회보장계획,행복금고,봉화 복지">
+<!-- 네이버 서치어드바이저 소유확인 코드: 발급받은 값을 content에 넣고 주석을 푸세요 -->
+<!-- <meta name="naver-site-verification" content="여기에_코드"> -->
+<link rel="canonical" href="https://anyeongran02-design.github.io/community-council/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="봉화군지역사회보장협의체">
+<meta property="og:title" content="봉화군지역사회보장협의체">
+<meta property="og:description" content="사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화. 민·관이 함께 이웃을 살피는 봉화군지역사회보장협의체입니다.">
+<meta property="og:url" content="https://anyeongran02-design.github.io/community-council/">
+<meta property="og:image" content="https://anyeongran02-design.github.io/community-council/assets/logo.jpg">
+<meta property="og:locale" content="ko_KR">
+<meta name="theme-color" content="#1f7a5c">
+<link rel="icon" href="assets/logo.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"봉화군지역사회보장협의체","alternateName":"봉화지사협","url":"https://anyeongran02-design.github.io/community-council/","logo":"https://anyeongran02-design.github.io/community-council/assets/logo.jpg","telephone":"+82-54-673-6076","email":"bonghwa6076@naver.com","address":{"@type":"PostalAddress","streetAddress":"내성로5길 13, 봉화군평생학습관 3층","addressLocality":"봉화군 봉화읍","addressRegion":"경상북도","postalCode":"36238","addressCountry":"KR"}}
+</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
 <style>
 :root{
@@ -216,6 +232,22 @@ tbody tr:hover{background:#fafbf9}
 
 .map{aspect-ratio:16/8;border-radius:var(--radius);background:repeating-linear-gradient(45deg,#eef3ee 0 12px,#e5ece6 12px 24px);display:grid;place-items:center;color:var(--muted);margin-bottom:20px;text-align:center;padding:20px}
 
+.logo img{height:42px;width:auto}
+.vision-card{border-radius:var(--radius);background:linear-gradient(160deg,var(--brand-soft),#cfe6da);padding:22px 16px;text-align:center}
+.vision-card img{margin:0 auto 14px;max-width:100%;height:auto;mix-blend-mode:multiply}
+.vision-card p{font-weight:700;color:var(--brand-dark);line-height:1.5}
+.vision{background:linear-gradient(135deg,var(--brand),#3a9a77);color:#fff;border-radius:var(--radius);padding:22px 24px;margin:18px 0 8px;text-align:center}
+.vision small{display:block;opacity:.85;margin-bottom:4px}
+.vision b{font-size:1.25rem;letter-spacing:-.02em}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.towns{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.town{border:1px solid var(--line);border-radius:12px;padding:14px 8px;text-align:center}
+.town b{display:block;color:var(--brand-dark);font-size:1.05rem}
+.town span{font-size:.78rem;color:var(--muted)}
+.btn.naver{background:#03c75a;color:#fff}
+.btn.naver:hover{filter:brightness(.95)}
+.nlogo{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;background:#fff;color:#03c75a;font-weight:900;font-size:.8rem}
+.map.live{display:block;padding:0;background:none;overflow:hidden}
 /* 푸터 */
 footer.site{margin-top:80px;background:#1b2420;color:#b8c4be;font-size:.88rem}
 footer .fl{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
@@ -258,6 +290,8 @@ footer .copy{margin-top:10px;color:#7f8c86}
   .content{padding:22px 18px}
   .greet{grid-template-columns:1fr}
   .portrait{max-width:180px}
+  .logo img{height:32px}
+  .towns{grid-template-columns:repeat(2,1fr)}
   .form .row{grid-template-columns:1fr}
   .form label{padding:10px 12px}
   .search input{width:140px}
@@ -286,14 +320,8 @@ footer .copy{margin-top:10px;color:#7f8c86}
 
 <header class="site">
   <div class="wrap">
-    <a class="logo" href="#/" aria-label="홈으로">
-      <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
-        <circle cx="24" cy="24" r="23" fill="#1f7a5c"/>
-        <path d="M12 25 L24 14 L36 25" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16 23v11h16V23" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
-        <path d="M24 32c-3-2.2-5-3.8-5-6a2.6 2.6 0 0 1 5-1 2.6 2.6 0 0 1 5 1c0 2.2-2 3.8-5 6z" fill="#ef8a2b"/>
-      </svg>
-      <span><span data-name></span><small>Community Social Security Council</small></span>
+    <a class="logo" href="#/" aria-label="봉화군지역사회보장협의체 홈으로">
+      <img src="assets/logo.jpg" alt="봉화군지역사회보장협의체" width="267" height="42">
     </a>
     <ul class="gnb" id="gnb"></ul>
     <a class="report-btn d" href="#/join/report">위기가구 알리기</a>
@@ -309,6 +337,14 @@ footer .copy{margin-top:10px;color:#7f8c86}
 </div>
 
 <main id="main" tabindex="-1"></main>
+<noscript>
+  <div class="wrap" style="padding:40px 20px">
+    <h1>봉화군지역사회보장협의체</h1>
+    <p>사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화. 봉화군지역사회보장협의체는 「사회보장급여법」 제41조에 따라 설치된 민·관 협력 기구로, 대표협의체·실무협의체·6개 실무분과·10개 읍면 지역사회보장협의체의 위원 209명이 함께 복지 사각지대를 발굴하고 봉화군 지역사회보장계획을 심의·점검합니다.</p>
+    <p>주요 사업: 함께모아 행복금고, 영양죽 나눔, 비타민 톡톡, 실무분과 특화사업, 제6기(2027~2030) 봉화군 지역사회보장계획</p>
+    <p>주소: 경상북도 봉화군 봉화읍 내성로5길 13, 봉화군평생학습관 3층 · 전화 054-673-6076 · 이메일 bonghwa6076@naver.com</p>
+  </div>
+</noscript>
 
 <footer class="site">
   <div class="wrap">
@@ -316,12 +352,13 @@ footer .copy{margin-top:10px;color:#7f8c86}
       <a href="#/info/privacy" class="pp">개인정보처리방침</a>
       <a href="#/info/email">이메일무단수집거부</a>
       <a href="#/info/map">찾아오시는 길</a>
+      <a href="https://map.naver.com/p/search/%EB%B4%89%ED%99%94%EA%B5%B0%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80" target="_blank" rel="noopener">네이버 지도</a>
     </div>
     <div class="fi">
       <div>
         <p><b style="color:#fff" data-name></b> 사무국</p>
         <p data-addr></p>
-        <p>전화 <span data-tel></span> · 팩스 <span data-fax></span> · 이메일 <span data-email></span></p>
+        <p>전화·팩스 <span data-tel></span> · 이메일 <span data-email></span></p>
         <p class="copy">Copyright © <span data-year></span> <span data-name></span>. All rights reserved.</p>
       </div>
       <div>
@@ -337,61 +374,84 @@ footer .copy{margin-top:10px;color:#7f8c86}
    ▼▼ 여기만 고치면 사이트 전체에 반영됩니다 ▼▼
    ========================================================= */
 const SITE = {
-  region: "○○군",
-  name: "○○군지역사회보장협의체",
-  addr: "(우)00000 ○○도 ○○군 ○○읍 군청길 00, ○○군청 주민복지과",
-  tel: "000-000-0000",
-  fax: "000-000-0000",
-  email: "welfare@example.go.kr",
-  chairPublic: "○○○ (○○군수)",
-  chairPrivate: "○○○",
-  founded: "2015",
-  stats: [ ["위원 수", "248", "명"], ["읍·면 협의체", "12", "개"], ["올해 연계 가구", "1,320", "가구"], ["특화사업", "18", "개"] ],
-  towns: ["중앙읍","동산면","서림면","남천면","북계면","가람면","솔뫼면","하늘면","풍양면","보문면","용궁면","은풍면"]
+  region: "봉화군",
+  name: "봉화군지역사회보장협의체",
+  addr: "(우)36238 경상북도 봉화군 봉화읍 내성로5길 13, 봉화군평생학습관 3층",
+  roadAddr: "경상북도 봉화군 봉화읍 내성로5길 13",
+  place: "봉화군평생학습관",
+  tel: "054-673-6076",
+  fax: "054-673-6076",
+  email: "bonghwa6076@naver.com",
+  gen: "제11기",
+  term: "2026. 7. 11. ~ 2028. 7. 10.",
+  chairPublic: "최기영", chairPublicRole: "봉화군수",
+  chairPrivate: "조석현", chairPrivateRole: "사회복지법인 하눌 대표이사",
+  viceChair: "이순희",
+  workChair: "손현정", workChairRole: "봉화군정신건강복지센터 팀장",
+  vision: "사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화",
+  stats: [ ["함께하는 위원", "209", "명"], ["대표·실무협의체", "33", "명"], ["실무분과", "6", "개"], ["읍·면 협의체", "10", "개"] ],
+  towns: ["봉화읍","물야면","봉성면","법전면","춘양면","소천면","석포면","재산면","명호면","상운면"],
+  planFolder: "https://drive.google.com/drive/folders/1mM6PG8c9WF-6KHxT8wfXo2gJNLCXHGMn",
+  yearFolder: "https://drive.google.com/drive/folders/1iqhQxFyyQ2P1QFD8asU-pSHfm_LOCSek",
+  /* 네이버 지도를 페이지 안에 띄우려면 네이버 클라우드 플랫폼 Maps의 Client ID를 넣으세요.
+     비워 두면 '네이버 지도에서 보기' 버튼으로 연결됩니다. */
+  naverMapKey: ""
 };
+const NAVER_MAP_URL = "https://map.naver.com/p/search/" + encodeURIComponent(SITE.place);
 
 const NOTICES = [
-  {id:12, cat:"공지", title:"2026년 하반기 읍·면 지역사회보장협의체 위원 역량강화 교육 안내", date:"2026-11-03", views:84,
-   body:"읍·면 협의체 위원 역량강화 교육을 아래와 같이 실시하오니 위원님들의 많은 참여 바랍니다.\n\n○ 일시: 2026. 11. 20.(금) 14:00 ~ 16:30\n○ 장소: ○○군청 대회의실\n○ 대상: 읍·면 지역사회보장협의체 위원\n○ 내용: 복지 사각지대 발굴 사례 공유, 인적안전망 활동 안내\n\n문의: 주민복지과 희망복지지원팀 " },
-  {id:11, cat:"모집", title:"2026 연말 이웃돕기 '사랑의 김장 나눔' 자원봉사자 모집", date:"2026-10-28", views:132,
-   body:"올해도 이웃과 함께하는 김장 나눔 행사를 개최합니다.\n\n○ 일시: 2026. 11. 28.(토) 09:00 ~\n○ 장소: ○○군 종합자원봉사센터 앞 광장\n○ 모집인원: 80명 (선착순)\n○ 신청방법: 전화 또는 읍·면 행정복지센터 방문 접수" },
-  {id:10, cat:"회의", title:"2026년 제3차 실무협의체 회의 결과 안내", date:"2026-10-15", views:57,
-   body:"2026년 제3차 실무협의체 회의 결과를 안내드립니다.\n\n○ 안건 1: 2027년 지역사회보장 연차별 시행계획(안) 사전 검토\n○ 안건 2: 특화사업 추진 실적 점검\n\n회의록은 자료실에서 확인하실 수 있습니다." },
-  {id:9, cat:"공지", title:"제6기 지역사회보장계획(2027~2030) 주민 의견 수렴", date:"2026-09-30", views:201,
-   body:"제6기 지역사회보장계획 수립을 위해 군민 여러분의 의견을 듣고자 합니다.\n\n○ 기간: 2026. 10. 1. ~ 10. 31.\n○ 방법: 읍·면 행정복지센터 비치 설문지 또는 이메일 제출\n○ 내용: 우리 지역에 꼭 필요한 복지 서비스" },
-  {id:8, cat:"소식", title:"실무협의체 위원 위촉식 및 지역사회보장계획 최종보고회 개최", date:"2026-09-04", views:96,
-   body:"관내 사회보장 분야 실무 전문가를 실무협의체 위원으로 위촉하고, 지역사회보장계획 최종보고회를 함께 개최하였습니다." },
-  {id:7, cat:"모집", title:"찾아가는 이동 목욕 서비스 대상자 신청 안내", date:"2026-08-20", views:143,
-   body:"거동이 불편한 어르신과 장애인 가구를 직접 찾아가는 이동 목욕 서비스를 운영합니다. 가까운 읍·면 행정복지센터로 신청해 주세요." }
+  {id:7, cat:"소식", title:"분과별 특화사업으로 ‘서로 존중하는 봉화’ 만든다", date:"2026-11-03", views:0,
+   body:"봉화군지역사회보장협의체가 분과별 특화사업으로 아이부터 어르신까지 서로 존중하는 지역사회 만들기에 나섰습니다.\n\n○ 노인분과 「행복을 담음, 인생을 빚음」\n  - 일시: 2026. 11. 4.(수) 10:00~12:00\n  - 장소: 봉화군평생학습관 1층 강의실\n  - 대상: 관내 65세 이상 어르신 20여 명\n  - 내용: 노인인권 존중·노인학대 예방 교육(경북북부노인보호전문기관), 나만의 도자기 만들기 체험\n\n○ 장애인분과 「우리 같이 가까이」 (2026. 10. 16., 봉화군민회관)\n  - 관내 취학 전 아동 100여 명 대상 장애인식개선 카툰 전시, 수어·점자 키링 만들기, 휠체어·장애인 놀이 체험\n\n○ 가족돌봄분과 「알록달록 권리놀이터」 (2026. 10. 16., 봉화군민회관)\n  - 아동권리·아동학대 예방 홍보, 나만의 키캡 만들기, “아이사랑, 아이존중” 풍선 전달\n  - 협력: 아동보호전문기관, 드림스타트, 가족센터, 어린이집연합회\n\n협의체는 앞으로도 민관 협력을 바탕으로 장애인, 아동, 어르신 모두가 함께 어울려 사는 지역사회를 만들어 가겠습니다."},
+  {id:6, cat:"소식", title:"울릉군·구미시 진미동 협의체, 봉화군협의체 벤치마킹 방문", date:"2026-10-14", views:0,
+   body:"봉화군지역사회보장협의체는 10월 13일과 14일 이틀 동안 울릉군지역사회보장협의체와 구미시 진미동 지역사회보장협의체의 벤치마킹 방문을 받았습니다.\n\n○ 10. 13.(화) 울릉군지역사회보장협의체 (봉화군평생학습관 3층)\n  - 협의체 구성과 운영체계, 실무분과 운영, 지역사회보장계획 연계, 읍·면 협의체 운영사례 공유\n\n○ 10. 14.(수) 구미시 진미동 지역사회보장협의체\n  - 10개 읍·면 협의체 특화사업 운영체계, 위원 역량강화 교육, 행복금고를 통한 위기가구 발굴·지원 사례 공유\n\n서로의 경험을 나누는 교류가 각 지역의 복지 안전망을 더 촘촘히 하는 계기가 되기를 바랍니다."},
+  {id:5, cat:"공지", title:"제6기(2027~2030) 봉화군 지역사회보장계획 수립 안내", date:"2026-09-30", views:0,
+   body:"앞으로 4년간 봉화군 사회보장의 방향을 담은 제6기(2027~2030) 봉화군 지역사회보장계획을 수립하였습니다.\n\n○ 비전: 사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화\n○ 주민공고: 2026. 8. 20. ~ 9. 8.\n○ 봉화군지역사회보장협의체 심의: 2026. 8. 31.\n○ 봉화군의회 보고: 2026. 9. 3.\n○ 경상북도 제출: 2026. 9. 30.\n\n계획서 전문은 [주요사업 › 지역사회보장계획] 메뉴에서 누구나 열람하실 수 있습니다."},
+  {id:4, cat:"회의", title:"2026년 연차별 시행계획 모니터링 회의 개최", date:"2026-09-29", views:0,
+   body:"2026년 지역사회보장 연차별 시행계획이 계획대로 추진되고 있는지 점검하는 모니터링 회의를 개최하였습니다.\n\n○ 1차 회의: 2026. 9. 18.\n○ 2차 회의: 2026. 9. 29.\n○ 장소: 봉화군평생학습관 3층\n○ 참석: 연차별 TF팀 및 모니터링단\n\n모니터링 결과는 세부사업 담당자에게 전달하여 예산·성과목표 조정 등 환류 의견을 받아 다음 계획에 반영합니다."},
+  {id:3, cat:"소식", title:"제6기 지역사회보장계획 중간보고회 및 주민공청회 개최", date:"2026-08-27", views:0,
+   body:"제6기(2027~2030) 봉화군 지역사회보장계획(안)의 중간보고회와 주민공청회를 개최하였습니다.\n\n주민과 관계기관이 함께 계획(안)을 살펴보고 의견을 나누었으며, 제시된 의견은 최종 계획에 반영하였습니다."},
+  {id:2, cat:"회의", title:"2차 읍·면 지역사회보장협의체 교육 및 간담회", date:"2026-07-22", views:0,
+   body:"10개 읍·면 지역사회보장협의체 담당자와 함께 교육 및 간담회를 진행하였습니다.\n\n읍·면 협의체 운영 현황과 특화사업 추진 사항을 공유하고, 위기가구 발굴과 지원 연계 방안을 논의하였습니다."},
+  {id:1, cat:"공지", title:"제11기 봉화군지역사회보장협의체 출범", date:"2026-07-11", views:0,
+   body:"제11기 봉화군지역사회보장협의체가 새롭게 출범하였습니다.\n\n○ 임기: 2026. 7. 11. ~ 2028. 7. 10.\n○ 대표협의체 공동위원장: 최기영(봉화군수), 조석현(사회복지법인 하눌 대표이사)\n○ 실무협의체 위원장: 손현정(봉화군정신건강복지센터 팀장)\n○ 구성: 대표협의체 17명, 실무협의체 16명, 6개 실무분과 66명\n\n앞으로 2년간 봉화군의 복지 문제를 함께 논의하고 해결해 나가겠습니다."}
 ];
 
 const GALLERY = [
-  {title:"사랑의 김장 나눔 행사", date:"2025-11-29", hue:28},
-  {title:"읍·면 협의체 위원 워크숍", date:"2026-06-12", hue:150},
-  {title:"홀몸 어르신 안부살피기 활동", date:"2026-05-08", hue:200},
-  {title:"청소년 문화한마당", date:"2026-04-25", hue:330},
-  {title:"행복 밑반찬 나눔", date:"2026-03-17", hue:45},
-  {title:"주거환경 개선 봉사", date:"2026-02-21", hue:100},
-  {title:"대표협의체 위원 위촉식", date:"2026-07-10", hue:170},
-  {title:"복지박람회 벤치마킹", date:"2026-09-22", hue:260}
+  {title:"노인분과 「행복을 담음, 인생을 빚음」", date:"2026-11-04", hue:28},
+  {title:"민간단체 업무협약식", date:"2026-10-28", hue:200},
+  {title:"장애인분과 「우리 같이 가까이」", date:"2026-10-16", hue:150},
+  {title:"가족돌봄분과 「알록달록 권리놀이터」", date:"2026-10-16", hue:330},
+  {title:"울릉군협의체 벤치마킹 간담회", date:"2026-10-13", hue:210},
+  {title:"제6기 계획 중간보고회·주민공청회", date:"2026-08-27", hue:100},
+  {title:"비타민 톡톡! 과일 꾸러미 전달", date:"2026-07-28", hue:45},
+  {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", hue:170}
 ];
 
 const PROJECTS = [
-  {key:"care", title:"이웃 안부살피기", desc:"홀몸 어르신·중장년 1인 가구를 정기적으로 방문하고 안부를 확인합니다.", hue:150, icon:"heart",
-   detail:["읍·면 협의체 위원이 담당 가구를 정해 월 2회 이상 방문·전화","위기 징후 발견 시 행정복지센터에 즉시 연계","명절·폭염·한파 시기 집중 안부 확인"]},
-  {key:"house", title:"행복 보금자리", desc:"주거 취약 가구의 도배·장판, 단열, 안전손잡이 설치를 지원합니다.", hue:30, icon:"home",
-   detail:["저소득 가구 주거환경 개선 (도배·장판·전기·보일러 점검)","어르신 가구 낙상 예방 안전손잡이 설치","지역 업체·봉사단체와 재능 나눔 연계"]},
-  {key:"bath", title:"찾아가는 목욕 서비스", desc:"교통이 불편한 지역 어르신께 목욕 차량과 이동 목욕을 지원합니다.", hue:200, icon:"drop",
-   detail:["대중교통 소외지역 어르신 단체 목욕 차량 지원","거동 불편 가구 이동 목욕 서비스","이용 후 건강 상태 확인 및 보건소 연계"]},
-  {key:"fund", title:"연합 모금·나눔", desc:"지역 기관·단체가 함께 모금하여 긴급 생계·의료비를 지원합니다.", hue:340, icon:"gift",
-   detail:["협의체 연합 모금으로 긴급 생계비·주거비·의료비 지원","공적 지원에서 제외된 사각지대 가구 우선 지원","후원 물품 나눔 창고 운영"]}
+  {key:"fund", title:"함께모아 행복금고", desc:"경북사랑의열매와 함께 모은 성금으로 읍·면 협의체가 찾은 위기가구를 긴급 지원합니다.", hue:340, icon:"gift",
+   detail:["읍·면 협의체 위원이 도움이 필요한 이웃을 직접 발굴하여 연계","긴급생계비, 집수리, 실내화장실 설치 등 생활 밀착형 지원","2023년 수해 피해 주민 지원과 수해성금 배분"]},
+  {key:"juk", title:"영양죽 나눔", desc:"부녀회 자조모임에서 시작해 어르신 가정에 영양죽을 전하며 안부를 살핍니다.", hue:30, icon:"heart",
+   detail:["홀로 지내는 어르신 가정에 영양죽을 정기적으로 전달","전달하면서 건강과 생활 형편을 함께 살피는 안부 확인","부녀회 자조모임이 사회적협동조합으로 성장한 주민 주도 사례"]},
+  {key:"vita", title:"비타민 톡톡!", desc:"협의체 위원이 취약가구에 제철 과일 꾸러미를 전하며 여름철 건강을 챙깁니다.", hue:45, icon:"drop",
+   detail:["2026년 7월·8월·10월 세 차례 제철 과일 꾸러미 전달","협의체 위원이 직접 방문하여 안부 확인","폭염 등 계절별 위험에 취약한 가구 우선 지원"]},
+  {key:"team", title:"실무분과 특화사업", desc:"6개 실무분과가 대상별 문제를 직접 찾아 해마다 특화사업을 기획·운영합니다.", hue:150, icon:"people",
+   detail:["노인분과: 노인인권 교육과 도자기 체험 「행복을 담음, 인생을 빚음」","장애인분과: 장애인식개선 체험 「우리 같이 가까이」","가족돌봄분과: 아동권리 체험 「알록달록 권리놀이터」","생명사랑분과: 생명존중·자살예방 캠페인","고용자활분과: 일자리·자활 정보 안내 리플릿 제작"]}
+];
+
+const TEAMS = [
+  ["가족돌봄분과","아동·가족 돌봄","아동권리와 가족 돌봄을 지원합니다. 2026년 「알록달록 권리놀이터」로 아동권리·아동학대 예방 체험을 운영했습니다."],
+  ["고용자활분과","일자리·자활","일자리와 자활 정보를 연계하고, 군민이 알기 쉬운 고용·자활 안내 리플릿을 만듭니다."],
+  ["노인분과","어르신","어르신의 권리와 일상을 지킵니다. 2026년 노인인권 교육과 도자기 체험 「행복을 담음, 인생을 빚음」을 운영했습니다."],
+  ["생명사랑분과","자살예방","생명존중 문화를 확산합니다. 자살예방 캠페인과 생명지킴이 양성 등 마음 건강 안전망을 만듭니다."],
+  ["장애인분과","장애인","장애를 ‘다름’으로 이해하는 지역을 만듭니다. 2026년 장애인식개선 체험 「우리 같이 가까이」를 운영했습니다."],
+  ["통합사례관리분과","통합사례관리","여러 어려움이 겹친 가구를 함께 논의하고, 기관별 자원을 묶어 맞춤 지원을 연결합니다."]
 ];
 
 const MENU = [
   {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","설립목적·기능"],["history","연혁"],["org","조직도"],["map","찾아오시는 길"]]},
   {k:"group", t:"협의체 구성", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["town","읍·면 협의체"]]},
-  {k:"biz", t:"주요사업", items:[["plan","지역사회보장계획"],["special","특화사업"]]},
-  {k:"news", t:"알림마당", items:[["notice","공지사항"],["data","회의록·자료실"],["gallery","활동 갤러리"]]},
+  {k:"biz", t:"주요사업", items:[["plan","지역사회보장계획"],["monitor","모니터링·평가"],["special","특화사업"]]},
+  {k:"news", t:"알림마당", items:[["notice","공지사항"],["data","자료실"],["gallery","활동 갤러리"]]},
   {k:"join", t:"참여마당", items:[["report","위기가구 알리기"],["donate","후원·나눔 참여"],["services","복지서비스 안내"]]}
 ];
 /* ========================================================= */
@@ -444,30 +504,30 @@ document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
 });
 
 /* ---------------- 페이지 ---------------- */
+const homeItem = x => `<li><a href="#/news/notice/${x.id}"><span class="t"><span class="badge ${isNew(x.date)?"new":""}">${isNew(x.date)?"NEW":x.cat}</span>${esc(x.title)}</span><span class="d">${x.date.slice(5).replace("-",".")}</span></a></li>`;
 function home(){
-  const n = NOTICES;
-  const list = cat => n.filter(x => !cat || x.cat === cat).slice(0,5).map(x => `<li><a href="#/news/notice/${x.id}"><span class="t"><span class="badge ${isNew(x.date)?"new":""}">${isNew(x.date)?"NEW":x.cat}</span>${esc(x.title)}</span><span class="d">${x.date.slice(5).replace("-",".")}</span></a></li>`).join("");
   return `
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="tag">${SITE.name}</span>
-        <h1>이웃이 이웃을 돌보는<br><em>따뜻한 ${SITE.region}</em>을 만듭니다</h1>
-        <p>민·관이 함께 복지 사각지대를 찾고, 필요한 도움을 연결합니다. 한 사람도 소외되지 않는 지역공동체, 협의체가 함께하겠습니다.</p>
+        <span class="tag">제6기 봉화군 지역사회보장계획 비전</span>
+        <h1>사람이 모이는 봉화,<br><em>함께 돌보며 더욱 행복한 봉화</em></h1>
+        <p>민·관이 함께 이웃을 살피고 필요한 도움을 잇습니다. 대표·실무협의체와 6개 실무분과, 10개 읍·면 협의체의 위원 209명이 봉화의 복지 안전망이 되겠습니다.</p>
         <div class="cta">
           <a class="btn w" href="#/about/greeting">협의체 소개</a>
-          <a class="btn o" href="#/join/report">도움이 필요한 이웃 알리기</a>
+          <a class="btn o" href="#/biz/plan">지역사회보장계획 보기</a>
         </div>
       </div>
       <svg class="hero-art" viewBox="0 0 400 300" aria-hidden="true">
         <circle cx="200" cy="150" r="130" fill="rgba(255,255,255,.12)"/>
         <circle cx="200" cy="150" r="92" fill="rgba(255,255,255,.12)"/>
+        <path d="M40 250 L130 150 L180 200 L250 120 L360 250z" fill="rgba(255,255,255,.18)"/>
         <g fill="#fff">
-          <circle cx="140" cy="120" r="22"/><path d="M100 220c0-30 18-55 40-55s40 25 40 55z"/>
-          <circle cx="262" cy="120" r="22"/><path d="M222 220c0-30 18-55 40-55s40 25 40 55z"/>
-          <circle cx="201" cy="150" r="16" fill="#ffe2b8"/><path d="M172 225c0-24 13-44 29-44s29 20 29 44z" fill="#ffe2b8"/>
+          <circle cx="140" cy="128" r="20"/><path d="M104 232c0-28 16-50 36-50s36 22 36 50z"/>
+          <circle cx="262" cy="128" r="20"/><path d="M226 232c0-28 16-50 36-50s36 22 36 50z"/>
+          <circle cx="201" cy="160" r="15" fill="#ffe2b8"/><path d="M174 234c0-22 12-40 27-40s27 18 27 40z" fill="#ffe2b8"/>
         </g>
-        <path d="M200 92c-7-6-17-4-17 5 0 8 17 18 17 18s17-10 17-18c0-9-10-11-17-5z" fill="#ef8a2b"/>
+        <path d="M200 98c-7-6-17-4-17 5 0 8 17 18 17 18s17-10 17-18c0-9-10-11-17-5z" fill="#ef8a2b"/>
       </svg>
     </div>
     <svg class="hero-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C360 60 1080 0 1440 30 L1440 50 L0 50z" fill="#f6f7f4"/></svg>
@@ -478,8 +538,8 @@ function home(){
       <li><a href="#/join/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
       <li><a href="#/join/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
       <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
+      <li><a href="#/biz/plan"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
       <li><a href="#/join/donate"><span class="ic">${icon("gift")}</span>후원·나눔</a></li>
-      <li><a href="#/news/data"><span class="ic">${icon("doc")}</span>회의록·자료실</a></li>
       <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
     </ul>
   </nav>
@@ -489,22 +549,22 @@ function home(){
       <div class="card">
         <div class="blk-head" style="margin-bottom:6px"><h2>협의체 소식</h2><a class="more" href="#/news/notice">더보기 +</a></div>
         <div class="tabs" role="tablist">
-          ${["전체","공지","모집","회의"].map((t,i)=>`<button role="tab" aria-selected="${i===0}" data-cat="${i?t:""}">${t}</button>`).join("")}
+          ${["전체","공지","소식","회의"].map((t,i)=>`<button role="tab" aria-selected="${i===0}" data-cat="${i?t:""}">${t}</button>`).join("")}
         </div>
-        <ul class="nlist" id="homeList">${list("")}</ul>
+        <ul class="nlist" id="homeList">${NOTICES.slice(0,5).map(homeItem).join("")}</ul>
       </div>
       <div class="card sos">
         <h3>주변에 도움이 필요한 이웃이 있나요?</h3>
         <p>연락이 끊긴 어르신, 끼니를 거르는 아이, 갑작스러운 실직으로 어려운 이웃… 작은 관심이 한 사람을 살립니다.</p>
         <div class="tel">${icon("sos",30)}<div><b>129</b><br><span>보건복지상담센터 (24시간)</span></div></div>
-        <div class="tel">${icon("people",30)}<div><b style="font-size:1.15rem">${SITE.tel}</b><br><span>${SITE.region} 주민복지과 · 가까운 읍·면 행정복지센터</span></div></div>
+        <div class="tel">${icon("people",30)}<div><b style="font-size:1.1rem">가까운 읍·면 행정복지센터</b><br><span>${SITE.towns.length}개 읍·면 맞춤형복지팀</span></div></div>
         <a class="btn g" href="#/join/report" style="margin-top:6px">온라인으로 알리기 →</a>
       </div>
     </div>
   </section>
 
   <section class="blk wrap">
-    <div class="blk-head"><div><h2>주요 특화사업</h2><p>지역 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
+    <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
     <div class="biz">
       ${PROJECTS.map(p=>`<a href="#/biz/special"><div class="thumb" style="background:linear-gradient(140deg,hsl(${p.hue} 60% 92%),hsl(${p.hue} 50% 80%));color:hsl(${p.hue} 45% 32%)">${icon(p.icon,46)}</div><div class="body"><h3>${p.title}</h3><p>${p.desc}</p></div></a>`).join("")}
     </div>
@@ -524,142 +584,168 @@ function home(){
   <section class="blk wrap">
     <div class="blk-head"><h2>함께하는 기관</h2></div>
     <div class="partners">
-      <a href="https://www.mohw.go.kr" target="_blank" rel="noopener">보건복지부</a>
+      <a href="https://www.bonghwa.go.kr" target="_blank" rel="noopener">봉화군청</a>
+      <a href="https://gb.chest.or.kr" target="_blank" rel="noopener">경북사회복지공동모금회</a>
       <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로</a>
-      <a href="https://www.ssis.or.kr" target="_blank" rel="noopener">한국사회보장정보원</a>
-      <a href="https://chest.or.kr" target="_blank" rel="noopener">사회복지공동모금회</a>
+      <a href="https://www.mohw.go.kr" target="_blank" rel="noopener">보건복지부</a>
       <a href="https://www.1365.go.kr" target="_blank" rel="noopener">1365 자원봉사포털</a>
     </div>
   </section>`;
 }
 const isNew = d => (Date.now() - new Date(d)) / 864e5 < 7;
 
+const ext = (href, label) => `<a class="btn g" href="${href}" target="_blank" rel="noopener">${label} ↗</a>`;
+const mapBlock = () => `
+  <div class="map nmap" id="nmap">
+    <div>
+      ${icon("map",40)}
+      <p style="margin:8px 0 14px"><b>${SITE.place} 3층</b><br><small>${SITE.roadAddr}</small></p>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <a class="btn naver" href="${NAVER_MAP_URL}" target="_blank" rel="noopener"><span class="nlogo">N</span>네이버 지도에서 보기</a>
+      </div>
+    </div>
+  </div>`;
+
 const P = {
   about:{
     greeting:()=>`
       <div class="greet">
-        <div class="portrait">민간위원장<br>사진 자리</div>
+        <div class="vision-card"><img src="assets/logo.jpg" alt="${SITE.name} 로고"><p>${SITE.vision.replace(", ",",<br>")}</p></div>
         <div>
-          <p class="lead">“이웃의 안부를 묻는 일에서<br>복지는 시작됩니다.”</p>
-          <p>${SITE.name} 홈페이지를 찾아주신 여러분, 반갑습니다.</p>
-          <p>우리 협의체는 공공과 민간이 함께 지역의 복지 문제를 논의하고, 필요한 자원을 연결하는 지역 복지의 중심 기구입니다. 대표협의체와 실무협의체, 실무분과, 그리고 ${SITE.towns.length}개 읍·면 협의체의 위원들이 각자의 자리에서 이웃을 살피고 있습니다.</p>
-          <p>복지 사각지대는 행정의 손길만으로는 다 찾기 어렵습니다. 마을 사정을 가장 잘 아는 주민 한 분 한 분이 곧 가장 든든한 복지 안전망입니다. 앞으로도 군민 여러분의 목소리에 귀 기울이며, 누구나 살기 좋은 ${SITE.region}을 만들어 가겠습니다.</p>
-          <p>따뜻한 관심과 참여를 부탁드립니다. 감사합니다.</p>
-          <p class="sign"><span>${SITE.name}</span>민간위원장 ${SITE.chairPrivate}</p>
+          <p class="lead">“이웃의 안부를 묻는 일에서<br>봉화의 복지는 시작됩니다.”</p>
+          <p>${SITE.name} 홈페이지를 찾아주신 군민 여러분, 반갑습니다.</p>
+          <p>우리 협의체는 공공과 민간이 함께 봉화의 복지 문제를 논의하고, 필요한 자원을 찾아 연결하는 민·관 협력 기구입니다. 대표협의체와 실무협의체, 6개 실무분과, 그리고 ${SITE.towns.length}개 읍·면 협의체의 위원 209명이 각자의 자리에서 이웃을 살피고 있습니다.</p>
+          <p>산간 농촌인 봉화는 어르신이 많고 마을과 마을 사이가 멉니다. 그래서 마을 사정을 가장 잘 아는 주민 한 분 한 분이 곧 가장 든든한 복지 안전망입니다. 행복금고와 영양죽 나눔처럼 읍·면에서 시작된 작은 실천이 봉화를 더 따뜻하게 만들어 왔습니다.</p>
+          <p>앞으로 4년은 제6기 지역사회보장계획의 비전인 「${SITE.vision}」를 향해 함께 걸어가겠습니다. 군민 여러분의 따뜻한 관심과 참여를 부탁드립니다.</p>
+          <p class="sign"><span>${SITE.gen} ${SITE.name}</span>공동위원장 ${SITE.chairPublic} · ${SITE.chairPrivate}</p>
         </div>
       </div>`,
     purpose:()=>`
       <h3>설립 목적</h3>
-      <p>지역사회보장협의체는 「사회보장급여의 이용·제공 및 수급권자 발굴에 관한 법률」 제41조에 따라 설치된 민·관 협력 기구입니다. 지역의 사회보장 증진을 위해 공공과 민간이 함께 지역 복지 문제를 논의하고, 자원을 발굴·연계하여 주민 누구나 필요한 서비스를 받을 수 있도록 합니다.</p>
-      <div class="note">“주민이 체감하는 복지, 민·관이 함께 만드는 지역사회보장”</div>
+      <p>지역사회보장협의체는 「사회보장급여의 이용·제공 및 수급권자 발굴에 관한 법률」 제41조에 따라 설치된 민·관 협력 기구입니다. 공공과 민간이 함께 봉화의 사회보장 문제를 논의하고, 자원을 발굴·연계하여 군민 누구나 필요한 서비스를 받을 수 있도록 합니다.</p>
+      <div class="note">비전 「${SITE.vision}」</div>
       <h3>주요 기능</h3>
       <div class="grid2">
         ${[["지역사회보장계획 심의·자문","4년 단위 지역사회보장계획과 연차별 시행계획의 수립·시행·평가를 심의합니다."],
-           ["사회보장급여 제공 심의·자문","지역 주민에게 제공되는 사회보장급여와 서비스 제공에 관한 사항을 논의합니다."],
-           ["복지 사각지대 발굴·지원","읍·면 협의체를 중심으로 위기가구를 찾고 공공·민간 자원을 연계합니다."],
-           ["민·관 협력 네트워크","보건·복지·고용·주거·교육 등 다양한 분야 기관 간 연계와 협력을 강화합니다."]]
+           ["사회보장급여 제공 심의·자문","군민에게 제공되는 사회보장급여와 서비스 제공에 관한 사항을 논의합니다."],
+           ["복지 사각지대 발굴·지원","읍·면 협의체를 중심으로 위기가구를 찾고 행복금고 등 공공·민간 자원을 연계합니다."],
+           ["민·관 협력 네트워크","보건·복지·고용·주거·교육 등 30여 개 공공·민간 기관이 실무분과에서 함께 일합니다."]]
            .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
-      </div>
-      <h3>비전</h3>
-      <ul class="dot"><li>함께 돌보는 따뜻한 마을공동체</li><li>빈틈없는 복지 안전망 구축</li><li>주민이 참여하는 지역 복지</li></ul>`,
+      </div>`,
     history:()=>`
       <ul class="timeline">
-        ${[["2026","제6기 지역사회보장계획(2027~2030) 수립 · 실무협의체 위원 위촉"],
-           ["2024","제10기 대표협의체 구성 · 연합 모금 사업 확대"],
-           ["2022","제5기 지역사회보장계획(2023~2026) 수립"],
-           ["2019","찾아가는 목욕 서비스 · 행복 보금자리 특화사업 시작"],
-           ["2016","읍·면 지역사회보장협의체 전면 구성"],
-           [SITE.founded,`${SITE.name} 출범 (지역사회복지협의체에서 전환)`]]
+        ${[["2026. 10.","울릉군·구미시 진미동 지역사회보장협의체 벤치마킹 방문 · 민간단체 업무협약 체결"],
+           ["2026. 9.","제6기(2027~2030) 봉화군 지역사회보장계획 수립 · 경상북도 제출"],
+           ["2026. 8.","제6기 지역사회보장계획 중간보고회 및 주민공청회 개최"],
+           ["2026. 7.","제11기 대표·실무협의체 출범 (임기 2026. 7. 11. ~ 2028. 7. 10.)"],
+           ["2026.","읍·면 지역사회보장협의체 심의수당 신설"],
+           ["2023.","제5기(2023~2026) 지역사회보장계획 시행 · 행복금고로 수해 피해 주민 지원"],
+           ["2021.","보건복지부 지역사회보장계획 시행결과 부문 우수상 수상"],
+           ["2015.","「사회보장급여법」 시행에 따라 지역사회보장협의체로 개편"],
+           ["2011.","제2기(2011~2014) 봉화군 지역사회복지계획 수립"]]
            .map(h=>`<li><b>${h[0]}</b>${h[1]}</li>`).join("")}
-      </ul>
-      <p class="note">※ 연혁은 샘플입니다. 실제 협의체 연혁으로 바꿔 주세요.</p>`,
+      </ul>`,
     org:()=>`
       <div class="org">
-        <div class="box">대표협의체<small>공동위원장 · 공공 ${SITE.chairPublic} / 민간 ${SITE.chairPrivate}</small></div>
+        <div class="box">대표협의체 (17명)<small>공동위원장 ${SITE.chairPublic}(${SITE.chairPublicRole}) · ${SITE.chairPrivate}(민간위원장)</small></div>
         <div class="vline"></div>
-        <div class="org-side"><div class="box lt">실무협의체<small>대표협의체 안건 사전 검토·조정</small></div></div>
+        <div class="box lt">실무협의체 (16명)<small>실무위원장 ${SITE.workChair} · 대표협의체 안건 사전 검토</small></div>
         <div class="vline"></div>
-        <div class="row">${["아동·청소년","노인","장애인","저소득·주거","보건·의료","고용·자활"].map(t=>`<div class="box lt">${t}<small>분과</small></div>`).join("")}</div>
+        <div class="row">${TEAMS.map(t=>`<div class="box lt">${t[0]}<small>${t[1]}</small></div>`).join("")}</div>
         <div class="vline"></div>
-        <div class="box ac">읍·면 지역사회보장협의체<small>${SITE.towns.length}개 읍·면 · 복지 사각지대 발굴</small></div>
+        <div class="box ac">읍·면 지역사회보장협의체 (110명)<small>${SITE.towns.length}개 읍·면 · 복지 사각지대 발굴</small></div>
       </div>
-      <p class="note" style="margin-top:28px">사무국: ${SITE.region}청 주민복지과 희망복지지원팀 · ${SITE.tel}</p>`,
-    map:()=>`
-      <div class="map"><div>${icon("map",40)}<p style="margin-top:8px">지도 자리<br><small>카카오맵·네이버지도 퍼가기 코드를 넣으면 됩니다</small></p></div></div>
+      <div class="grid2" style="margin-top:28px">
+        <div class="tile"><h4>${icon("doc",22)}연차별 TF팀·모니터링단</h4><p>지역사회보장계획의 추진 상황을 점검하고 개선 의견을 냅니다.</p></div>
+        <div class="tile"><h4>${icon("map",22)}사무국</h4><p>${SITE.place} 3층 · ☎ ${SITE.tel}</p></div>
+      </div>`,
+    map:()=>`${mapBlock()}
       <div class="tbl-wrap"><table><tbody>
         <tr><th>주소</th><td class="l">${SITE.addr}</td></tr>
-        <tr><th>전화</th><td class="l">${SITE.tel}</td></tr>
-        <tr><th>팩스</th><td class="l">${SITE.fax}</td></tr>
-        <tr><th>운영시간</th><td class="l">평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00)</td></tr>
-        <tr><th>대중교통</th><td class="l">○○터미널에서 농어촌버스 ○번 이용, ‘군청’ 정류장 하차</td></tr>
+        <tr><th>전화·팩스</th><td class="l">${SITE.tel}</td></tr>
+        <tr><th>이메일</th><td class="l">${SITE.email}</td></tr>
+        <tr><th>운영시간</th><td class="l">평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00, 주말·공휴일 휴무)</td></tr>
       </tbody></table></div>`
   },
   group:{
     rep:()=>`
       <h3>구성 및 역할</h3>
-      <p>대표협의체는 공공위원장(군수)과 민간위원장을 공동위원장으로 하여, 사회보장 관련 기관·단체 대표, 학계 전문가, 지역 주민 대표 등으로 구성됩니다. 지역사회보장계획과 주요 복지 정책을 심의·자문합니다.</p>
+      <p>대표협의체는 봉화군수와 민간위원장을 공동위원장으로 하여 사회보장 관련 기관·단체 대표, 전문가, 지역 주민 대표 등 17명으로 구성됩니다. 지역사회보장계획과 봉화군 복지 정책 전반을 심의·자문합니다.</p>
       <ul class="dot"><li>지역사회보장계획 수립·시행 및 평가에 관한 사항</li><li>사회보장급여 제공에 관한 사항</li><li>사회보장 추진에 관한 사항</li><li>읍·면 지역사회보장협의체 운영에 관한 사항</li></ul>
-      <h3>위원 현황</h3>
+      <h3>임원 현황 (${SITE.gen})</h3>
       <div class="tbl-wrap"><table><thead><tr><th>구분</th><th>성명</th><th>소속·직위</th></tr></thead><tbody>
-        <tr><td>공공위원장</td><td>${SITE.chairPublic.split(" ")[0]}</td><td>${SITE.region}수</td></tr>
-        <tr><td>민간위원장</td><td>${SITE.chairPrivate}</td><td>○○종합자원봉사센터장</td></tr>
-        ${["○○군 사회복지협의회장","○○노인복지관장","○○지역아동센터장","○○군 보건소장","○○교육지원청 교육장"].map(r=>`<tr><td>위원</td><td>○○○</td><td>${r}</td></tr>`).join("")}
+        <tr><td>공동위원장(공공)</td><td>${SITE.chairPublic}</td><td>${SITE.chairPublicRole}</td></tr>
+        <tr><td>공동위원장(민간)</td><td>${SITE.chairPrivate}</td><td>${SITE.chairPrivateRole}</td></tr>
+        <tr><td>부위원장</td><td>${SITE.viceChair}</td><td>대표협의체</td></tr>
       </tbody></table></div>
-      <p class="note">임기: 2년 (연임 가능) · 위원 명단은 샘플입니다.</p>`,
+      <p class="note">임기: ${SITE.term} · 위원 17명</p>`,
     work:()=>`
       <h3>구성 및 역할</h3>
-      <p>실무협의체는 관내 사회보장 분야 실무 전문가로 구성되며, 대표협의체에 올라갈 안건을 미리 검토·조정하고 지역사회보장계획의 세부사업 실행을 점검합니다.</p>
+      <p>실무협의체는 관내 사회보장 분야 실무 전문가 16명으로 구성되며, 대표협의체에 올라갈 안건을 미리 검토·조정하고 지역사회보장계획 세부사업의 실행을 점검합니다.</p>
       <div class="grid3">
-        ${[["안건 사전 검토","대표협의체 심의 안건을 사전에 검토·조정"],["계획 실행·점검","지역사회보장계획 세부사업 실행과 모니터링"],["분과 연계","실무분과 운영 및 분과 간 협력 조정"]]
+        ${[["안건 사전 검토","대표협의체 심의 안건을 사전에 검토·조정"],["계획 실행·점검","지역사회보장계획 세부사업 실행과 모니터링"],["분과 연계","6개 실무분과 운영 및 분과 간 협력 조정"]]
           .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
       </div>
-      <h3>회의 운영</h3>
-      <ul class="dot"><li>정기회의: 분기 1회</li><li>임시회의: 위원장이 필요하다고 인정할 때</li><li>회의 결과는 <a href="#/news/data" style="color:var(--brand);text-decoration:underline">회의록·자료실</a>에 공개합니다.</li></ul>`,
+      <h3>위원장</h3>
+      <div class="tbl-wrap"><table><tbody><tr><th>실무위원장</th><td class="l">${SITE.workChair} (${SITE.workChairRole})</td></tr><tr><th>임기</th><td class="l">${SITE.term}</td></tr></tbody></table></div>`,
     team:()=>`
-      <p>실무분과는 대상·분야별로 나뉘어 현장의 문제를 구체적으로 논의하고 특화사업을 발굴합니다.</p>
+      <p>실무분과는 대상·기능별로 나뉘어 현장의 문제를 구체적으로 논의하고 해마다 특화사업을 운영합니다. 6개 분과에 위원 66명이 참여하며, 봉화군청·보건소·경찰서·소방서·교육지원청과 노인복지관·정신건강복지센터·가족센터 등 공공·민간 기관 30여 곳이 함께합니다.</p>
       <div class="grid2" style="margin-top:16px">
-        ${[["아동·청소년분과","돌봄 공백 해소, 청소년 문화·교육 지원"],["노인분과","홀몸 어르신 안부 확인, 이동·목욕 지원"],["장애인분과","장애인 이동권·일상생활 지원"],["저소득·주거분과","긴급 생계 지원, 주거환경 개선"],["보건·의료분과","의료 취약계층 연계, 정신건강 지원"],["고용·자활분과","일자리 연계, 자활 기반 마련"]]
-          .map(t=>`<div class="tile"><h4>${icon("people",22)}${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+        ${TEAMS.map(t=>`<div class="tile"><h4>${icon("people",22)}${t[0]}</h4><p>${t[2]}</p></div>`).join("")}
       </div>`,
     town:()=>`
-      <p>읍·면 지역사회보장협의체는 마을 사정을 가장 잘 아는 이장, 부녀회장, 종교·봉사단체 회원 등 주민으로 구성되어, 이웃의 어려움을 가장 먼저 발견하고 돕는 <b>우리 동네 복지 안전망</b>입니다.</p>
+      <p>읍·면 지역사회보장협의체는 마을 사정을 가장 잘 아는 이장, 부녀회장, 봉사단체 회원 등 주민으로 구성되어 이웃의 어려움을 가장 먼저 발견하고 돕는 <b>우리 동네 복지 안전망</b>입니다. ${SITE.towns.length}개 읍·면에서 위원 110명이 활동하며, 읍·면장과 민간위원장이 공동위원장을 맡습니다.</p>
       <h3>주요 활동</h3>
-      <ul class="dot"><li>복지 사각지대 위기가구 발굴 및 행정복지센터 연계</li><li>읍·면 특화사업 기획·운영 (밑반찬 나눔, 안부살피기 등)</li><li>지역 자원 발굴 및 나눔 문화 확산</li></ul>
-      <h3>읍·면 협의체 현황</h3>
-      <div class="tbl-wrap"><table><thead><tr><th>읍·면</th><th>위원 수</th><th>대표 특화사업</th><th>연락처</th></tr></thead><tbody>
-        ${SITE.towns.map((t,i)=>`<tr><td>${t}</td><td>${14 + (i*3)%9}명</td><td class="l">${["행복 밑반찬 나눔","어르신 안부살피기","희망 꾸러미 전달","이불 빨래 서비스","생일상 차려드리기","안전손잡이 설치"][i%6]}</td><td>${t} 행정복지센터</td></tr>`).join("")}
-      </tbody></table></div>
-      <p class="note">※ 읍·면 이름과 수치는 샘플입니다.</p>`
+      <ul class="dot"><li>복지 사각지대 위기가구 발굴 및 행정복지센터 연계</li><li>함께모아 행복금고 지원 대상자 발굴·추천</li><li>읍·면 맞춤형 특화사업 기획·운영</li><li>찾아가는 순회교육 (우리 마을 의제·자원 발굴, 생명지킴이 양성)</li></ul>
+      <h3>읍·면 협의체</h3>
+      <div class="towns">${SITE.towns.map(t=>`<div class="town"><b>${t}</b><span>지역사회보장협의체</span></div>`).join("")}</div>
+      <p class="note">읍·면 협의체 문의는 해당 읍·면 행정복지센터 맞춤형복지팀으로 해 주세요.</p>`
   },
   biz:{
     plan:()=>`
       <h3>지역사회보장계획이란?</h3>
-      <p>지역 주민의 복지 욕구와 지역 자원을 조사하여, 4년마다 수립하는 법정 중·장기 계획입니다. 매년 연차별 시행계획을 세우고 그 결과를 평가합니다.</p>
-      <div class="grid3">
-        ${[["지역사회보장조사","주민 욕구·자원 조사"],["계획 수립","협의체 심의 후 의회 보고"],["시행·평가","연차별 시행 및 결과 평가"]]
+      <p>군민의 복지 욕구와 지역 자원을 조사하여 4년마다 수립하는 법정 중·장기 계획입니다. 매년 연차별 시행계획을 세우고, 그 결과를 점검·평가합니다.</p>
+      <div class="vision"><small>제6기(2027~2030) 비전</small><b>${SITE.vision}</b></div>
+      <h3>사회보장 전략</h3>
+      <div class="grid2">
+        ${[["일상을 지키는 지역밀착 돌봄","로컬푸드 셰어링 트럭, 경로당 식사도우미, 영양채움 간식배달"],["정주로 이어지는 일자리·소득","사회적경제 활성화, 청년 예비창업 육성, 여성 취업교육"],["출생부터 노년까지 건강동행","생애초기 아동 건강·발달 지원, 자살예방, 치매 검사비 지원"],["다함께 누리는 교육·문화","찾아가는 마을 평생교육, 문화·예술 인프라 확충"]]
           .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
       </div>
-      <h3>제6기 계획 (2027~2030) 추진 방향</h3>
-      <ul class="dot"><li>촘촘한 돌봄: 어르신·1인 가구 통합 돌봄 체계 구축</li><li>든든한 안전망: 위기가구 조기 발굴과 신속한 지원</li><li>함께하는 공동체: 주민 참여와 민·관 협력 강화</li><li>건강한 삶: 보건·의료·정신건강 서비스 연계</li></ul>`,
+      <h3>지역발전 전략</h3>
+      <div class="grid2">
+        ${[["사회보장급여 이용·제공 및 수급권자 발굴","찾아가는 맞춤형 복지서비스, 인적 안전망을 통한 사각지대 발굴"],["담당인력 역량강화","사회복지사 역량강화, 읍·면 협의체 교육, 돌봄 종사자 처우 개선"],["지역사회 거버넌스 구축","협의체 기능 확대, 읍·면 맞춤형 특화사업, 민간복지자원 발굴"],["지역사회보장 인프라 확충","순환형 DRT 교통망, 교통약자 이동권, 시니어 라이프케어 허브"]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>계획서 열람</h3>
+      <p>로그인 없이 누구나 열람하실 수 있습니다.</p>
+      <div class="cta-row">${ext(SITE.planFolder,"제6기(2027~2030) 봉화군 지역사회보장계획")}${ext(SITE.yearFolder,"제6기 연차별 시행계획 및 결과")}</div>`,
+    monitor:()=>`
+      <p>계획은 세우는 것보다 지키는 것이 중요합니다. 협의체는 연차별 TF팀과 모니터링단을 꾸려 지역사회보장계획이 계획대로 추진되고 있는지 해마다 점검합니다.</p>
+      <div class="grid3" style="margin-top:16px">
+        ${[["모니터링","세부사업별 추진 실적과 성과목표 달성 여부 점검"],["환류","결과를 세부사업 담당자에게 전달하고 예산·목표 조정 의견 수렴"],["반영","다음 해 연차별 시행계획과 평가에 반영"]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>2026년 추진 현황</h3>
+      <ul class="dot"><li>2026. 9. 18. 연차별 시행계획 1차 모니터링 회의</li><li>2026. 9. 29. 연차별 시행계획 2차 모니터링 회의</li><li>2026. 10. 세부사업 담당자 환류 의견 수렴</li></ul>
+      <div class="cta-row">${ext(SITE.yearFolder,"연차별 시행계획 및 결과 보기")}</div>`,
     special:()=>`
-      <p>협의체가 지역 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
+      <p>협의체가 봉화의 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
       ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>`).join("")}`
   },
   news:{
     notice:(id, q)=> id ? noticeView(id) : noticeList(q),
     data:()=>`
-      <div class="tbl-wrap"><table><thead><tr><th>번호</th><th>제목</th><th>첨부</th><th>등록일</th></tr></thead><tbody>
-        ${[["2026년 제3차 실무협의체 회의록","2026-10-15"],["2026년 제1차 대표협의체 회의록","2026-07-10"],["2026년 지역사회보장 연차별 시행계획","2026-02-27"],["2025년 지역사회보장 시행결과 보고서","2026-02-10"],["협의체 운영 규정 (개정)","2025-12-19"]]
-          .map((r,i,a)=>`<tr><td>${a.length-i}</td><td class="l">${r[0]}</td><td>${icon("doc",18)}</td><td>${r[1]}</td></tr>`).join("")}
+      <div class="tbl-wrap"><table><thead><tr><th style="width:60px">번호</th><th>자료명</th><th style="width:110px">열람</th></tr></thead><tbody>
+        <tr><td>2</td><td class="l">제6기(2027~2030) 봉화군 지역사회보장계획</td><td><a href="${SITE.planFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
+        <tr><td>1</td><td class="l">제6기 연차별 시행계획 및 결과</td><td><a href="${SITE.yearFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
       </tbody></table></div>
-      <p class="note">파일을 올릴 때는 개인정보(위원 연락처, 대상자 정보 등)가 들어가지 않았는지 꼭 확인해 주세요.</p>`,
-    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>
-      <p class="note" style="margin-top:20px">※ 사진 자리입니다. 실제 활동 사진으로 바꿔 주세요. 사진 속 대상자 얼굴은 동의 없이 공개하지 않도록 주의해 주세요.</p>`
+      <p class="note">자료는 협의체 구글 드라이브 공개 폴더로 연결되며, 로그인 없이 볼 수 있습니다.</p>`,
+    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`
   },
   join:{
     report:()=>`
       <div class="note" style="background:var(--accent-soft);color:#7a4517"><b>긴급한 상황이라면 지금 바로 전화해 주세요.</b><br>보건복지상담센터 <b>129</b> (24시간) · 생명이 위급하면 <b>112 / 119</b></div>
-      <p>주변에 생활이 어렵거나 도움이 필요한 이웃이 있다면 알려 주세요. 담당 공무원과 읍·면 협의체 위원이 직접 찾아가 상황을 확인하고 필요한 지원을 연결합니다. <b>알려주신 분의 정보는 철저히 비밀로 보호됩니다.</b></p>
+      <p>주변에 생활이 어렵거나 도움이 필요한 이웃이 있다면 알려 주세요. 읍·면 행정복지센터 담당 공무원과 읍·면 협의체 위원이 직접 찾아가 상황을 확인하고 필요한 지원을 연결합니다. <b>알려주신 분의 정보는 철저히 비밀로 보호됩니다.</b></p>
       <form class="form" id="reportForm" style="margin-top:20px">
         <div class="row"><label for="rf1">도움이 필요한 분 거주지</label><div class="f"><select id="rf1" required><option value="">읍·면 선택</option>${SITE.towns.map(t=>`<option>${t}</option>`).join("")}</select></div></div>
         <div class="row"><label for="rf2">상세 위치</label><div class="f"><input type="text" id="rf2" placeholder="예: ○○리 마을회관 근처 (아는 만큼만)"></div></div>
@@ -670,22 +756,22 @@ const P = {
         <div style="text-align:center"><button class="btn g" type="submit">알리기</button></div>
       </form>`,
     donate:()=>`
-      <p>여러분의 나눔은 협의체를 통해 도움이 꼭 필요한 이웃에게 전달됩니다.</p>
+      <p>여러분의 나눔은 협의체를 통해 도움이 꼭 필요한 봉화의 이웃에게 전달됩니다.</p>
       <div class="grid3" style="margin-top:16px">
-        ${[["gift","정기·일시 후원","성금은 연합 모금을 통해 긴급 생계·의료비로 쓰입니다."],["people","재능 나눔","도배, 집수리, 이미용, 법률 상담 등 재능으로 함께해 주세요."],["heart","자원봉사","김장·밑반찬 나눔, 안부살피기 활동에 참여할 수 있습니다."]]
+        ${[["gift","함께모아 행복금고","경북사랑의열매와 함께하는 모금으로 긴급생계비·집수리 등 위기가구를 지원합니다."],["people","재능 나눔","도배, 집수리, 이미용, 상담 등 가진 재능으로 함께해 주세요."],["heart","자원봉사","영양죽 나눔, 과일 꾸러미 전달, 안부 살피기 활동에 참여할 수 있습니다."]]
           .map(t=>`<div class="tile"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></div>`).join("")}
       </div>
       <h3 style="margin-top:30px">참여 방법</h3>
-      <ul class="dot"><li>전화 문의: ${SITE.tel} (주민복지과)</li><li>방문 접수: 가까운 읍·면 행정복지센터</li><li>자원봉사 신청: <a href="https://www.1365.go.kr" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:underline">1365 자원봉사포털</a></li></ul>`,
+      <ul class="dot"><li>전화 문의: ${SITE.tel} (협의체 사무국)</li><li>방문 접수: ${SITE.place} 3층 사무국 또는 가까운 읍·면 행정복지센터</li><li>자원봉사 신청: <a href="https://www.1365.go.kr" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:underline">1365 자원봉사포털</a></li></ul>`,
     services:()=>`
       <p>받을 수 있는 복지서비스를 쉽게 찾아보세요.</p>
       <div class="grid2" style="margin-top:16px">
-        ${[["복지로","내게 맞는 복지서비스 찾기·온라인 신청","https://www.bokjiro.go.kr"],["보건복지상담센터 129","복지 제도 안내와 긴급 상담 (24시간)","tel:129"],["정부24","각종 민원 신청과 증명서 발급","https://www.gov.kr"],["워크넷","일자리 정보와 취업 지원","https://www.work24.go.kr"]]
+        ${[["복지로","내게 맞는 복지서비스 찾기·온라인 신청","https://www.bokjiro.go.kr"],["보건복지상담센터 129","복지 제도 안내와 긴급 상담 (24시간)","tel:129"],["봉화군청","군 복지 시책과 각종 신청 안내","https://www.bonghwa.go.kr"],["정부24","각종 민원 신청과 증명서 발급","https://www.gov.kr"]]
           .map(t=>`<a class="tile" href="${t[2]}" target="_blank" rel="noopener"><h4>${icon("search",22)}${t[0]}</h4><p>${t[1]}</p></a>`).join("")}
       </div>
       <h3 style="margin-top:30px">대상별 주요 서비스</h3>
       <div class="tbl-wrap"><table><thead><tr><th>대상</th><th class="l">주요 서비스</th></tr></thead><tbody>
-        <tr><td>어르신</td><td class="l">기초연금, 노인맞춤돌봄서비스, 장기요양보험</td></tr>
+        <tr><td>어르신</td><td class="l">기초연금, 노인맞춤돌봄서비스, 장기요양보험, 통합돌봄</td></tr>
         <tr><td>아동·청소년</td><td class="l">아동수당, 드림스타트, 지역아동센터</td></tr>
         <tr><td>장애인</td><td class="l">장애인연금, 활동지원서비스, 보조기기 지원</td></tr>
         <tr><td>저소득층</td><td class="l">기초생활보장, 긴급복지지원, 자활사업</td></tr>
@@ -696,8 +782,7 @@ const P = {
       <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계</p>
       <h3>2. 처리 항목</h3><p>대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)</p>
       <h3>3. 보유 기간</h3><p>처리 완료 후 지체 없이 파기</p>
-      <h3>4. 개인정보 보호책임자</h3><p>${SITE.region}청 주민복지과장 · ${SITE.tel}</p>
-      <p class="note">※ 실제 운영 전 기관의 개인정보 담당자 검토를 받아 내용을 확정해 주세요.</p>`,
+      <h3>4. 개인정보 보호 담당</h3><p>${SITE.name} 사무국 · ${SITE.tel} · ${SITE.email}</p>`,
     email:()=>`<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반하면 「정보통신망법」에 따라 처벌받을 수 있습니다.</p>`
   }
 };
@@ -710,18 +795,36 @@ function noticeList(q=""){
       <span class="cnt">전체 <b>${rows.length}</b>건</span>
       <form class="search" id="nSearch" role="search"><input type="search" placeholder="제목 검색" value="${esc(q)}" aria-label="검색어"><button>검색</button></form>
     </div>
-    <div class="tbl-wrap"><table><thead><tr><th style="width:70px">번호</th><th style="width:80px">분류</th><th>제목</th><th style="width:110px">등록일</th><th style="width:70px">조회</th></tr></thead><tbody>
-      ${rows.map(n=>`<tr><td>${n.id}</td><td><span class="badge">${n.cat}</span></td><td class="l"><a href="#/news/notice/${n.id}">${esc(n.title)}</a>${isNew(n.date)?' <span class="badge new">NEW</span>':""}</td><td>${n.date}</td><td>${n.views}</td></tr>`).join("") || `<tr><td colspan="5">검색 결과가 없습니다.</td></tr>`}
+    <div class="tbl-wrap"><table><thead><tr><th style="width:70px">번호</th><th style="width:80px">분류</th><th>제목</th><th style="width:110px">등록일</th></tr></thead><tbody>
+      ${rows.map(n=>`<tr><td>${n.id}</td><td><span class="badge">${n.cat}</span></td><td class="l"><a href="#/news/notice/${n.id}">${esc(n.title)}</a>${isNew(n.date)?' <span class="badge new">NEW</span>':""}</td><td>${n.date}</td></tr>`).join("") || `<tr><td colspan="4">검색 결과가 없습니다.</td></tr>`}
     </tbody></table></div>`;
 }
 function noticeView(id){
   const n = NOTICES.find(x => x.id == id);
   if (!n) return `<p>게시글을 찾을 수 없습니다.</p>`;
   return `
-    <div class="view-head"><h3>${esc(n.title)}</h3><div class="meta"><span>분류 ${n.cat}</span><span>작성자 사무국</span><span>등록일 ${n.date}</span><span>조회 ${n.views}</span></div></div>
-    <div class="view-body">${esc(n.body)}${n.body.trim().endsWith("팀")?" "+SITE.tel:""}</div>
-    <div class="attach">첨부파일 없음</div>
+    <div class="view-head"><h3>${esc(n.title)}</h3><div class="meta"><span>분류 ${n.cat}</span><span>작성자 사무국</span><span>등록일 ${n.date}</span></div></div>
+    <div class="view-body">${esc(n.body)}</div>
     <div class="view-foot"><a class="btn g" href="#/news/notice">목록</a></div>`;
+}
+
+/* 네이버 지도: SITE.naverMapKey가 있으면 페이지 안에 지도를 띄웁니다 */
+function initMap(){
+  const el = $("#nmap");
+  if (!el || !SITE.naverMapKey) return;
+  const draw = () => naver.maps.Service.geocode({ query: SITE.roadAddr }, (status, res) => {
+    const a = status === naver.maps.Service.Status.OK && res.v2.addresses[0];
+    if (!a) return;
+    const pos = new naver.maps.LatLng(+a.y, +a.x);
+    el.innerHTML = ""; el.classList.add("live");
+    const map = new naver.maps.Map(el, { center: pos, zoom: 17 });
+    const mk = new naver.maps.Marker({ position: pos, map });
+    new naver.maps.InfoWindow({ content: `<div style="padding:8px 12px;font-size:13px"><b>${SITE.name}</b><br>${SITE.place} 3층</div>` }).open(map, mk);
+  });
+  if (window.naver && naver.maps && naver.maps.Service) return draw();
+  const s = document.createElement("script");
+  s.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${encodeURIComponent(SITE.naverMapKey)}&submodules=geocoder`;
+  s.onload = draw; document.head.appendChild(s);
 }
 
 /* ---------------- 라우터 ---------------- */
@@ -759,8 +862,9 @@ function bindSub(){
   const r = $("#reportForm");
   if (r) r.onsubmit = e => {
     e.preventDefault();
-    alert("현재는 시범 화면이라 온라인 접수가 아직 연결되지 않았습니다.\n\n보건복지상담센터 129 또는 " + SITE.tel + "(주민복지과)로 전화해 주시면 바로 확인해 드립니다.");
+    alert("온라인 접수는 준비 중입니다.\n\n가까운 읍·면 행정복지센터 또는 보건복지상담센터 129(24시간)로 전화해 주시면 바로 확인해 드립니다.");
   };
+  initMap();
 }
 
 fill(); buildMenu(); render();

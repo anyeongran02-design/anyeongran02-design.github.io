@@ -24,15 +24,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
 <style>
 :root{
-  --brand:#1f7a5c; --brand-dark:#155a43; --brand-soft:#e6f2ec;
-  --accent:#ef8a2b; --accent-soft:#fdf0e3;
-  --bg:#f6f7f4; --surface:#ffffff; --line:#e2e6e0;
-  --text:#1c2520; --muted:#5d6a63;
-  --radius:14px; --shadow:0 6px 24px rgba(20,40,30,.08);
+  --brand:#2a74c5; --brand-dark:#1b4f8a; --brand-soft:#e8f1fb;
+  --accent:#e5484d; --accent-soft:#fdecee;
+  --green:#2f9e55; --green-soft:#e6f5ea;
+  --bg:#fbfaf7; --surface:#ffffff; --line:#ebe8e1;
+  --text:#1f2421; --muted:#5b6360;
+  --radius:18px; --shadow:0 8px 28px rgba(40,30,20,.08);
   --max:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
+html{font-size:17px;scroll-behavior:smooth}
 body{font-family:"Pretendard",-apple-system,"Malgun Gothic",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;word-break:keep-all;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
@@ -297,6 +298,74 @@ footer .copy{margin-top:10px;color:#7f8c86}
   .search input{width:140px}
   .stats b{font-size:1.7rem}
 }
+/* ===== B안: 로고 색 따뜻한 마을 ===== */
+.util{background:#2b2f2d;color:#d9dcda}
+header.site{border-bottom:0;box-shadow:0 1px 0 var(--line)}
+.report-btn{background:var(--accent)}
+.hero2{background:linear-gradient(180deg,#fff 0%,#fff 70%,var(--bg) 100%);padding:44px 0 70px;overflow:hidden}
+.hero2-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:44px;align-items:center}
+.dots3{display:flex;gap:6px;margin-bottom:16px}
+.dots3 i{width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.dots3 i:nth-child(2){background:var(--green)}.dots3 i:nth-child(3){background:var(--brand)}
+.tag2{display:inline-block;background:var(--green-soft);color:#1f6b39;font-weight:700;font-size:.82rem;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.hero2 h1{font-size:clamp(1.85rem,3.6vw,2.7rem);line-height:1.3;letter-spacing:-.035em;font-weight:800;color:var(--text)}
+.hero2 h1 em{font-style:normal;color:var(--accent)}
+.hero2 p{margin-top:16px;color:var(--muted);font-size:1.02rem;max-width:520px}
+.hero2 .cta{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.btn.r{background:var(--accent);color:#fff}
+.btn.line{border:1.5px solid var(--line);background:#fff;color:var(--text)}
+.btn.g{background:var(--brand)}
+.slider{position:relative;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:#eee;box-shadow:var(--shadow)}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transform:translateY(40px) scale(.94);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1.15);pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide figcaption{position:absolute;left:16px;right:16px;bottom:58px;background:rgba(255,255,255,.94);border-radius:14px;padding:10px 14px;transform:translateY(24px);opacity:0;transition:all .6s .35s ease}
+.slide.on figcaption{transform:none;opacity:1}
+.slide figcaption b{display:block;font-size:.95rem}
+.slide figcaption span{font-size:.8rem;color:var(--muted)}
+.sl-ctl{position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between;align-items:center}
+.sl-dots{display:flex;gap:6px}
+.sl-dots button{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.65);transition:width .3s}
+.sl-dots button.on{width:26px;background:#fff}
+.sl-pause{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;font-size:.7rem}
+.quick{margin-top:-30px}
+.quick ul{border-radius:24px}
+.quick li:nth-child(3n+1) .ic{background:var(--accent-soft);color:var(--accent)}
+.quick li:nth-child(3n+2) .ic{background:var(--green-soft);color:var(--green)}
+.quick li:nth-child(3n) .ic{background:var(--brand-soft);color:var(--brand)}
+.sos{background:#fff6ee;border-color:#f8dcc4}
+.sos .tel b{color:var(--accent)}
+.stats{background:#fff;color:var(--text);border:1px solid var(--line)}
+.stats div{border-color:var(--line)}
+.stats div:nth-child(1) b{color:var(--accent)}.stats div:nth-child(2) b{color:var(--green)}.stats div:nth-child(3) b{color:var(--brand)}.stats div:nth-child(4) b{color:#d98a0b}
+.stats span{opacity:1;color:var(--muted)}
+.gal .ph{background:#eee}
+.gal .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal a:hover .ph img{transform:scale(1.05)}
+.sub-hero{background:linear-gradient(120deg,var(--accent-soft),#fff7e8 50%,var(--green-soft));color:var(--text)}
+.sub-hero .crumb{color:var(--muted);opacity:1}
+.lnb h2{background:var(--accent)}
+.content h3{border-left-color:var(--accent)}
+.num{background:var(--accent)}
+.badge{background:var(--brand-soft);color:var(--brand-dark)}
+.vision{background:linear-gradient(120deg,var(--accent),#f08a4b)}
+.vision-card{background:linear-gradient(160deg,var(--accent-soft),#fff4e3)}
+.vision-card p{color:#8a2a2e}
+.org .box{background:var(--brand)}
+.org .box.lt{background:var(--green-soft);color:#1f6b39}
+.org .box.ac{background:var(--accent)}
+.org .vline{background:#d6d2c8}
+footer.site{background:#2b2f2d}
+@media (prefers-reduced-motion:reduce){.slide,.slide figcaption{transition:none}}
+@media (max-width:960px){
+  .hero2{padding:26px 0 60px}
+  .hero2-in{grid-template-columns:minmax(0,1fr);gap:24px}
+  .slider{order:-1;border-radius:22px}
+}
+@media (max-width:600px){
+  .slide figcaption{bottom:52px;padding:8px 12px}
+  .slide figcaption b{font-size:.85rem}
+}
 </style>
 </head>
 <body>
@@ -416,15 +485,24 @@ const NOTICES = [
    body:"제11기 봉화군지역사회보장협의체가 새롭게 출범하였습니다.\n\n○ 임기: 2026. 7. 11. ~ 2028. 7. 10.\n○ 대표협의체 공동위원장: 최기영(봉화군수), 조석현(사회복지법인 하눌 대표이사)\n○ 실무협의체 위원장: 손현정(봉화군정신건강복지센터 팀장)\n○ 구성: 대표협의체 17명, 실무협의체 16명, 6개 실무분과 66명\n\n앞으로 2년간 봉화군의 복지 문제를 함께 논의하고 해결해 나가겠습니다."}
 ];
 
+const HERO = [
+  {img:"hero-vitamin", title:"비타민 톡톡! 제철과일 꾸러미 나눔", date:"2026. 7. 28."},
+  {img:"hero-hearing", title:"제6기 지역사회보장계획 중간보고회·주민공청회", date:"2026. 8. 27."},
+  {img:"hero-mou", title:"민간단체 나눔 업무협약식", date:"2026. 10. 28."},
+  {img:"hero-family", title:"가족돌봄분과 「알록달록 권리놀이터」", date:"2026. 10. 16."},
+  {img:"hero-town", title:"2차 읍·면 지역사회보장협의체 교육 및 간담회", date:"2026. 7. 22."},
+  {img:"hero-life", title:"생명사랑분과 생명존중 캠페인", date:"2026. 3. 24."}
+];
+
 const GALLERY = [
-  {title:"노인분과 「행복을 담음, 인생을 빚음」", date:"2026-11-04", hue:28},
-  {title:"민간단체 업무협약식", date:"2026-10-28", hue:200},
-  {title:"장애인분과 「우리 같이 가까이」", date:"2026-10-16", hue:150},
-  {title:"가족돌봄분과 「알록달록 권리놀이터」", date:"2026-10-16", hue:330},
-  {title:"울릉군협의체 벤치마킹 간담회", date:"2026-10-13", hue:210},
-  {title:"제6기 계획 중간보고회·주민공청회", date:"2026-08-27", hue:100},
-  {title:"비타민 톡톡! 과일 꾸러미 전달", date:"2026-07-28", hue:45},
-  {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", hue:170}
+  {title:"장애인분과 「우리 같이 가까이」", date:"2026-10-16", img:"g-disability"},
+  {title:"가족돌봄분과 「알록달록 권리놀이터」", date:"2026-10-16", img:"g-family"},
+  {title:"비타민 톡톡! 과일 꾸러미", date:"2026-10-06", img:"g-vitamin"},
+  {title:"협의체 위원 힐링 프로그램", date:"2026-10-29", img:"g-healing"},
+  {title:"제6기 계획 주민공청회", date:"2026-08-27", img:"g-hearing"},
+  {title:"제6기 지역사회보장계획(안) 자료집", date:"2026-08-27", img:"g-plan"},
+  {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", img:"g-town"},
+  {title:"생명사랑분과 생명존중 캠페인", date:"2026-03-24", img:"g-life"}
 ];
 
 const PROJECTS = [
@@ -481,6 +559,7 @@ const ICONS = {
   photo:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/>'
 };
 const icon = (n, s=26) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
+const gimg = g => `<div class="ph"><img src="assets/photos/${g.img}.jpg" alt="${g.title}" loading="lazy"></div>`;
 const ph = (hue, ic="photo", label="") => `<div class="ph" style="background:linear-gradient(140deg,hsl(${hue} 55% 88%),hsl(${hue} 45% 74%));color:hsl(${hue} 45% 32%)"><div style="text-align:center">${icon(ic,40)}${label?`<div style="font-size:.8rem;margin-top:6px">${label}</div>`:""}</div></div>`;
 
 /* 메뉴 생성 */
@@ -497,9 +576,9 @@ mnav.addEventListener("click", e => { if (e.target === mnav || e.target.closest(
 document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
 
 /* 글자 크기 */
-let fs = 16;
+let fs = 17;
 document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
-  const d = +b.dataset.fs; fs = d === 0 ? 16 : Math.min(20, Math.max(14, fs + d));
+  const d = +b.dataset.fs; fs = d === 0 ? 17 : Math.min(22, Math.max(15, fs + d));
   document.documentElement.style.fontSize = fs + "px";
 });
 
@@ -507,33 +586,29 @@ document.querySelectorAll("[data-fs]").forEach(b => b.onclick = () => {
 const homeItem = x => `<li><a href="#/news/notice/${x.id}"><span class="t"><span class="badge ${isNew(x.date)?"new":""}">${isNew(x.date)?"NEW":x.cat}</span>${esc(x.title)}</span><span class="d">${x.date.slice(5).replace("-",".")}</span></a></li>`;
 function home(){
   return `
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <span class="tag">제6기 봉화군 지역사회보장계획 비전</span>
-        <h1>사람이 모이는 봉화,<br><em>함께 돌보며 더욱 행복한 봉화</em></h1>
+  <section class="hero2">
+    <div class="wrap hero2-in">
+      <div class="hero2-text">
+        <div class="dots3" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="tag2">제6기 봉화군 지역사회보장계획 비전</span>
+        <h1>사람이 모이는 봉화,<br><em>함께 돌보며</em> 더욱 행복한 봉화</h1>
         <p>민·관이 함께 이웃을 살피고 필요한 도움을 잇습니다. 대표·실무협의체와 6개 실무분과, 10개 읍·면 협의체의 위원 209명이 봉화의 복지 안전망이 되겠습니다.</p>
         <div class="cta">
-          <a class="btn w" href="#/about/greeting">협의체 소개</a>
-          <a class="btn o" href="#/biz/plan">지역사회보장계획 보기</a>
+          <a class="btn r" href="#/about/greeting">협의체 소개</a>
+          <a class="btn line" href="#/biz/plan">지역사회보장계획 보기</a>
         </div>
       </div>
-      <svg class="hero-art" viewBox="0 0 400 300" aria-hidden="true">
-        <circle cx="200" cy="150" r="130" fill="rgba(255,255,255,.12)"/>
-        <circle cx="200" cy="150" r="92" fill="rgba(255,255,255,.12)"/>
-        <path d="M40 250 L130 150 L180 200 L250 120 L360 250z" fill="rgba(255,255,255,.18)"/>
-        <g fill="#fff">
-          <circle cx="140" cy="128" r="20"/><path d="M104 232c0-28 16-50 36-50s36 22 36 50z"/>
-          <circle cx="262" cy="128" r="20"/><path d="M226 232c0-28 16-50 36-50s36 22 36 50z"/>
-          <circle cx="201" cy="160" r="15" fill="#ffe2b8"/><path d="M174 234c0-22 12-40 27-40s27 18 27 40z" fill="#ffe2b8"/>
-        </g>
-        <path d="M200 98c-7-6-17-4-17 5 0 8 17 18 17 18s17-10 17-18c0-9-10-11-17-5z" fill="#ef8a2b"/>
-      </svg>
+      <div class="slider" id="slider" aria-roledescription="carousel" aria-label="협의체 대표 사진">
+        ${HERO.map((h,i)=>`<figure class="slide${i===0?" on":""}" aria-hidden="${i!==0}"><img src="assets/photos/${h.img}.jpg" alt="${h.title}" ${i?'loading="lazy"':''}><figcaption><b>${h.title}</b><span>${h.date}</span></figcaption></figure>`).join("")}
+        <div class="sl-ctl">
+          <div class="sl-dots">${HERO.map((h,i)=>`<button type="button" class="${i===0?"on":""}" data-i="${i}" aria-label="${i+1}번째 사진: ${h.title}"></button>`).join("")}</div>
+          <button type="button" class="sl-pause" id="slPause" aria-label="자동 넘김 멈추기">❚❚</button>
+        </div>
+      </div>
     </div>
-    <svg class="hero-wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C360 60 1080 0 1440 30 L1440 50 L0 50z" fill="#f6f7f4"/></svg>
   </section>
 
-  <nav class="quick wrap" aria-label="바로가기">
+<nav class="quick wrap" aria-label="바로가기">
     <ul>
       <li><a href="#/join/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
       <li><a href="#/join/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
@@ -578,7 +653,7 @@ function home(){
 
   <section class="blk wrap">
     <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
-    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
+    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
   </section>
 
   <section class="blk wrap">
@@ -740,7 +815,7 @@ const P = {
         <tr><td>1</td><td class="l">제6기 연차별 시행계획 및 결과</td><td><a href="${SITE.yearFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
       </tbody></table></div>
       <p class="note">자료는 협의체 구글 드라이브 공개 폴더로 연결되며, 로그인 없이 볼 수 있습니다.</p>`,
-    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${ph(g.hue)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`
+    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`
   },
   join:{
     report:()=>`
@@ -829,6 +904,7 @@ function initMap(){
 
 /* ---------------- 라우터 ---------------- */
 function render(){
+  clearInterval(slTimer);
   const [, k, s, id] = (location.hash.replace(/^#/, "") || "/").split("/").map(decodeURIComponent);
   const main = $("#main");
   document.querySelectorAll(".gnb>li").forEach(li => li.classList.toggle("on", li.dataset.k === k));
@@ -849,7 +925,23 @@ function render(){
   window.scrollTo({top:0, behavior:"instant"});
 }
 let sessionQ = "";
+let slTimer = null;
+function bindSlider(){
+  const root = $("#slider"); if (!root) return;
+  const slides = [...root.querySelectorAll(".slide")], dots = [...root.querySelectorAll(".sl-dots button")], pb = $("#slPause");
+  let i = 0, paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const go = n => { i = (n + slides.length) % slides.length;
+    slides.forEach((s,k)=>{ s.classList.toggle("on", k===i); s.setAttribute("aria-hidden", k!==i); });
+    dots.forEach((d,k)=>d.classList.toggle("on", k===i)); };
+  const start = () => { clearInterval(slTimer); if (!paused) slTimer = setInterval(()=>go(i+1), 4500); };
+  dots.forEach(d => d.onclick = () => { go(+d.dataset.i); start(); });
+  pb.onclick = () => { paused = !paused; pb.textContent = paused ? "▶" : "❚❚"; pb.setAttribute("aria-label", paused ? "자동 넘김 시작" : "자동 넘김 멈추기"); start(); };
+  if (paused) { pb.textContent = "▶"; pb.setAttribute("aria-label","자동 넘김 시작"); }
+  root.onmouseenter = () => clearInterval(slTimer); root.onmouseleave = start;
+  start();
+}
 function bindHome(){
+  bindSlider();
   document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
     document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
     const cat = b.dataset.cat;

@@ -273,40 +273,41 @@ tbody tr:hover{background:#fafbf9}
 .bn-photo img{position:relative;height:100%;width:auto;max-width:100%;object-fit:contain}
 .bn-photo figcaption{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);background:rgba(255,255,255,.94);padding:10px 22px;border-radius:999px;display:flex;gap:12px;align-items:baseline;box-shadow:0 6px 20px rgba(0,0,0,.15);white-space:nowrap;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis}
 .bn-photo figcaption span{color:var(--muted);font-size:.88rem}
-.yt-bn{background:linear-gradient(180deg,#bfe6ff 0%,#e8f6ff 70%,#f7fbff 100%);color:var(--text)}
-.yt-bg i{position:absolute;border-radius:50%;opacity:.55}
-.yt-bg .c1{width:120px;height:120px;background:#ffd2d4;left:6%;top:12%}
-.yt-bg .c2{width:70px;height:70px;background:#cdeccf;right:9%;top:10%}
-.yt-bg .c3{width:46px;height:46px;background:#c9dcf6;left:38%;bottom:28%}
-.yt-bg .hill{width:140%;height:240px;left:-20%;bottom:-170px;background:#9fdc8e;opacity:.9;border-radius:50%}
-.yt-ph{position:absolute;border-radius:50%;background:var(--img) center 35%/cover;border:6px solid #fff;box-shadow:0 10px 26px rgba(30,60,90,.22);animation:ytFloat 6s ease-in-out infinite}
-.yt-ph.p1{width:190px;height:190px;left:5%;top:14%}
-.yt-ph.p2{width:120px;height:120px;left:15%;bottom:64px;animation-delay:-2s}
-.yt-ph.p3{width:170px;height:170px;right:5%;top:12%;animation-delay:-1s}
-.yt-ph.p4{width:124px;height:124px;right:16%;bottom:70px;animation-delay:-3s}
-.yt-bub{position:absolute;background:#fff;color:#333;font-weight:800;font-size:.85rem;padding:6px 12px;border-radius:14px;box-shadow:0 6px 16px rgba(30,60,90,.16);animation:ytFloat 5s ease-in-out infinite}
-.yt-bub::after{content:"";position:absolute;bottom:-6px;left:18px;border-top:7px solid #fff;border-left:6px solid transparent;border-right:6px solid transparent}
-.yt-bub.b1{left:calc(5% + 150px);top:10%;color:#e5242a}
-.yt-bub.b2{left:3%;bottom:40px;color:#e5242a;animation-delay:-1.5s}
-.yt-bub.b3{right:calc(5% + 130px);top:9%;color:var(--green);animation-delay:-2.5s}
-@keyframes ytFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media (prefers-reduced-motion:reduce){.yt-ph,.yt-bub{animation:none}}
-@media (max-width:1280px){ .yt-ph.p2,.yt-ph.p4{display:none} .yt-ph.p1{width:150px;height:150px;left:2%} .yt-ph.p3{width:140px;height:140px;right:2%} .yt-bub.b2{display:none} .yt-bub.b1{left:calc(2% + 110px)} .yt-bub.b3{right:calc(2% + 100px)} }
-@media (max-width:1100px){ .yt-ph,.yt-bub{display:none} }
-.yt-in{position:relative;z-index:1;height:100%;max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:56px}
-.yt-txt{display:flex;flex-direction:column;gap:14px}
-.yt-logo{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:2.1rem;letter-spacing:-.5px;color:#222}
-.yt-play{width:58px;height:40px;border-radius:11px;background:#ff0000;position:relative}
-.yt-play::after{content:"";position:absolute;left:23px;top:11px;border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
-.yt-title{font-size:2.2rem;line-height:1.25;font-weight:900;letter-spacing:-1px}
-.yt-title em{font-style:normal;color:#e5242a}
-.yt-desc{color:#415058;font-size:1.05rem}
-.yt-chips{display:flex;gap:8px;flex-wrap:wrap}
-.yt-chips span{padding:6px 14px;border-radius:999px;color:#fff;font-weight:800;font-size:.92rem}
-.yt-chips .r{background:#e5242a}.yt-chips .b{background:var(--brand)}.yt-chips .g{background:var(--green)}
-.yt-qr{background:#fff;border-radius:22px;padding:16px 16px 12px;box-shadow:0 12px 30px rgba(30,60,90,.18);text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;transform:rotate(2deg)}
-.yt-qr img{width:180px;height:180px}
-.yt-qr small{font-weight:700;font-size:.86rem;line-height:1.4}
+.yt-bn{background:#5cc8f5;color:#1f2421}
+.yt-sky{position:absolute;inset:0;overflow:hidden}
+.yt-sky .hill{position:absolute;border-radius:50%}
+.yt-sky .h1{width:120%;height:330px;left:-10%;bottom:-150px;background:#8fe05a}
+.yt-sky .h2{width:70%;height:260px;right:-12%;bottom:-140px;background:#76d148}
+.yt-sky .dec{position:absolute;animation:ytFloat 5s ease-in-out infinite}
+.yt-sky .d1{width:46px;left:20%;top:16%}
+.yt-sky .d2{width:34px;right:20%;top:20%;animation-delay:-2s}
+.yt-sky .d3{width:26px;left:33%;top:8%;animation-delay:-1s}
+.yt-sky .bf1{width:40px;left:12%;top:9%;animation-delay:-3s}
+.yt-sky .bf2{width:34px;right:12%;top:36%;animation-delay:-1.5s}
+.yt-sky .bal{width:34px;right:27%;top:6%;animation-duration:6s}
+.yt-il{position:absolute;bottom:0;width:min(34vw,470px);height:auto;z-index:1;pointer-events:none}
+.yt-il.l{left:max(0px,calc(50% - 760px))}
+.yt-il.r{right:max(0px,calc(50% - 760px))}
+.yt-in{position:relative;z-index:2;height:100%;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;align-items:center;padding-top:26px;gap:10px;text-align:center}
+.yt-top{display:flex;flex-direction:column;align-items:center;gap:6px}
+.yt-logo{display:inline-flex;align-items:center;gap:12px;font-weight:900;font-size:3rem;letter-spacing:-1.5px;color:#222;line-height:1}
+.yt-play{width:78px;height:54px;border-radius:15px;background:#ff0000;position:relative;box-shadow:0 4px 0 rgba(0,0,0,.12)}
+.yt-play::after{content:"";position:absolute;left:31px;top:15px;border-left:21px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+.yt-title{font-size:2.1rem;font-weight:900;letter-spacing:-1px;color:#1a1a1a;text-shadow:0 2px 0 rgba(255,255,255,.55)}
+.yt-qr{background:#fff;padding:10px;border-radius:10px;box-shadow:0 10px 24px rgba(0,60,90,.22);margin-top:6px}
+.yt-qr img{width:170px;height:170px;display:block}
+.yt-scan{font-weight:900;font-size:1.2rem;color:#1a1a1a;background:rgba(255,255,255,.7);padding:4px 14px;border-radius:999px}
+.yt-say{position:absolute;display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:900;font-size:2rem;letter-spacing:-1px;color:#1a1a1a;animation:ytFloat 5s ease-in-out infinite}
+.yt-say i{font-style:normal;font-size:.78rem;letter-spacing:0;font-weight:800;color:#fff;background:#e5242a;padding:4px 14px;border-radius:999px;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.yt-say.sub{left:22%;top:44%;color:#fff;background:#e5242a;padding:8px 18px 10px;border-radius:16px;box-shadow:0 5px 0 rgba(0,0,0,.12)}
+.yt-say.sub::after{content:"";position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);border-top:13px solid #e5242a;border-left:10px solid transparent;border-right:10px solid transparent}
+.yt-say.sub i{background:#fff;color:#e5242a}
+.yt-say.like{right:27%;bottom:30%;animation-delay:-2s}
+.yt-say.noti{right:16%;top:10%;font-size:1.5rem;animation-delay:-1s}
+@keyframes ytFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media (prefers-reduced-motion:reduce){.yt-sky .dec,.yt-say{animation:none}}
+@media (max-width:1280px){ .yt-say.sub{left:16%} .yt-say.like{right:16%} .yt-say.noti{right:9%} }
+@media (max-width:1100px){ .yt-say{font-size:1.5rem} .yt-say.noti{display:none} .yt-il{width:36vw} }
 .bn-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.85);color:var(--brand-dark);font-size:2rem;line-height:1;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.15);z-index:2}
 .bn-arrow:hover{background:#fff}
 .bn-arrow.prev{left:18px}.bn-arrow.next{right:18px}
@@ -336,13 +337,15 @@ tbody tr:hover{background:#fafbf9}
 @media (max-width:1000px){ .home3{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} .home3 .card:first-child{grid-column:1/-1} }
 @media (max-width:860px){
   .bn-slide{height:400px}
-  .yt-in{flex-direction:column;gap:16px;justify-content:center;text-align:center}
-  .yt-txt{align-items:center;gap:8px}
-  .yt-logo{font-size:1.5rem}.yt-play{width:44px;height:30px;border-radius:8px}.yt-play::after{left:17px;top:8px;border-left-width:12px;border-top-width:7px;border-bottom-width:7px}
-  .yt-title{font-size:1.45rem}
-  .yt-desc{font-size:.9rem}
-  .yt-qr{flex-direction:row;padding:10px 14px;transform:none;gap:12px}
-  .yt-qr img{width:96px;height:96px}
+  .yt-in{padding-top:18px;gap:8px}
+  .yt-logo{font-size:1.9rem;gap:8px}.yt-play{width:50px;height:35px;border-radius:10px}.yt-play::after{left:20px;top:10px;border-left-width:13px;border-top-width:8px;border-bottom-width:8px}
+  .yt-title{font-size:1.15rem}
+  .yt-qr{padding:7px}.yt-qr img{width:118px;height:118px}
+  .yt-scan{font-size:.85rem}
+  .yt-say{display:none}
+  .yt-il{width:47vw}
+  .yt-sky .h1{height:200px;bottom:-110px}.yt-sky .h2{display:none}
+  .yt-sky .d1,.yt-sky .d2{width:24px}.yt-sky .d1{left:6%}.yt-sky .d2{right:6%}.yt-sky .bal{right:8%;width:24px}.yt-sky .bf2,.yt-sky .d3{display:none}.yt-sky .bf1{left:8%;width:26px;top:28%}
   .bn-arrow{width:36px;height:36px;font-size:1.5rem}.bn-arrow.prev{left:8px}.bn-arrow.next{right:8px}
   .bn-photo figcaption{bottom:46px;padding:8px 16px;font-size:.9rem}
 }
@@ -787,21 +790,26 @@ function home(){
   <section class="bn" id="bn" aria-roledescription="carousel" aria-label="협의체 알림 배너">
     <div class="bn-track" id="bnTrack">
       <a class="bn-slide yt-bn" href="${YT_SUB}" target="_blank" rel="noopener" aria-label="봉화군지역사회보장협의체 유튜브 채널 구독하기">
-        <span class="yt-bg" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="hill"></i>
-          <span class="yt-ph p1" style="--img:url('assets/photos/hero-vitamin.jpg')"></span>
-          <span class="yt-ph p2" style="--img:url('assets/photos/hero-town.jpg')"></span>
-          <span class="yt-ph p3" style="--img:url('assets/photos/hero-hearing.jpg')"></span>
-          <span class="yt-ph p4" style="--img:url('assets/photos/hero-mou.jpg')"></span>
-          <span class="yt-bub b1">♥ 좋아요</span><span class="yt-bub b2">▶ 구독</span><span class="yt-bub b3">🔔 알림설정</span>
+        <span class="yt-sky" aria-hidden="true"><i class="hill h1"></i><i class="hill h2"></i>
+          <svg class="dec d1" viewBox="0 0 40 36"><path d="M20 34C8 25 2 18 2 11 2 5 7 2 11 2c4 0 7 3 9 6 2-3 5-6 9-6 4 0 9 3 9 9 0 7-6 14-18 23z" fill="#ff7b9a"/></svg>
+          <svg class="dec d2" viewBox="0 0 40 36"><path d="M20 34C8 25 2 18 2 11 2 5 7 2 11 2c4 0 7 3 9 6 2-3 5-6 9-6 4 0 9 3 9 9 0 7-6 14-18 23z" fill="#ff9eb3"/></svg>
+          <svg class="dec d3" viewBox="0 0 40 36"><path d="M20 34C8 25 2 18 2 11 2 5 7 2 11 2c4 0 7 3 9 6 2-3 5-6 9-6 4 0 9 3 9 9 0 7-6 14-18 23z" fill="#fff" opacity=".9"/></svg>
+          <svg class="dec bf1" viewBox="0 0 40 30"><ellipse cx="12" cy="11" rx="10" ry="8" fill="#ffd23f"/><ellipse cx="28" cy="11" rx="10" ry="8" fill="#ffd23f"/><ellipse cx="13" cy="22" rx="7" ry="6" fill="#ffb703"/><ellipse cx="27" cy="22" rx="7" ry="6" fill="#ffb703"/><rect x="18.5" y="6" width="3" height="20" rx="1.5" fill="#5a3a2a"/></svg>
+          <svg class="dec bf2" viewBox="0 0 40 30"><ellipse cx="12" cy="11" rx="10" ry="8" fill="#ffd23f"/><ellipse cx="28" cy="11" rx="10" ry="8" fill="#ffd23f"/><ellipse cx="13" cy="22" rx="7" ry="6" fill="#ffb703"/><ellipse cx="27" cy="22" rx="7" ry="6" fill="#ffb703"/><rect x="18.5" y="6" width="3" height="20" rx="1.5" fill="#5a3a2a"/></svg>
+          <svg class="dec bal" viewBox="0 0 40 90"><ellipse cx="20" cy="20" rx="17" ry="19" fill="#ff8fa3"/><ellipse cx="14" cy="13" rx="4" ry="6" fill="#fff" opacity=".6"/><path d="M20 39 Q16 60 22 88" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
         </span>
+        <img class="yt-il l" src="assets/illust-left.svg" alt="" aria-hidden="true">
+        <img class="yt-il r" src="assets/illust-right.svg" alt="" aria-hidden="true">
         <span class="yt-in">
-          <span class="yt-txt">
+          <span class="yt-top">
             <span class="yt-logo"><span class="yt-play" aria-hidden="true"></span>YouTube</span>
-            <b class="yt-title">봉화군지역사회보장협의체<br><em>유튜브 채널</em></b>
-            <span class="yt-desc">협의체 소식과 활동을 영상으로 가장 먼저 만나 보세요</span>
-            <span class="yt-chips"><span class="r">구독</span><span class="b">좋아요</span><span class="g">알림설정</span></span>
+            <b class="yt-title">봉화군지역사회보장협의체 유튜브 채널</b>
           </span>
-          <span class="yt-qr"><img src="assets/yt-qr.png" alt="유튜브 채널 QR코드" width="180" height="180"><small>QR코드를 스캔하거나<br>클릭해 보세요</small></span>
+          <span class="yt-qr"><img src="assets/yt-qr.png" alt="유튜브 채널 QR코드" width="170" height="170"></span>
+          <span class="yt-scan">QR코드를 스캔하거나 클릭해 보세요</span>
+          <span class="yt-say sub" aria-hidden="true">구독<i>▶ Subscribe</i></span>
+          <span class="yt-say like" aria-hidden="true">좋아요<i>👍 Like</i></span>
+          <span class="yt-say noti" aria-hidden="true">알림설정<i>🔔 Notification</i></span>
         </span>
       </a>
       ${HERO.map(h=>`<figure class="bn-slide bn-photo" aria-hidden="true" style="--bg:url('assets/photos/${h.img}.jpg')"><img src="assets/photos/${h.img}.jpg" alt="${h.title}" loading="lazy"><figcaption><b>${h.title}</b><span>${h.date}</span></figcaption></figure>`).join("")}

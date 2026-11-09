@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" role="img" aria-label="함께 걷는 할머니, 할아버지와 풍선을 든 아이">
+  <!-- 나무 -->
+  <rect x="44" y="168" width="16" height="118" rx="7" fill="#8a5a3c"/>
+  <circle cx="52" cy="140" r="50" fill="#79c472"/>
+  <circle cx="22" cy="170" r="32" fill="#66b660"/>
+  <circle cx="86" cy="168" r="34" fill="#8fd387"/>
+  <circle cx="40" cy="122" r="8" fill="#f28b8f"/><circle cx="74" cy="150" r="7" fill="#f28b8f"/><circle cx="30" cy="168" r="6" fill="#fff2a8"/>
+
+  <!-- 할머니 -->
+  <g>
+    <rect x="139" y="234" width="10" height="50" rx="5" fill="#6b5a99"/>
+    <rect x="153" y="234" width="10" height="50" rx="5" fill="#6b5a99"/>
+    <ellipse cx="143" cy="285" rx="9" ry="5" fill="#4a3f6b"/><ellipse cx="159" cy="285" rx="9" ry="5" fill="#4a3f6b"/>
+    <path d="M124 240 L134 172 Q151 160 168 172 L178 240 Z" fill="#e5484d"/>
+    <path d="M140 172 Q151 186 162 172" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M136 182 L126 220" stroke="#f6c9a8" stroke-width="9" stroke-linecap="round"/>
+    <path d="M166 182 L186 214" stroke="#f6c9a8" stroke-width="9" stroke-linecap="round"/>
+    <path d="M190 212 L194 284" stroke="#8a5a3c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M184 214 Q186 204 194 206" fill="none" stroke="#8a5a3c" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="151" cy="146" r="19" fill="#f6c9a8"/>
+    <circle cx="151" cy="121" r="8" fill="#cfd0d8"/>
+    <path d="M132 146 Q132 125 151 125 Q170 125 170 146 Q162 135 151 135 Q140 135 132 146Z" fill="#cfd0d8"/>
+    <circle cx="144" cy="148" r="2" fill="#333"/><circle cx="158" cy="148" r="2" fill="#333"/>
+    <path d="M145 155 Q151 160 157 155" fill="none" stroke="#c0544f" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="139" cy="154" r="3.5" fill="#f5a3a6" opacity=".7"/><circle cx="163" cy="154" r="3.5" fill="#f5a3a6" opacity=".7"/>
+  </g>
+
+  <!-- 할아버지 -->
+  <g>
+    <rect x="214" y="234" width="11" height="50" rx="5" fill="#34507a"/>
+    <rect x="229" y="234" width="11" height="50" rx="5" fill="#34507a"/>
+    <ellipse cx="219" cy="285" rx="10" ry="5" fill="#2a2f3a"/><ellipse cx="235" cy="285" rx="10" ry="5" fill="#2a2f3a"/>
+    <rect x="205" y="166" width="44" height="76" rx="17" fill="#2f9e55"/>
+    <path d="M227 168 L227 240" stroke="#258a49" stroke-width="2"/>
+    <path d="M209 180 L200 216" stroke="#f1c19c" stroke-width="9" stroke-linecap="round"/>
+    <path d="M246 178 L264 146" stroke="#f1c19c" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="266" cy="141" r="7" fill="#f1c19c"/>
+    <circle cx="227" cy="143" r="20" fill="#f1c19c"/>
+    <path d="M207 142 Q208 131 214 128 M247 142 Q246 131 240 128" fill="none" stroke="#d9d9df" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="220" cy="145" r="6" fill="none" stroke="#555" stroke-width="2"/><circle cx="234" cy="145" r="6" fill="none" stroke="#555" stroke-width="2"/>
+    <path d="M226 145 L228 145" stroke="#555" stroke-width="2"/>
+    <path d="M220 154 Q227 160 234 154" fill="none" stroke="#a4554f" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- 아이와 풍선 -->
+  <g>
+    <path d="M340 222 Q352 170 352 112" fill="none" stroke="#888" stroke-width="1.6"/>
+    <path d="M352 112 C340 100 326 88 326 74 C326 62 336 56 345 58 C349 59 352 62 352 66 C352 62 355 59 359 58 C368 56 378 62 378 74 C378 88 364 100 352 112Z" fill="#e5484d"/>
+    <path d="M334 68 Q336 63 341 62" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <rect x="311" y="246" width="9" height="38" rx="4" fill="#2a74c5"/>
+    <rect x="323" y="246" width="9" height="38" rx="4" fill="#2a74c5"/>
+    <ellipse cx="315" cy="285" rx="8" ry="4.5" fill="#e5484d"/><ellipse cx="328" cy="285" rx="8" ry="4.5" fill="#e5484d"/>
+    <rect x="304" y="200" width="36" height="52" rx="14" fill="#ffcf4a"/>
+    <path d="M336 212 L342 224" stroke="#f6c9a8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M308 212 L300 236" stroke="#f6c9a8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="322" cy="184" r="16" fill="#f6c9a8"/>
+    <path d="M306 182 Q306 166 322 166 Q338 166 338 182 Q332 174 322 174 Q312 174 306 182Z" fill="#3b2a22"/>
+    <circle cx="316" cy="186" r="1.8" fill="#333"/><circle cx="328" cy="186" r="1.8" fill="#333"/>
+    <path d="M317 192 Q322 196 327 192" fill="none" stroke="#c0544f" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- 풀 -->
+  <path d="M100 288 q4 -12 8 0 q4 -10 8 0 M270 288 q4 -12 8 0 q4 -10 8 0 M380 288 q4 -12 8 0 q4 -10 8 0" fill="none" stroke="#5fae58" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="118" cy="282" r="4" fill="#fff"/><circle cx="118" cy="282" r="1.6" fill="#ffcf4a"/>
+  <circle cx="400" cy="284" r="4" fill="#f28b8f"/>
+</svg>

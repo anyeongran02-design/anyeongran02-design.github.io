@@ -279,6 +279,20 @@ tbody tr:hover{background:#fafbf9}
 .yt-bg .c2{width:70px;height:70px;background:#cdeccf;right:9%;top:10%}
 .yt-bg .c3{width:46px;height:46px;background:#c9dcf6;left:38%;bottom:28%}
 .yt-bg .hill{width:140%;height:240px;left:-20%;bottom:-170px;background:#9fdc8e;opacity:.9;border-radius:50%}
+.yt-ph{position:absolute;border-radius:50%;background:var(--img) center 35%/cover;border:6px solid #fff;box-shadow:0 10px 26px rgba(30,60,90,.22);animation:ytFloat 6s ease-in-out infinite}
+.yt-ph.p1{width:190px;height:190px;left:5%;top:14%}
+.yt-ph.p2{width:120px;height:120px;left:15%;bottom:64px;animation-delay:-2s}
+.yt-ph.p3{width:170px;height:170px;right:5%;top:12%;animation-delay:-1s}
+.yt-ph.p4{width:124px;height:124px;right:16%;bottom:70px;animation-delay:-3s}
+.yt-bub{position:absolute;background:#fff;color:#333;font-weight:800;font-size:.85rem;padding:6px 12px;border-radius:14px;box-shadow:0 6px 16px rgba(30,60,90,.16);animation:ytFloat 5s ease-in-out infinite}
+.yt-bub::after{content:"";position:absolute;bottom:-6px;left:18px;border-top:7px solid #fff;border-left:6px solid transparent;border-right:6px solid transparent}
+.yt-bub.b1{left:calc(5% + 150px);top:10%;color:#e5242a}
+.yt-bub.b2{left:3%;bottom:40px;color:#e5242a;animation-delay:-1.5s}
+.yt-bub.b3{right:calc(5% + 130px);top:9%;color:var(--green);animation-delay:-2.5s}
+@keyframes ytFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.yt-ph,.yt-bub{animation:none}}
+@media (max-width:1280px){ .yt-ph.p2,.yt-ph.p4{display:none} .yt-ph.p1{width:150px;height:150px;left:2%} .yt-ph.p3{width:140px;height:140px;right:2%} .yt-bub.b2{display:none} .yt-bub.b1{left:calc(2% + 110px)} .yt-bub.b3{right:calc(2% + 100px)} }
+@media (max-width:1100px){ .yt-ph,.yt-bub{display:none} }
 .yt-in{position:relative;z-index:1;height:100%;max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:56px}
 .yt-txt{display:flex;flex-direction:column;gap:14px}
 .yt-logo{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:2.1rem;letter-spacing:-.5px;color:#222}
@@ -773,7 +787,13 @@ function home(){
   <section class="bn" id="bn" aria-roledescription="carousel" aria-label="협의체 알림 배너">
     <div class="bn-track" id="bnTrack">
       <a class="bn-slide yt-bn" href="${YT_SUB}" target="_blank" rel="noopener" aria-label="봉화군지역사회보장협의체 유튜브 채널 구독하기">
-        <span class="yt-bg" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="hill"></i></span>
+        <span class="yt-bg" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="hill"></i>
+          <span class="yt-ph p1" style="--img:url('assets/photos/hero-vitamin.jpg')"></span>
+          <span class="yt-ph p2" style="--img:url('assets/photos/hero-town.jpg')"></span>
+          <span class="yt-ph p3" style="--img:url('assets/photos/hero-hearing.jpg')"></span>
+          <span class="yt-ph p4" style="--img:url('assets/photos/hero-mou.jpg')"></span>
+          <span class="yt-bub b1">♥ 좋아요</span><span class="yt-bub b2">▶ 구독</span><span class="yt-bub b3">🔔 알림설정</span>
+        </span>
         <span class="yt-in">
           <span class="yt-txt">
             <span class="yt-logo"><span class="yt-play" aria-hidden="true"></span>YouTube</span>

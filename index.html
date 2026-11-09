@@ -100,7 +100,7 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .quick .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand)}
 .quick li:nth-child(1) .ic{background:var(--accent-soft);color:var(--accent)}
 
-section.blk{padding:64px 0 0}
+section.blk{padding-top:64px}
 .blk-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px;gap:12px}
 .blk-head h2{font-size:1.6rem;letter-spacing:-.03em}
 .blk-head p{color:var(--muted);font-size:.95rem}
@@ -263,6 +263,25 @@ tbody tr:hover{background:#fafbf9}
 }
 .opinion-cta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;padding:20px 22px;border-radius:var(--radius);background:var(--green-soft)}
 .opinion-cta p{margin:4px 0 0;color:var(--muted);font-size:.92rem}
+.btn.yt{background:#ff0000;color:#fff;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn.yt:hover{filter:brightness(.93)}
+.yt-main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:start}
+.yt-main .video{margin-top:0}
+.yt-side{display:grid;gap:14px}
+.yt-sub{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 18px;border-radius:var(--radius);background:#fff1f1;border:1px solid #ffd9d9}
+.yt-sub b{font-size:1.02rem}
+.yt-sub p{margin:2px 0 0;color:var(--muted);font-size:.88rem}
+.yt-card{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 12px;align-items:start}
+.yt-card .yt-th{grid-row:span 2;position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.yt-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.yt-card:hover img{transform:scale(1.05)}
+.yt-card i{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.75);color:#fff;font-style:normal;font-size:.75rem;padding:1px 6px;border-radius:4px}
+.yt-card b{font-size:.95rem;line-height:1.4}
+.yt-card .d{font-size:.82rem;color:var(--muted)}
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;margin-top:20px}
+.yt-grid .yt-card{grid-template-columns:1fr}
+.yt-grid .yt-card .yt-th{grid-row:auto}
+@media (max-width:860px){ .yt-main{grid-template-columns:1fr} .yt-card{grid-template-columns:130px minmax(0,1fr)} }
 .form-embed iframe{width:100%;height:1100px;border:0;margin-top:20px}
 .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;margin-top:8px}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -415,7 +434,7 @@ footer.site{background:#2b2f2d}
       <img src="assets/logo.jpg" alt="봉화군지역사회보장협의체" width="267" height="42">
     </a>
     <ul class="gnb" id="gnb"></ul>
-    <a class="report-btn d" href="#/join/report">위기가구 알리기</a>
+    <a class="report-btn d" href="#/news/report">위기가구 알리기</a>
     <button class="menu-btn" type="button" aria-label="전체 메뉴 열기" id="menuOpen"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -583,15 +602,36 @@ const MINUTES = [
   {body:"team", team:"생명사랑분과", date:"2026-03-10", title:"생명사랑분과 제1차 회의", agenda:"", file:""},
   ...["10","09","08","07","06","05","04","03","02","01"].map(m => ({body:"ops", date:`2026-${m}`, title:`2026년 ${+m}월 운영회의`, agenda:"", file:""}))
 ];
-const MIN_TABS = [["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"]];
-
-const MENU = [
-  {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","설립목적·기능"],["history","연혁"],["org","조직도"],["map","찾아오시는 길"]]},
-  {k:"group", t:"협의체 구성", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["town","읍·면 협의체"]]},
-  {k:"biz", t:"주요사업", items:[["plan","지역사회보장계획"],["opinion","주민 의견"],["monitor","모니터링·평가"],["special","특화사업"]]},
-  {k:"news", t:"알림마당", items:[["notice","공지사항"],["minutes","회의록"],["data","자료실"],["gallery","활동 갤러리"]]},
-  {k:"join", t:"참여마당", items:[["report","위기가구 알리기"],["donate","후원·나눔 참여"],["services","복지서비스 안내"]]}
+/* 유튜브 영상: 맨 위에 새 영상을 추가하세요. id는 영상 주소(youtu.be/ 뒤의 글자)입니다. 첫 번째 영상이 첫 화면에 크게 나옵니다. */
+const VIDEOS = [
+  {id:"czD1sM_S2zU", title:"봉화군 제6기 지역사회보장계획 안내영상", date:"2026-11-09", len:"4:58"},
+  {id:"zcihZoF9DNE", title:"2026년 시원한 여름나기 지원사업", date:"2026-08-05", len:"1:07"},
+  {id:"jujFvH8DQX4", title:"봉화군 지역사회보장계획 수립을 위한 FGI 추진", date:"2026-07-07", len:"1:01"}
 ];
+
+/* 메뉴 (포항시지역사회보장협의체 홈페이지 구성 참고) */
+const MENU = [
+  {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","개요·주요기능"],["history","연혁"],["org","조직기구"],["map","찾아오시는 길"]]},
+  {k:"group", t:"협의체 운영", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"],["town","읍·면 협의체"],["director","사회복지법인 외부이사"]]},
+  {k:"biz", t:"지역사회복지", items:[["plan","지역사회보장계획"],["opinion","주민 의견"],["monitor","모니터링·평가"],["special","특화사업"],["services","복지서비스 안내"]]},
+  {k:"lib", t:"복지자료실", items:[["data","자료실"],["gallery","활동 갤러리"],["video","활동영상"]]},
+  {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["report","위기가구 알리기"],["donate","후원·나눔 참여"]]}
+];
+/* 회의자료 표: 각 협의체 페이지 아래에 붙습니다 */
+const fmtD = d => d.split("-").map(Number).join(". ") + ".";
+const minutesBlock = (body, team) => {
+  const rows = MINUTES.filter(m => m.body === body && (!team || m.team === team));
+  const chips = body === "team" ? `<div class="chips"><a href="#/group/team" class="${!team?"on":""}">전체 분과</a>${TEAMS.map(t=>t[0]).map(n=>`<a href="#/group/team/${encodeURIComponent(n)}" class="${team===n?"on":""}">${n}</a>`).join("")}</div>` : "";
+  return `
+    <h3 id="minutes">회의자료</h3>
+    ${chips}
+    <div class="tbl-wrap"><table class="min-tbl"><thead><tr><th style="width:56px">번호</th><th>회의명</th><th style="width:120px">일자</th><th style="width:110px">회의록</th></tr></thead><tbody>
+      ${rows.map((m,i)=>`<tr><td>${rows.length-i}</td><td class="l"><b>${m.title}</b>${m.team && !team ? ` <span class="badge">${m.team}</span>` : ""}${m.agenda?`<br><small>안건: ${m.agenda}</small>`:""}</td><td>${fmtD(m.date)}</td><td>${m.file?`<a href="${m.file}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">PDF 보기 ↗</a>`:`<span style="color:var(--muted)">준비 중</span>`}</td></tr>`).join("") || `<tr><td colspan="4" style="padding:28px;color:var(--muted)">등록된 회의자료가 없습니다.</td></tr>`}
+    </tbody></table></div>
+    <p class="note">회의록은 개인정보(대상자 이름·사례, 위원 연락처)를 가린 뒤 게시합니다. 원문 열람은 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>`;
+};
+const ytThumb = (v, big) => `<a class="yt-card" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"><span class="yt-th"><img src="https://i.ytimg.com/vi/${v.id}/${big?"hqdefault":"mqdefault"}.jpg" alt="" loading="lazy"><i>${v.len}</i></span><b>${v.title}</b><span class="d">${fmtD(v.date)}</span></a>`;
+const YT_SUB = "https://www.youtube.com/@bonghwa_csc?sub_confirmation=1";
 /* ========================================================= */
 
 const $ = (s, el=document) => el.querySelector(s);
@@ -612,6 +652,7 @@ const ICONS = {
   drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
   gift:'<rect x="4" y="9" width="16" height="11" rx="1"/><path d="M12 9v11M4 13h16M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/>',
   sos:'<circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>',
+  play:'<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/>',
   search:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
   people:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/>',
   doc:'<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/>',
@@ -625,7 +666,7 @@ const ph = (hue, ic="photo", label="") => `<div class="ph" style="background:lin
 /* 메뉴 생성 */
 function buildMenu(){
   $("#gnb").innerHTML = MENU.map(m => `<li data-k="${m.k}"><a href="#/${m.k}/${m.items[0][0]}">${m.t}</a><div class="sub">${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}</div></li>`).join("");
-  $("#mnavList").innerHTML = `<a href="#/join/report" class="report-btn" style="display:block;text-align:center;border:0;margin-top:10px">위기가구 알리기</a>` +
+  $("#mnavList").innerHTML = `<a href="#/news/report" class="report-btn" style="display:block;text-align:center;border:0;margin-top:10px">위기가구 알리기</a>` +
     MENU.map(m => `<h3>${m.t}</h3>${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}`).join("");
 }
 const mnav = $("#mnav");
@@ -670,11 +711,11 @@ function home(){
 
 <nav class="quick wrap" aria-label="바로가기">
     <ul>
-      <li><a href="#/join/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
-      <li><a href="#/join/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
+      <li><a href="#/news/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
+      <li><a href="#/biz/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
       <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
       <li><a href="#/biz/plan"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
-      <li><a href="#/join/donate"><span class="ic">${icon("gift")}</span>후원·나눔</a></li>
+      <li><a href="#/news/donate"><span class="ic">${icon("gift")}</span>후원·나눔</a></li>
       <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
     </ul>
   </nav>
@@ -693,7 +734,18 @@ function home(){
         <p>연락이 끊긴 어르신, 끼니를 거르는 아이, 갑작스러운 실직으로 어려운 이웃… 작은 관심이 한 사람을 살립니다.</p>
         <div class="tel">${icon("sos",30)}<div><b>129</b><br><span>보건복지상담센터 (24시간)</span></div></div>
         <div class="tel">${icon("people",30)}<div><b style="font-size:1.1rem">가까운 읍·면 행정복지센터</b><br><span>${SITE.towns.length}개 읍·면 맞춤형복지팀</span></div></div>
-        <a class="btn g" href="#/join/report" style="margin-top:6px">온라인으로 알리기 →</a>
+        <a class="btn g" href="#/news/report" style="margin-top:6px">온라인으로 알리기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk wrap yt-home">
+    <div class="blk-head"><div><h2>협의체 유튜브</h2><p>영상으로 만나는 봉화군지역사회보장협의체</p></div><a class="more" href="#/lib/video">전체 영상 +</a></div>
+    <div class="yt-main">
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${VIDEOS[0].id}" title="${VIDEOS[0].title}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="yt-side">
+        <div class="yt-sub"><div><b>구독하고 소식 받기</b><p>새 영상이 올라오면 알려 드려요.</p></div><a class="btn yt" href="${YT_SUB}" target="_blank" rel="noopener">${icon("play",18)} 구독하기</a></div>
+        ${VIDEOS.slice(1,3).map(v=>ytThumb(v)).join("")}
       </div>
     </div>
   </section>
@@ -712,8 +764,8 @@ function home(){
   </section>
 
   <section class="blk wrap">
-    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
-    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
+    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/lib/gallery">더보기 +</a></div>
+    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/lib/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
   </section>
 
   <section class="blk wrap">
@@ -813,7 +865,8 @@ const P = {
         <tr><td>공동위원장(민간)</td><td>${SITE.chairPrivate}</td><td>${SITE.chairPrivateRole}</td></tr>
         <tr><td>부위원장</td><td>${SITE.viceChair}</td><td>대표협의체</td></tr>
       </tbody></table></div>
-      <p class="note">임기: ${SITE.term} · 위원 17명</p>`,
+      <p class="note">임기: ${SITE.term} · 위원 17명</p>
+      ${minutesBlock("rep")}`,
     work:()=>`
       <h3>구성 및 역할</h3>
       <p>실무협의체는 관내 사회보장 분야 실무 전문가 16명으로 구성되며, 대표협의체에 올라갈 안건을 미리 검토·조정하고 지역사회보장계획 세부사업의 실행을 점검합니다.</p>
@@ -822,12 +875,32 @@ const P = {
           .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
       </div>
       <h3>위원장</h3>
-      <div class="tbl-wrap"><table><tbody><tr><th>실무위원장</th><td class="l">${SITE.workChair} (${SITE.workChairRole})</td></tr><tr><th>임기</th><td class="l">${SITE.term}</td></tr></tbody></table></div>`,
-    team:()=>`
+      <div class="tbl-wrap"><table><tbody><tr><th>실무위원장</th><td class="l">${SITE.workChair} (${SITE.workChairRole})</td></tr><tr><th>임기</th><td class="l">${SITE.term}</td></tr></tbody></table></div>
+      ${minutesBlock("work")}`,
+    team:(id)=>`
       <p>실무분과는 대상·기능별로 나뉘어 현장의 문제를 구체적으로 논의하고 해마다 특화사업을 운영합니다. 6개 분과에 위원 66명이 참여하며, 봉화군청·보건소·경찰서·소방서·교육지원청과 노인복지관·정신건강복지센터·가족센터 등 공공·민간 기관 30여 곳이 함께합니다.</p>
       <div class="grid2" style="margin-top:16px">
-        ${TEAMS.map(t=>`<div class="tile"><h4>${icon("people",22)}${t[0]}</h4><p>${t[2]}</p></div>`).join("")}
-      </div>`,
+        ${TEAMS.map(t=>`<a class="tile" href="#/group/team/${encodeURIComponent(t[0])}"><h4>${icon("people",22)}${t[0]}</h4><p>${t[2]}</p></a>`).join("")}
+      </div>
+      ${minutesBlock("team", TEAMS.some(t=>t[0]===id) ? id : "")}`,
+    ops:()=>`
+      <p>운영회의는 공동위원장, 실무위원장, 분과장 등 협의체 임원이 매월 모여 협의체 사업 추진 상황을 점검하고, 대표·실무협의체에 올릴 안건과 주요 일정을 미리 조율하는 회의입니다.</p>
+      <div class="grid3" style="margin-top:16px">
+        ${[["사업 점검","분과별 특화사업과 협의체 사업 추진 상황 공유"],["안건 조율","대표·실무협의체 상정 안건 사전 협의"],["일정 협의","교육·행사·모니터링 등 월간 일정 조정"]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <p class="note">개최: 매월 1회 · 장소: ${SITE.place} 3층 협의체 사무국</p>
+      ${minutesBlock("ops")}`,
+    director:()=>`
+      <h3>외부추천이사 제도</h3>
+      <p>「사회복지사업법」 제18조에 따라 사회복지법인은 이사 정수의 3분의 1 이상을 시·도 사회보장위원회 또는 시·군·구 지역사회보장협의체가 <b>3배수로 추천한 사람</b> 중에서 선임해야 합니다. 법인 운영의 투명성과 공공성을 높이기 위한 제도입니다.</p>
+      <h3>추천 절차</h3>
+      <div class="grid3">
+        ${[["추천 요청","사회복지법인이 협의체에 외부추천이사 후보 추천을 요청합니다."],["후보자 모집","협의체가 공개 모집 공고를 내고 신청서·결격사유 확인 서류를 받습니다."],["심사·추천","자격과 결격사유를 확인한 뒤 3배수로 법인에 추천합니다."]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>후보자 모집</h3>
+      <ul class="dot"><li>모집 공고는 <a href="#/news/notice" style="color:var(--brand);text-decoration:underline">공지사항</a>에 게시합니다.</li><li>사회복지 분야 경험과 전문성을 갖추고, 「사회복지사업법」 제19조의 결격사유에 해당하지 않는 분</li><li>문의: 협의체 사무국 ${SITE.tel}</li></ul>`,
     town:()=>`
       <p>읍·면 지역사회보장협의체는 마을 사정을 가장 잘 아는 이장, 부녀회장, 봉사단체 회원 등 주민으로 구성되어 이웃의 어려움을 가장 먼저 발견하고 돕는 <b>우리 동네 복지 안전망</b>입니다. ${SITE.towns.length}개 읍·면에서 위원 110명이 활동하며, 읍·면장과 민간위원장이 공동위원장을 맡습니다.</p>
       <h3>주요 활동</h3>
@@ -892,21 +965,6 @@ const P = {
   },
   news:{
     notice:(id, q)=> id ? noticeView(id) : noticeList(q),
-    minutes:(id)=>{
-      const [tab, team] = (id || "rep").split(":");
-      const cur = MIN_TABS.some(t => t[0] === tab) ? tab : "rep";
-      const teams = TEAMS.map(t => t[0]);
-      const rows = MINUTES.filter(m => m.body === cur && (!team || m.team === team));
-      const fmtD = d => d.split("-").map(Number).join(". ") + ".";
-      return `
-      <p>협의체 회의 결과를 공개합니다. 회의록은 개인정보(대상자 이름·사례, 위원 연락처)를 가린 뒤 게시합니다.</p>
-      <div class="tabs min-tabs" role="tablist" style="margin-top:18px">${MIN_TABS.map(t=>`<a role="tab" href="#/news/minutes/${t[0]}" aria-selected="${t[0]===cur}">${t[1]}</a>`).join("")}</div>
-      ${cur === "team" ? `<div class="chips"><a href="#/news/minutes/team" class="${!team?"on":""}">전체 분과</a>${teams.map(n=>`<a href="#/news/minutes/team:${encodeURIComponent(n)}" class="${team===n?"on":""}">${n}</a>`).join("")}</div>` : ""}
-      <div class="tbl-wrap"><table class="min-tbl"><thead><tr><th style="width:56px">번호</th><th>회의명</th><th style="width:120px">일자</th><th style="width:110px">회의록</th></tr></thead><tbody>
-        ${rows.map((m,i)=>`<tr><td>${rows.length-i}</td><td class="l"><b>${m.title}</b>${m.team && !team ? ` <span class="badge">${m.team}</span>` : ""}${m.agenda?`<br><small>안건: ${m.agenda}</small>`:""}</td><td>${fmtD(m.date)}</td><td>${m.file?`<a href="${m.file}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">PDF 보기 ↗</a>`:`<span style="color:var(--muted)">준비 중</span>`}</td></tr>`).join("") || `<tr><td colspan="4" style="padding:28px;color:var(--muted)">등록된 회의록이 없습니다.</td></tr>`}
-      </tbody></table></div>
-      <p class="note">회의록 원문 열람을 원하시면 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>`;
-    },
     data:()=>`
       <div class="tbl-wrap"><table><thead><tr><th style="width:60px">번호</th><th>자료명</th><th style="width:110px">열람</th></tr></thead><tbody>
         <tr><td>2</td><td class="l">제6기(2027~2030) 봉화군 지역사회보장계획</td><td><a href="${SITE.planFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
@@ -952,14 +1010,25 @@ const P = {
   },
   info:{
     privacy:()=>`<p>${SITE.name}(이하 ‘협의체’)는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 둡니다.</p>
-      <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계</p>
-      <h3>2. 처리 항목</h3><p>대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)</p>
+      <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계, 주민 의견 확인 및 답변</p>
+      <h3>2. 처리 항목</h3><p>위기가구 알리기: 대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)<br>주민 의견: 사는 곳(읍·면), 의견 내용, 이름·연락처(선택)</p>
       <h3>3. 보유 기간</h3><p>처리 완료 후 지체 없이 파기</p>
       <h3>4. 개인정보 보호 담당</h3><p>${SITE.name} 사무국 · ${SITE.tel} · ${SITE.email}</p>`,
     email:()=>`<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반하면 「정보통신망법」에 따라 처벌받을 수 있습니다.</p>`
   }
 };
 P.info.map = P.about.map;
+/* 메뉴 재구성에 따른 연결 */
+P.news.report = P.join.report;
+P.news.donate = P.join.donate;
+P.biz.services = P.join.services;
+P.lib = {
+  data: P.news.data,
+  gallery: P.news.gallery,
+  video: () => `
+    <div class="yt-sub"><div><b>봉화군지역사회보장협의체 유튜브</b><p>협의체 소식과 활동 영상을 가장 먼저 받아 보세요.</p></div><a class="btn yt" href="${YT_SUB}" target="_blank" rel="noopener">${icon("play",18)} 구독하기</a></div>
+    <div class="yt-grid">${VIDEOS.map(v=>ytThumb(v, true)).join("")}</div>`
+};
 
 function noticeList(q=""){
   const rows = NOTICES.filter(n => !q || n.title.includes(q));

@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://anyeongran02-design.github.io/">
 <meta property="og:image" content="https://anyeongran02-design.github.io/assets/logo.jpg">
 <meta property="og:locale" content="ko_KR">
-<meta name="theme-color" content="#1f7a5c">
+<meta name="theme-color" content="#173f73">
 <link rel="icon" href="assets/logo.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"GovernmentOrganization","name":"봉화군지역사회보장협의체","alternateName":"봉화지사협","url":"https://anyeongran02-design.github.io/","logo":"https://anyeongran02-design.github.io/assets/logo.jpg","telephone":"+82-54-673-6076","email":"bonghwa6076@naver.com","sameAs":["https://www.youtube.com/@bonghwa_csc"],"address":{"@type":"PostalAddress","streetAddress":"내성로5길 13, 봉화군평생학습관 3층","addressLocality":"봉화군 봉화읍","addressRegion":"경상북도","postalCode":"36238","addressCountry":"KR"}}
@@ -494,6 +494,74 @@ footer.site{background:#2b2f2d}
   .slide figcaption{bottom:52px;padding:8px 12px}
   .slide figcaption b{font-size:.85rem}
 }
+/* ===== C안: 정돈된 파랑 한 가지 색 (2026-11-10) ===== */
+:root{--bg:#f5f7fa;--line:#e3e8ef;--text:#1a2230;--muted:#5b6676;--brand:#2a6fc0;--brand-dark:#173f73;--brand-soft:#eaf2fc;--shadow:0 10px 30px rgba(20,40,80,.08);--radius:16px}
+.util{background:var(--brand-dark);color:#cfdcef}
+header.site{box-shadow:0 1px 0 var(--line)}
+.bn{background:var(--brand-dark)}
+.bn-intro{background:radial-gradient(circle at 88% 18%,rgba(255,255,255,.13),transparent 42%),linear-gradient(120deg,#143a6b 0%,#2a6fc0 72%,#3b86d4 100%);color:#fff}
+.bi-in{height:100%;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px;align-items:center;padding:0 72px 20px}
+.bi-tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:5px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.bn-intro h1{font-size:clamp(1.7rem,3.3vw,2.55rem);line-height:1.3;letter-spacing:-.035em;font-weight:800}
+.bn-intro h1 em{font-style:normal;color:#ffd58a}
+.bi-desc{margin-top:14px;opacity:.9;max-width:500px}
+.bn-intro .cta{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.bi-pics{position:relative;height:330px}
+.bi-pics img{position:absolute;object-fit:cover;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.28);border:4px solid rgba(255,255,255,.92)}
+.bi-pics img:nth-child(1){width:60%;height:60%;left:0;top:0}
+.bi-pics img:nth-child(2){width:48%;height:50%;right:0;top:10%}
+.bi-pics img:nth-child(3){width:52%;height:48%;left:24%;bottom:0}
+.quick.qx{margin-top:28px}
+.quick ul{border-radius:20px;box-shadow:0 6px 24px rgba(20,40,80,.07);border:1px solid var(--line)}
+.quick li:nth-child(n) .ic{background:var(--brand-soft);color:var(--brand)}
+.quick li:first-child .ic{background:var(--accent-soft);color:var(--accent)}
+.quick a:hover{background:var(--bg)}
+.blk-head h2{font-size:1.55rem;font-weight:800}
+.more{display:inline-flex;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.85rem;color:var(--muted)}
+.more:hover{color:var(--brand);border-color:var(--brand)}
+.card{border-radius:var(--radius);box-shadow:0 2px 12px rgba(20,40,80,.04)}
+.card .more{padding:4px 12px}
+.sos{background:#fff7f3;border-color:#f6dccd}
+.cal-head button{background:var(--brand-soft);color:var(--brand)}
+.orgband{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px;padding:48px 0}
+.ob-in{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,2fr);gap:36px;align-items:center}
+.ob-in h2{font-size:1.55rem;letter-spacing:-.03em}
+.ob-in .big{font-size:3rem;font-weight:800;color:var(--brand);letter-spacing:-.04em;line-height:1.1;margin:10px 0 8px}
+.ob-in .big small{font-size:1.1rem;margin-left:2px}
+.ob-in p{color:var(--muted);font-size:.93rem}
+.ob-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ob-cards a{border:1px solid var(--line);border-radius:16px;padding:20px 18px;background:var(--bg);transition:transform .15s,border-color .15s,background .15s}
+.ob-cards a:hover{border-color:var(--brand);background:#fff;transform:translateY(-2px)}
+.ob-cards b{display:block;font-size:1.02rem}
+.ob-cards strong{display:block;font-size:1.75rem;color:var(--brand-dark);margin:8px 0 2px;letter-spacing:-.03em;line-height:1.2}
+.ob-cards strong small{font-size:.9rem;font-weight:600;margin-left:2px}
+.ob-cards span{font-size:.85rem;color:var(--muted)}
+.biz a{padding:24px;display:flex;flex-direction:column;gap:10px;border-radius:var(--radius)}
+.biz a:hover{border-color:var(--brand)}
+.bz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.bz-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
+.bz-no{font-weight:800;color:#c7d2e0;font-size:1.3rem;letter-spacing:-.02em}
+.biz h3{margin:0}
+.bz-more{margin-top:auto;padding-top:6px;font-size:.88rem;font-weight:700;color:var(--brand)}
+.gal .ph{border-radius:var(--radius)}
+.partners a{display:flex;justify-content:center;align-items:center;gap:6px;color:var(--text);border-radius:14px}
+.partners a::after{content:"↗";color:var(--muted);font-size:.85rem}
+.sub-hero{background:linear-gradient(120deg,#e6f0fb,#f5f7fa 70%);color:var(--text)}
+.lnb h2{background:var(--brand)}
+.content h3{border-left-color:var(--brand)}
+.num{background:var(--brand)}
+.vision{background:linear-gradient(120deg,var(--brand-dark),var(--brand))}
+.vision-card{background:linear-gradient(160deg,var(--brand-soft),#fff)}
+.vision-card p{color:var(--brand-dark)}
+.org .box.lt{background:var(--brand-soft);color:var(--brand-dark)}
+thead th,.form label{background:#f1f5fa}
+tbody tr:hover{background:#f8fafc}
+footer.site{background:#14243a;color:#b6c2d3}
+footer .copy{color:#7d8aa0}
+@media (max-width:960px){ .ob-in{grid-template-columns:1fr;gap:20px} .ob-cards{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:860px){ .bi-in{grid-template-columns:1fr;text-align:center;justify-items:center;padding:0 52px 40px} .bi-pics{display:none} .bi-desc{margin-inline:auto} .bn-intro .cta{justify-content:center} }
+@media (max-width:600px){ .bi-tag{display:none} .bn-intro h1{font-size:1.5rem} .bi-desc{font-size:.92rem;margin-top:10px} .bn-intro .cta{margin-top:16px} .bn-intro .btn{padding:10px 16px;font-size:.92rem} .bi-in{padding-bottom:48px} }
+@media (max-width:600px){ .ob-cards a{padding:16px 14px} .ob-cards strong{font-size:1.45rem} .ob-in .big{font-size:2.4rem} .orgband{padding:36px 0;margin-top:48px} }
 </style>
 </head>
 <body>
@@ -789,6 +857,17 @@ function home(){
   return `
   <section class="bn" id="bn" aria-roledescription="carousel" aria-label="협의체 알림 배너">
     <div class="bn-track" id="bnTrack">
+      <div class="bn-slide bn-intro">
+        <div class="wrap bi-in">
+          <div class="bi-txt">
+            <span class="bi-tag">민·관이 함께 이웃을 살피는 ${SITE.name}</span>
+            <h1>사람이 모이는 봉화,<br><em>함께 돌보며</em> 더욱 행복한 봉화</h1>
+            <p class="bi-desc">위원 ${SITE.stats[0][1]}명이 함께 복지 사각지대를 찾아 돕고, 봉화군 지역사회보장계획을 세우고 점검합니다.</p>
+            <div class="cta"><a class="btn w" href="#/about/greeting">협의체 소개</a><a class="btn o" href="#/news/report">위기가구 알리기</a></div>
+          </div>
+          <div class="bi-pics" aria-hidden="true"><img src="assets/photos/hero-hearing.jpg" alt=""><img src="assets/photos/hero-vitamin.jpg" alt=""><img src="assets/photos/hero-family.jpg" alt=""></div>
+        </div>
+      </div>
       <a class="bn-slide yt-bn" href="${YT_SUB}" target="_blank" rel="noopener" aria-label="봉화군지역사회보장협의체 유튜브 채널 구독하기">
         <span class="yt-sky" aria-hidden="true"><i class="hill h1"></i><i class="hill h2"></i>
           <svg class="dec d1" viewBox="0 0 40 36"><path d="M20 34C8 25 2 18 2 11 2 5 7 2 11 2c4 0 7 3 9 6 2-3 5-6 9-6 4 0 9 3 9 9 0 7-6 14-18 23z" fill="#ff7b9a"/></svg>
@@ -817,9 +896,22 @@ function home(){
     <button type="button" class="bn-arrow prev" id="bnPrev" aria-label="이전 배너">‹</button>
     <button type="button" class="bn-arrow next" id="bnNext" aria-label="다음 배너">›</button>
     <div class="bn-ctl">
-      <div class="sl-dots" id="bnDots">${["유튜브 채널",...HERO.map(h=>h.title)].map((t,i)=>`<button type="button" class="${i===0?"on":""}" data-i="${i}" aria-label="${i+1}번째 배너: ${t}"></button>`).join("")}</div>
+      <div class="sl-dots" id="bnDots">${["협의체 소개","유튜브 채널",...HERO.map(h=>h.title)].map((t,i)=>`<button type="button" class="${i===0?"on":""}" data-i="${i}" aria-label="${i+1}번째 배너: ${t}"></button>`).join("")}</div>
       <button type="button" class="sl-pause" id="bnPause" aria-label="자동 넘김 멈추기">❚❚</button>
     </div>
+  </section>
+
+  <section class="wrap">
+    <nav class="quick q2 qx" aria-label="바로가기">
+      <ul>
+        <li><a href="#/news/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
+        <li><a href="#/biz/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
+        <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
+        <li><a href="#/biz/plan"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
+        <li><a href="#/biz/opinion"><span class="ic">${icon("heart")}</span>주민 의견</a></li>
+        <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
+      </ul>
+    </nav>
   </section>
 
   <section class="blk wrap" style="padding-top:44px">
@@ -842,18 +934,28 @@ function home(){
     </div>
   </section>
 
-  <section class="blk wrap" style="padding-top:44px">
-    <div class="blk-head"><h2>바로가기</h2></div>
-    <nav class="quick q2" aria-label="바로가기">
-      <ul>
-        <li><a href="#/news/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
-        <li><a href="#/biz/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
-        <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
-        <li><a href="#/biz/plan"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
-        <li><a href="#/biz/opinion"><span class="ic">${icon("heart")}</span>주민 의견</a></li>
-        <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
-      </ul>
-    </nav>
+  <section class="orgband">
+    <div class="wrap ob-in">
+      <div><h2>협의체 구성</h2><div class="big">${SITE.stats[0][1]}<small>명</small></div><p>${SITE.gen} 위원이 대표·실무협의체와 실무분과, 읍·면 협의체에서 함께 활동합니다.</p></div>
+      <div class="ob-cards">
+        <a href="#/group/rep"><b>대표협의체</b><strong>17<small>명</small></strong><span>계획 심의·주요 사항 결정</span></a>
+        <a href="#/group/work"><b>실무협의체</b><strong>16<small>명</small></strong><span>안건 사전 검토·실무 조정</span></a>
+        <a href="#/group/team"><b>실무분과</b><strong>${TEAMS.length}<small>개 분과</small></strong><span>분과위원 66명·특화사업</span></a>
+        <a href="#/group/town"><b>읍·면 협의체</b><strong>${SITE.towns.length}<small>곳</small></strong><span>마을 위기가구 발굴·지원</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
+    <div class="biz">
+      ${PROJECTS.map((p,i)=>`<a href="#/biz/special"><div class="bz-top"><span class="bz-ic">${icon(p.icon,28)}</span><span class="bz-no">0${i+1}</span></div><h3>${p.title}</h3><p>${p.desc}</p><span class="bz-more">자세히 보기 →</span></a>`).join("")}
+    </div>
+  </section>
+
+  <section class="blk wrap">
+    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/lib/gallery">더보기 +</a></div>
+    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/lib/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
   </section>
 
   <section class="blk wrap yt-home">
@@ -865,24 +967,6 @@ function home(){
         ${VIDEOS.slice(1,3).map(v=>ytThumb(v)).join("")}
       </div>
     </div>
-  </section>
-
-  <section class="blk wrap">
-    <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
-    <div class="biz">
-      ${PROJECTS.map(p=>`<a href="#/biz/special"><div class="thumb" style="background:linear-gradient(140deg,hsl(${p.hue} 60% 92%),hsl(${p.hue} 50% 80%));color:hsl(${p.hue} 45% 32%)">${icon(p.icon,46)}</div><div class="body"><h3>${p.title}</h3><p>${p.desc}</p></div></a>`).join("")}
-    </div>
-  </section>
-
-  <section class="blk wrap">
-    <div class="stats">
-      ${SITE.stats.map(s=>`<div><b>${s[1]}<small style="font-size:1rem;font-weight:600"> ${s[2]}</small></b><span>${s[0]}</span></div>`).join("")}
-    </div>
-  </section>
-
-  <section class="blk wrap">
-    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/lib/gallery">더보기 +</a></div>
-    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/lib/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
   </section>
 
   <section class="blk wrap">
@@ -1237,7 +1321,7 @@ function bindBanner(){
   const n = track.children.length, dots = [...document.querySelectorAll("#bnDots button")], pb = $("#bnPause");
   let i = 0, paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const go = k => { i = (k + n) % n; track.style.transform = `translateX(-${i*100}%)`;
-    [...track.children].forEach((s,j) => { s.setAttribute("aria-hidden", j!==i); s.tabIndex = j===i ? 0 : -1; });
+    [...track.children].forEach((s,j) => { s.setAttribute("aria-hidden", j!==i); s.inert = j!==i; });
     dots.forEach((d,j) => d.classList.toggle("on", j===i)); };
   const start = () => { clearInterval(slTimer); if (!paused) slTimer = setInterval(() => go(i+1), 5000); };
   $("#bnPrev").onclick = () => { go(i-1); start(); };

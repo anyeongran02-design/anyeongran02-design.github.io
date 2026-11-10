@@ -896,6 +896,12 @@ function home(){
     </div>
   </section>`;
 }
+const fundForm = () => `
+      <div class="tile" style="margin:12px 0 8px;background:#fffaf5">
+        <h4>${icon("gift",22)}2026년 행복금고 기부 신청서</h4>
+        <p>경북사회복지공동모금회 2026년 양식입니다. 1쪽은 한 번 기부하는 <b>지정기탁신청서(일시)</b>, 2쪽은 매달 기부하는 <b>정기기부(CMS) 신청서</b>입니다.<br>지정내용 칸에 <b>봉화군 ○○읍·면</b>을 꼭 적어 주세요. 작성·제출 방법은 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>
+        <div class="cta-row"><a class="btn g" href="assets/forms/2026-happyfund-form.pdf" download="2026년 함께모아 행복금고 기부신청서.pdf">신청서 내려받기 (PDF)</a><a class="btn line" href="assets/forms/2026-happyfund-form.hwp" download="2026년 함께모아 행복금고 기부신청서.hwp">한글 파일 (HWP)</a></div>
+      </div>`;
 const isNew = d => (Date.now() - new Date(d)) / 864e5 < 7;
 
 const ext = (href, label) => `<a class="btn g" href="${href}" target="_blank" rel="noopener">${label} ↗</a>`;
@@ -1078,7 +1084,7 @@ const P = {
       <div class="cta-row">${ext(SITE.yearFolder,"연차별 시행계획 및 결과 보기")}</div>`,
     special:()=>`
       <p>협의체가 봉화의 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
-      ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>`).join("")}`
+      ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>${p.key==="fund"?fundForm():""}`).join("")}`
   },
   news:{
     notice:(id, q)=> id ? noticeView(id) : noticeList(q),
@@ -1109,6 +1115,7 @@ const P = {
         ${[["gift","함께모아 행복금고","경북사랑의열매와 함께하는 모금으로 긴급생계비·집수리 등 위기가구를 지원합니다."],["people","재능 나눔","도배, 집수리, 이미용, 상담 등 가진 재능으로 함께해 주세요."],["heart","자원봉사","영양죽 나눔, 과일 꾸러미 전달, 안부 살피기 활동에 참여할 수 있습니다."]]
           .map(t=>`<div class="tile"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></div>`).join("")}
       </div>
+      ${fundForm()}
       <h3 style="margin-top:30px">참여 방법</h3>
       <ul class="dot"><li>전화 문의: ${SITE.tel} (협의체 사무국)</li><li>방문 접수: ${SITE.place} 3층 사무국 또는 가까운 읍·면 행정복지센터</li><li>자원봉사 신청: <a href="https://www.1365.go.kr" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:underline">1365 자원봉사포털</a></li></ul>`,
     services:()=>`

@@ -899,7 +899,7 @@ function home(){
 const fundForm = () => `
       <div class="tile" style="margin:12px 0 8px;background:#fffaf5">
         <h4>${icon("gift",22)}2026년 행복금고 기부 신청서</h4>
-        <p>경북사회복지공동모금회 2026년 양식입니다. 1쪽은 한 번 기부하는 <b>지정기탁신청서(일시)</b>, 2쪽은 매달 기부하는 <b>정기기부(CMS) 신청서</b>입니다.<br>지정내용 칸에 <b>봉화군 ○○읍·면</b>을 꼭 적어 주세요. 작성·제출 방법은 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>
+        <p>경북사회복지공동모금회 2026년 양식입니다. 1쪽은 한 번 기부하는 <b>지정기탁신청서(일시)</b>, 2쪽은 매달 기부하는 <b>정기기부(CMS) 신청서</b>입니다.<br>지정내용 칸의 <b>00읍면동</b> 자리에 읍·면 이름을 꼭 적어 주세요. 작성·제출 방법은 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>
         <div class="cta-row"><a class="btn g" href="assets/forms/2026-happyfund-form.pdf" download="2026년 함께모아 행복금고 기부신청서.pdf">신청서 내려받기 (PDF)</a><a class="btn line" href="assets/forms/2026-happyfund-form.hwp" download="2026년 함께모아 행복금고 기부신청서.hwp">한글 파일 (HWP)</a></div>
       </div>`;
 const isNew = d => (Date.now() - new Date(d)) / 864e5 < 7;

@@ -2,7 +2,7 @@
 
 `index.html` 파일 하나로 된 홈페이지입니다. GitHub Pages로 무료 호스팅됩니다.
 
-- 주소: https://anyeongran02-design.github.io/
+- 주소: https://bonghwacsc.or.kr/
 
 ## 내용 고치는 법
 

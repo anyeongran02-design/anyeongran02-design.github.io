@@ -380,6 +380,11 @@ tbody tr:hover{background:#fafbf9}
 .yt-grid .yt-card .yt-th{grid-row:auto}
 @media (max-width:860px){ .yt-main{grid-template-columns:1fr} .yt-card{grid-template-columns:130px minmax(0,1fr)} }
 .form-embed iframe{width:100%;height:1100px;border:0;margin-top:20px}
+.dash-embed{margin-top:10px;border:1px solid var(--line,#dde3ea);border-radius:var(--radius);overflow:hidden;background:#f7f8fa}
+.dash-embed iframe{display:block;width:100%;height:900px;border:0}
+@media(max-width:700px){.dash-embed iframe{height:720px}}
+.kccwp-link{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;padding:16px 18px;border:1px solid var(--line,#dde3ea);border-left:4px solid var(--brand);border-radius:var(--radius);background:#fff}
+.kccwp-link b{font-size:1.05em}.kccwp-link p{margin:4px 0 0;color:var(--muted,#5b6876)}
 .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;margin-top:8px}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video-cap{font-size:.9rem;color:var(--muted);margin-top:8px}
@@ -669,6 +674,10 @@ const SITE = {
   towns: ["봉화읍","물야면","봉성면","법전면","춘양면","소천면","석포면","재산면","명호면","상운면"],
   planFolder: "https://drive.google.com/drive/folders/1mM6PG8c9WF-6KHxT8wfXo2gJNLCXHGMn",
   yearFolder: "https://drive.google.com/drive/folders/1iqhQxFyyQ2P1QFD8asU-pSHfm_LOCSek",
+  /* 지역사회보장균형발전지원센터의 봉화군 지역사회보장계획·연차별 시행계획 화면 */
+  kccwpPlan: "http://www.kccwp.or.kr/kccwp/sub02_view.asp?sido=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84&gugun=%EB%B4%89%ED%99%94%EA%B5%B0",
+  /* 연차별 시행계획 모니터링 대시보드(같은 폴더의 monitoring.html) */
+  monitorDash: "monitoring.html",
   /* 네이버 지도를 페이지 안에 띄우려면 네이버 클라우드 플랫폼 Maps의 Client ID를 넣으세요.
      비워 두면 '네이버 지도에서 보기' 버튼으로 연결됩니다. */
   naverMapKey: "",
@@ -1155,6 +1164,15 @@ const P = {
       <h3>계획서 열람</h3>
       <p>로그인 없이 누구나 열람하실 수 있습니다.</p>
       <div class="cta-row">${ext(SITE.planFolder,"제6기(2027~2030) 봉화군 지역사회보장계획")}${ext(SITE.yearFolder,"제6기 연차별 시행계획 및 결과")}</div>
+      <div class="kccwp-link">
+        <div><b>지역사회보장균형발전지원센터에서 보기</b><p>봉화군의 지역사회보장계획과 연도별 연차별 시행계획·시행결과 보고서를 연도와 계획/결과를 골라 내려받을 수 있습니다.</p></div>
+        <a class="btn g" href="${SITE.kccwpPlan}" target="_blank" rel="noopener">봉화군 계획·연차별 시행계획 보기 ↗</a>
+      </div>
+      <h3>연차별 시행계획 모니터링 대시보드</h3>
+      <p>제6기 세부사업·과업 41개의 사업추진율과 예산집행률을 한눈에 보고, 1차·2차·결과확인 단계별 점검 내용을 입력합니다.</p>
+      <div class="dash-embed"><iframe src="${SITE.monitorDash}" title="연차별 시행계획 모니터링 대시보드" loading="lazy"></iframe></div>
+      <div class="cta-row">${ext(SITE.monitorDash,"대시보드 새 창에서 크게 보기")}</div>
+      <p class="note">입력한 내용은 지금 쓰는 컴퓨터의 브라우저에만 저장되며, 다른 사람이나 다른 컴퓨터와 공유되지 않습니다. 취합할 때는 대시보드 아래 [JSON 백업]으로 파일을 받아 사무국에 보내 주세요. 개인정보는 입력하지 마세요.</p>
       <h3>연관기관</h3>
       <p>지역사회보장계획과 관련된 전국 통계·조사자료와 다른 시·군의 계획 현황은 아래 기관 누리집에서 보실 수 있습니다.</p>
       <div class="grid2 rel-orgs">
@@ -1188,7 +1206,7 @@ const P = {
       </div>
       <h3>2026년 추진 현황</h3>
       <ul class="dot"><li>2026. 9. 18. 연차별 시행계획 1차 모니터링 회의</li><li>2026. 9. 29. 연차별 시행계획 2차 모니터링 회의</li><li>2026. 10. 세부사업 담당자 환류 의견 수렴</li></ul>
-      <div class="cta-row">${ext(SITE.yearFolder,"연차별 시행계획 및 결과 보기")}</div>`,
+      <div class="cta-row">${ext(SITE.monitorDash,"모니터링 대시보드 열기")}${ext(SITE.yearFolder,"연차별 시행계획 및 결과 보기")}${ext(SITE.kccwpPlan,"균형발전지원센터에서 연차별 시행계획 보기")}</div>`,
     special:()=>`
       <p>협의체가 봉화의 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
       ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>${p.key==="fund"?fundForm():""}`).join("")}`

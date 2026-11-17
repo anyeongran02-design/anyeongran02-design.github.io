@@ -577,6 +577,113 @@ footer .copy{color:#7d8aa0}
 @media (max-width:860px){ .bi-in{grid-template-columns:1fr;text-align:center;justify-items:center;padding:0 52px 40px} .bi-pics{display:none} .bi-desc{margin-inline:auto} .bn-intro .cta{justify-content:center} }
 @media (max-width:600px){ .bi-tag{display:none} .bn-intro h1{font-size:1.5rem} .bi-desc{font-size:.92rem;margin-top:10px} .bn-intro .cta{margin-top:16px} .bn-intro .btn{padding:10px 16px;font-size:.92rem} .bi-in{padding-bottom:48px} }
 @media (max-width:600px){ .ob-cards a{padding:16px 14px} .ob-cards strong{font-size:1.45rem} .ob-in .big{font-size:2.4rem} .orgband{padding:36px 0;margin-top:48px} }
+
+/* 로그인 · 자유게시판 */
+.authbox{display:flex;gap:4px;margin-left:auto;margin-right:14px}
+.authbox button{color:#fff;font-size:.82rem;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.bd-tbl{min-width:0}
+.lg table{min-width:0}
+.authbox button:hover{background:rgba(255,255,255,.15)}
+.authbox #abIn{background:rgba(255,255,255,.16);font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lg{position:fixed;inset:0;z-index:1001;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(15,25,40,.55)}
+.lg.on{display:flex}
+.lg-box{position:relative;width:100%;max-width:420px;max-height:calc(100vh - 32px);overflow:auto;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.3);padding:30px 26px 24px}
+.lg-x{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;font-size:1.6rem;line-height:1;color:var(--muted)}
+.lg-x:hover{background:var(--bg)}
+.lg h2{font-size:1.35rem;margin-bottom:12px;color:var(--brand-dark)}
+.lg p{font-size:.93rem;margin-bottom:12px}
+.lg .lg-why{background:var(--brand-soft);color:var(--brand-dark);border-radius:10px;padding:10px 12px;font-weight:700}
+.lg-tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);margin-bottom:16px}
+.lg-tabs button{padding:10px;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+.lg-tabs button[aria-selected=true]{color:var(--brand);border-color:var(--brand)}
+.lg-google{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px;font-weight:700;background:#fff}
+.lg-google:hover{background:var(--bg)}
+.lg-or{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85rem;margin:16px 0 10px}
+.lg-or::before,.lg-or::after{content:"";flex:1;height:1px;background:var(--line)}
+.lg form label{display:block;font-weight:700;font-size:.92rem;margin-bottom:10px}
+.lg form label small{font-weight:400;color:var(--muted);font-size:.8rem}
+.lg form input:not([type=checkbox]){display:block;width:100%;margin-top:5px;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit}
+.lg form input:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px var(--brand-soft)}
+.lg-agree{background:var(--bg);border-radius:10px;padding:10px 12px;font-size:.84rem;color:var(--muted);margin-bottom:8px}
+.lg-agree a{color:var(--brand);text-decoration:underline}
+.lg form .lg-chk{display:flex;gap:6px;align-items:center;margin:8px 0 0;color:var(--text);font-size:.88rem}
+.lg-chk input{width:18px;height:18px}
+.lg .lg-err{color:var(--accent);font-weight:700;min-height:1em;margin:4px 0 8px;font-size:.88rem}
+.lg-go{display:block;width:100%;background:var(--brand);color:#fff;font-weight:800;border-radius:12px;padding:13px;font-size:1rem}
+.lg-go:hover{background:var(--brand-dark)}
+.lg-go:disabled{opacity:.6}
+.lg .lg-small{font-size:.84rem;color:var(--muted);margin:12px 0 0;text-align:center}
+.lk{color:var(--brand);text-decoration:underline;font-size:inherit}
+.lg-demo{background:#fff6dd;color:#7a5a00;border-radius:8px;padding:8px 10px;font-size:.82rem;text-align:center}
+.lg table th{width:90px}
+.bd-rule{background:var(--brand-soft);border-radius:12px;padding:14px 18px;margin-bottom:18px;font-size:.9rem;color:var(--brand-dark)}
+.bd-rule ul{margin:6px 0 0 18px}
+.bd-rule a{text-decoration:underline;font-weight:700}
+.bd-load,.bd-empty{text-align:center;color:var(--muted);padding:50px 0}
+.bd-tbl td a:hover{color:var(--brand);text-decoration:underline}
+.bd-cc{color:var(--accent);font-weight:700;font-size:.88rem}
+.bd-m{display:none}
+.bd-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:6px}
+.pager{display:flex;gap:4px;flex-wrap:wrap}
+.pager button{min-width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:#fff}
+.pager button.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:700}
+.bd-acts{display:flex;justify-content:center;gap:8px;margin-top:22px;flex-wrap:wrap}
+.cmt{margin-top:34px;border-top:2px solid var(--text);padding-top:16px}
+.cmt h4{font-size:1.05rem;margin-bottom:8px}
+.cmt h4 b{color:var(--brand)}
+.cmt ul{list-style:none}
+.cmt li{border-bottom:1px solid var(--line);padding:12px 2px}
+.cmt li.none{color:var(--muted);font-size:.92rem}
+.cm-h{display:flex;gap:10px;align-items:center;font-size:.86rem;color:var(--muted);margin-bottom:4px}
+.cm-h b{color:var(--text)}
+.cm-h .lk{margin-left:auto;font-size:.82rem}
+.cmt li p{white-space:pre-line}
+.cm-f{display:flex;gap:8px;margin-top:14px;align-items:stretch}
+.cm-f textarea{flex:1;min-height:70px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;resize:vertical}
+.cm-f .btn{border-radius:10px;justify-content:center}
+.cm-login{display:block;width:100%;margin-top:14px;border:1.5px dashed var(--line);border-radius:10px;padding:16px;color:var(--brand);font-weight:700}
+.cm-login:hover{background:var(--brand-soft)}
+.bd-w label{display:block;font-weight:700;margin-bottom:14px}
+.bd-w input,.bd-w textarea{display:block;width:100%;margin-top:6px;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font:inherit;font-weight:400}
+.bd-w textarea{min-height:300px;resize:vertical}
+.bd-w input:focus,.bd-w textarea:focus,.cm-f textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px var(--brand-soft)}
+.bd-who{margin-bottom:14px;color:var(--muted)}
+.bd-who b{color:var(--text)}
+.bd-warn{background:#fff6dd;color:#7a5a00;border-radius:10px;padding:10px 14px;font-size:.88rem}
+.bd-w .lg-err{color:var(--accent);font-weight:700;margin-top:8px}
+@media (max-width:600px){
+  .authbox{margin-right:6px}
+  .fontctl>span{display:none}
+  .bd-tbl td.l{word-break:break-all}
+  .tbl-wrap:has(.bd-tbl){overflow-x:visible}
+  .bd-tbl thead,.bd-tbl .bd-h,.bd-tbl td:first-child:not([colspan]){display:none}
+  .bd-tbl td.l{padding:12px 4px}
+  .bd-m{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+  .cm-f{flex-direction:column}
+  .bd-bottom{flex-direction:column-reverse;align-items:stretch}
+  .bd-bottom .btn{justify-content:center}
+}
+
+/* 캐릭터 이름 공모 팝업 */
+.npop{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(15,25,40,.55)}
+.npop.on{display:flex}
+.npop-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#fbf9f2;border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center;color:#5a3a26}
+.npop-x{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.9);font-size:1.6rem;line-height:1;color:#5a3a26;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.npop-in{padding:26px 22px 20px}
+.npop-tag{display:inline-block;background:#5a3a26;color:#fff;font-size:.78rem;font-weight:700;border-radius:999px;padding:4px 13px}
+.npop h2{font-size:1.55rem;line-height:1.3;margin:12px 0 4px;letter-spacing:-.03em;font-weight:800}
+.npop h2 em{font-style:normal;background:linear-gradient(transparent 60%,#ffe08a 60%)}
+.npop .sl{font-weight:700;color:#3c7a1c;font-size:.95rem}
+.npop img{margin:12px auto 6px;width:100%;height:auto}
+.npop .pd{font-size:.92rem;font-weight:700;background:#fff;border:1.5px solid #ece6d8;border-radius:12px;padding:8px 12px;display:inline-block}
+.npop .pd b{color:#b8325f}
+.npop-go{display:block;margin:14px 0 0;background:#3c7a1c;color:#fff;font-weight:800;font-size:1.05rem;border-radius:14px;padding:14px}
+.npop-go:hover{background:#2f6514}
+.npop-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#5a3a26;color:#fff;font-size:.88rem;padding:11px 18px}
+.npop-foot label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.npop-foot input{width:17px;height:17px;accent-color:#fff}
+.npop-foot button{color:#fff;font-weight:700}
 </style>
 </head>
 <body>
@@ -589,6 +696,7 @@ footer .copy{color:#7d8aa0}
       <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener">복지로</a>
       <a href="#/info/map">찾아오시는 길</a>
     </div>
+    <div class="authbox" id="authBox"></div>
     <div class="fontctl" aria-label="글자 크기 조절">
       <span>글자크기</span>
       <button type="button" data-fs="-1" aria-label="글자 작게">−</button>
@@ -650,6 +758,31 @@ footer .copy{color:#7d8aa0}
   </div>
 </footer>
 
+<div class="lg" id="lg" aria-hidden="true">
+  <div class="lg-box" role="dialog" aria-modal="true" aria-labelledby="lgT">
+    <button type="button" class="lg-x" aria-label="닫기">×</button>
+    <div id="lgBody"></div>
+  </div>
+</div>
+
+<div class="npop" id="npop" aria-hidden="true">
+  <div class="npop-box" role="dialog" aria-modal="true" aria-labelledby="npopT">
+    <button type="button" class="npop-x" id="npopX" aria-label="팝업 닫기">×</button>
+    <div class="npop-in">
+      <span class="npop-tag">복지캐릭터 이름 공모</span>
+      <h2 id="npopT">우리 동네 복지 친구,<br><em>이름을 지어 주세요!</em></h2>
+      <p class="sl">이웃을 잇고, 복지를 잇다</p>
+      <img src="assets/character/characters.webp" width="1000" height="525" alt="초록색 새싹 캐릭터와 분홍색 하트 캐릭터가 함께 빨간 하트를 들고 있는 그림">
+      <p class="pd">응모 기간 <b id="npopP"></b></p>
+      <a class="npop-go" id="npopGo" href="name-contest.html">공모 안내 보고 응모하기 ›</a>
+    </div>
+    <div class="npop-foot">
+      <label><input type="checkbox" id="npopToday"> 오늘 하루 보지 않기</label>
+      <button type="button" id="npopClose">닫기</button>
+    </div>
+  </div>
+</div>
+
 <script>
 /* =========================================================
    ▼▼ 여기만 고치면 사이트 전체에 반영됩니다 ▼▼
@@ -686,7 +819,20 @@ const SITE = {
   planVideo: "czD1sM_S2zU",
   /* 주민 의견: 구글 설문지를 만들면 '보내기 → <> 퍼가기'의 주소(https://docs.google.com/forms/.../viewform?embedded=true)를 넣으세요.
      비워 두면 홈페이지 양식에서 이메일 앱으로 사무국에 보내집니다. */
-  opinionForm: ""
+  opinionForm: "",
+  /* 캐릭터 이름 공모 팝업: 첫 화면에 뜹니다. until(마감일)이 지나면 저절로 안 뜹니다. 바로 끄려면 show를 false로. */
+  /* 로그인·자유게시판: Firebase 콘솔 → 프로젝트 설정 → 내 앱(웹)의 firebaseConfig 값을 그대로 넣으세요.
+     예) firebase: { apiKey:"...", authDomain:"....firebaseapp.com", projectId:"...", storageBucket:"...", messagingSenderId:"...", appId:"..." }
+     비워 두면 공개 사이트에서는 자유게시판이 '준비 중'으로 보입니다(내 컴퓨터 미리보기에서는 시험 모드). */
+  firebase: {
+    apiKey: "AIzaSyD8fkLQmbM6U6U93LqHldTjk3KI_P9SFPY",
+    authDomain: "bonghwacsc-board.firebaseapp.com",
+    projectId: "bonghwacsc-board",
+    storageBucket: "bonghwacsc-board.firebasestorage.app",
+    messagingSenderId: "32304179829",
+    appId: "1:32304179829:web:cb8c7ef90d4b2f55d1a63c"
+  },
+  namePopup: { show: false, start: "2026-11-17", until: "2026-12-07", url: "name-contest.html" }
 };
 const NAVER_MAP_URL = "https://map.naver.com/p/search/" + encodeURIComponent(SITE.place);
 
@@ -810,7 +956,7 @@ const MENU = [
   {k:"group", t:"협의체 운영", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"],["town","읍·면 협의체"],["director","사회복지법인 외부이사"]]},
   {k:"biz", t:"지역사회복지", items:[["plan","지역사회보장계획"],["opinion","주민 의견"],["monitor","모니터링·평가"],["special","특화사업"],["services","복지서비스 안내"]]},
   {k:"lib", t:"복지자료실", items:[["data","자료실"],["gallery","활동 갤러리"],["video","활동영상"]]},
-  {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["report","위기가구 알리기"],["donate","후원·나눔 참여"]]}
+  {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["free","자유게시판"],["report","위기가구 알리기"],["donate","후원·나눔 참여"]]}
 ];
 /* 회의자료 표: 각 협의체 페이지 아래에 붙습니다 */
 const fmtD = d => d.split("-").map(Number).join(". ") + ".";
@@ -1259,10 +1405,12 @@ const P = {
   },
   info:{
     privacy:()=>`<p>${SITE.name}(이하 ‘협의체’)는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 둡니다.</p>
-      <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계, 주민 의견 확인 및 답변</p>
-      <h3>2. 처리 항목</h3><p>위기가구 알리기: 대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)<br>주민 의견: 사는 곳(읍·면), 의견 내용, 이름·연락처(선택)</p>
-      <h3>3. 보유 기간</h3><p>처리 완료 후 지체 없이 파기</p>
-      <h3>4. 개인정보 보호 담당</h3><p>${SITE.name} 사무국 · ${SITE.tel} · ${SITE.email}</p>`,
+      <h3>1. 처리 목적</h3><p>위기가구 알리기 접수 확인 및 지원 연계, 주민 의견 확인 및 답변, 자유게시판 회원 확인 및 게시판 운영</p>
+      <h3>2. 처리 항목</h3><p>위기가구 알리기: 대상자 거주지, 상황 설명, 알려주신 분 연락처(선택)<br>주민 의견: 사는 곳(읍·면), 의견 내용, 이름·연락처(선택)<br>자유게시판 회원: 이메일 주소, 이름(별명 또는 구글 계정 이름), 로그인 기록, 회원이 쓴 글·댓글 (게시판에는 이름을 홍*동처럼 가려서 표시)</p>
+      <h3>3. 보유 기간</h3><p>위기가구 알리기·주민 의견: 처리 완료 후 지체 없이 파기<br>자유게시판 회원 정보: 회원 탈퇴 때까지 (탈퇴하면 계정 정보는 바로 삭제되며, 이미 쓴 글·댓글은 회원이 지우거나 운영 원칙에 따라 삭제될 때까지 남습니다)</p>
+      <h3>4. 처리 위탁 및 국외 이전</h3><p>자유게시판의 로그인과 글 저장을 위해 아래와 같이 위탁합니다.<br>· 받는 자: Google LLC (Firebase 인증·데이터베이스 서비스)<br>· 이전 국가: 미국 등 Google 데이터센터 소재 국가 · 이전 방법: 서비스 이용 시 인터넷으로 전송<br>· 이전 항목: 이메일 주소, 이름, 로그인 기록, 글·댓글 · 보유 기간: 회원 탈퇴 또는 위탁 계약 종료 때까지<br>국외 이전을 원하지 않으면 회원으로 가입하지 않으시면 되며, 이 경우 자유게시판 글쓰기만 제한됩니다.</p>
+      <h3>5. 정보주체의 권리</h3><p>회원은 언제든지 ‘내 정보’에서 탈퇴할 수 있고, 자신이 쓴 글·댓글을 고치거나 지울 수 있습니다. 그 밖의 열람·정정·삭제 요구는 아래 담당으로 연락해 주세요.</p>
+      <h3>6. 개인정보 보호 담당</h3><p>${SITE.name} 사무국 · ${SITE.tel} · ${SITE.email}</p>`,
     email:()=>`<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반하면 「정보통신망법」에 따라 처벌받을 수 있습니다.</p>`
   }
 };
@@ -1428,10 +1576,380 @@ function bindSub(){
     location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("[주민 의견] " + v("of2"))}&body=${encodeURIComponent(body)}`;
   };
   initMap();
+  if ($("#board")) mountBoard();
+}
+
+/* ---------------- 로그인 · 자유게시판 ----------------
+   저장소: Firebase(구글) 인증 + Firestore 데이터베이스.
+   SITE.firebase가 비어 있으면 공개 사이트에서는 '준비 중', 내 컴퓨터 미리보기(localhost)에서는 시험 모드로 동작합니다. */
+const BD = { user:null, admin:false, ready:false, api:null, cache:null, after:null, demo:false, PER:15 };
+const maskName = n => { n = String(n || "").trim().replace(/\s+/g, ""); if (!n) return "회원";
+  const c = [...n]; if (c.length === 1) return n; if (c.length === 2) return c[0] + "*";
+  return c[0] + "*".repeat(Math.min(c.length - 2, 3)) + c[c.length - 1]; };
+const fmtDT = ms => { if (!ms) return ""; const d = new Date(ms), p = n => String(n).padStart(2,"0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`; };
+const fmtDTL = ms => { if (!ms) return ""; const d = new Date(ms), p = n => String(n).padStart(2,"0");
+  return `${fmtDT(ms)} ${p(d.getHours())}:${p(d.getMinutes())}`; };
+const AUTH_MSG = {
+  "auth/invalid-email":"이메일 주소 형식이 맞지 않아요.",
+  "auth/missing-password":"비밀번호를 입력해 주세요.",
+  "auth/invalid-credential":"이메일 또는 비밀번호가 맞지 않아요.",
+  "auth/wrong-password":"이메일 또는 비밀번호가 맞지 않아요.",
+  "auth/user-not-found":"이메일 또는 비밀번호가 맞지 않아요.",
+  "auth/email-already-in-use":"이미 가입된 이메일이에요. 로그인해 주세요.",
+  "auth/weak-password":"비밀번호는 6자 이상으로 정해 주세요.",
+  "auth/too-many-requests":"시도가 너무 많아 잠시 막혔어요. 잠시 뒤 다시 해 주세요.",
+  "auth/popup-closed-by-user":"로그인 창이 닫혔어요.",
+  "auth/cancelled-popup-request":"로그인 창이 닫혔어요.",
+  "auth/popup-blocked":"팝업이 막혔어요. 브라우저 주소창의 팝업 차단을 풀어 주세요.",
+  "auth/web-storage-unsupported":"이 앱 안의 브라우저에서는 구글 로그인이 안 돼요. 크롬·사파리·삼성인터넷으로 열거나 이메일로 로그인해 주세요.",
+  "auth/operation-not-supported-in-this-environment":"이 앱 안의 브라우저에서는 구글 로그인이 안 돼요. 크롬·사파리·삼성인터넷으로 열거나 이메일로 로그인해 주세요.",
+  "auth/requires-recent-login":"보안을 위해 로그아웃 후 다시 로그인한 다음 시도해 주세요.",
+  "auth/network-request-failed":"인터넷 연결을 확인해 주세요.",
+  "permission-denied":"권한이 없어요. 이메일 인증을 마쳤는지 확인해 주세요."
+};
+const errMsg = e => AUTH_MSG[e && e.code] || (e && e.message) || "문제가 생겼어요. 잠시 뒤 다시 해 주세요.";
+
+/* Firebase 연결 */
+async function firebaseApi(){
+  const V = "https://www.gstatic.com/firebasejs/10.12.2/";
+  const [{ initializeApp }, A, F] = await Promise.all([import(V+"firebase-app.js"), import(V+"firebase-auth.js"), import(V+"firebase-firestore.js")]);
+  const app = initializeApp(SITE.firebase), auth = A.getAuth(app), db = F.getFirestore(app);
+  auth.languageCode = "ko";
+  const ms = t => t && t.toMillis ? t.toMillis() : (t || 0);
+  const toUser = u => u && { uid:u.uid, name:u.displayName || "", email:u.email || "", verified:u.emailVerified,
+    google:u.providerData.some(p => p.providerId === "google.com") };
+  const post = d => ({ id:d.id, ...d.data(), createdAt:ms(d.data().createdAt), updatedAt:ms(d.data().updatedAt) });
+  return {
+    onAuth: cb => A.onAuthStateChanged(auth, u => cb(toUser(u))),
+    isAdmin: async uid => { try { return (await F.getDoc(F.doc(db, "admins", uid))).exists(); } catch(e) { return false; } },
+    google: () => A.signInWithPopup(auth, new A.GoogleAuthProvider()),
+    login: (em, pw) => A.signInWithEmailAndPassword(auth, em, pw),
+    signup: async (em, pw, name) => { const c = await A.createUserWithEmailAndPassword(auth, em, pw);
+      await A.updateProfile(c.user, { displayName:name }); await A.sendEmailVerification(c.user); },
+    resend: () => A.sendEmailVerification(auth.currentUser),
+    reload: async () => { await auth.currentUser.reload(); await auth.currentUser.getIdToken(true); return toUser(auth.currentUser); },
+    reset: em => A.sendPasswordResetEmail(auth, em),
+    logout: () => A.signOut(auth),
+    remove: () => A.deleteUser(auth.currentUser),
+    list: async () => (await F.getDocs(F.query(F.collection(db, "posts"), F.orderBy("createdAt", "desc"), F.limit(500)))).docs.map(post),
+    get: async id => { const d = await F.getDoc(F.doc(db, "posts", id)); return d.exists() ? post(d) : null; },
+    create: async (t, b) => (await F.addDoc(F.collection(db, "posts"), { title:t, body:b, uid:auth.currentUser.uid,
+      name:maskName(auth.currentUser.displayName), createdAt:F.serverTimestamp(), updatedAt:F.serverTimestamp(), commentCount:0 })).id,
+    update: (id, t, b) => F.updateDoc(F.doc(db, "posts", id), { title:t, body:b, updatedAt:F.serverTimestamp() }),
+    del: async id => { const cs = await F.getDocs(F.collection(db, "posts", id, "comments"));
+      for (const c of cs.docs) await F.deleteDoc(c.ref); await F.deleteDoc(F.doc(db, "posts", id)); },
+    comments: async id => (await F.getDocs(F.query(F.collection(db, "posts", id, "comments"), F.orderBy("createdAt")))).docs.map(post),
+    addComment: async (id, b) => { const w = F.writeBatch(db);
+      w.set(F.doc(F.collection(db, "posts", id, "comments")), { body:b, uid:auth.currentUser.uid, name:maskName(auth.currentUser.displayName), createdAt:F.serverTimestamp() });
+      w.update(F.doc(db, "posts", id), { commentCount:F.increment(1) }); await w.commit(); },
+    delComment: async (id, cid) => { const w = F.writeBatch(db);
+      w.delete(F.doc(db, "posts", id, "comments", cid)); w.update(F.doc(db, "posts", id), { commentCount:F.increment(-1) }); await w.commit(); }
+  };
+}
+
+/* 내 컴퓨터 미리보기용 시험 모드(브라우저에만 저장, 실제 사이트에서는 쓰지 않음) */
+function demoApi(){
+  const K = "bdDemo", load = () => { try { return JSON.parse(localStorage.getItem(K)) || {posts:[], user:null}; } catch(e) { return {posts:[], user:null}; } };
+  const save = s => { try { localStorage.setItem(K, JSON.stringify(s)); } catch(e) {} };
+  let cb = () => {}; const set = u => { const s = load(); s.user = u; save(s); cb(u); };
+  const me = () => load().user, nid = () => Math.random().toString(36).slice(2, 12);
+  const edit = f => { const s = load(); const r = f(s); save(s); return r; };
+  return {
+    onAuth: f => { cb = f; setTimeout(() => f(me()), 0); },
+    isAdmin: async () => !!(me() && me().email === "admin@test.local"),
+    google: async () => set({ uid:"g1", name:"시험사용자", email:"tester@test.local", verified:true, google:true }),
+    login: async (em, pw) => { if (!em || !pw) throw {code:"auth/missing-password"}; set({ uid:"e-"+em, name:em.split("@")[0], email:em, verified:true, google:false }); },
+    signup: async (em, pw, name) => { if (pw.length < 6) throw {code:"auth/weak-password"}; set({ uid:"e-"+em, name, email:em, verified:false, google:false }); },
+    resend: async () => {}, reload: async () => { const u = {...me(), verified:true}; set(u); return u; },
+    reset: async () => {}, logout: async () => set(null), remove: async () => set(null),
+    list: async () => load().posts.map(p => ({...p, commentCount:p.comments.length})).sort((a,b) => b.createdAt - a.createdAt),
+    get: async id => { const p = load().posts.find(x => x.id === id); return p ? {...p, commentCount:p.comments.length} : null; },
+    create: async (t, b) => edit(s => { const id = nid(); s.posts.push({ id, title:t, body:b, uid:me().uid, name:maskName(me().name), createdAt:Date.now(), updatedAt:Date.now(), comments:[] }); return id; }),
+    update: async (id, t, b) => edit(s => Object.assign(s.posts.find(x => x.id === id), { title:t, body:b, updatedAt:Date.now() })),
+    del: async id => edit(s => { s.posts = s.posts.filter(x => x.id !== id); }),
+    comments: async id => (load().posts.find(x => x.id === id) || {comments:[]}).comments,
+    addComment: async (id, b) => edit(s => s.posts.find(x => x.id === id).comments.push({ id:nid(), body:b, uid:me().uid, name:maskName(me().name), createdAt:Date.now() })),
+    delComment: async (id, cid) => edit(s => { const p = s.posts.find(x => x.id === id); p.comments = p.comments.filter(c => c.id !== cid); })
+  };
+}
+
+function initAuth(){
+  const local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const p = SITE.firebase && SITE.firebase.apiKey ? firebaseApi() : local ? Promise.resolve((BD.demo = true, demoApi())) : Promise.resolve(null);
+  p.then(api => {
+    BD.api = api;
+    if (!api) { BD.ready = true; drawAuthBox(); return; }
+    api.onAuth(async u => {
+      BD.user = u; BD.admin = u ? await api.isAdmin(u.uid) : false; BD.ready = true;
+      drawAuthBox();
+      const lgOpen = $("#lg") && $("#lg").classList.contains("on");
+      if (u && !u.verified && lgOpen) openVerify();
+      else if (u && u.verified && (BD.after || lgOpen)) { const f = BD.after; BD.after = null; closeLogin(); if (f) f(); else if ($("#board")) mountBoard(); }
+      else if ($("#board")) mountBoard();
+    });
+  }).catch(e => { console.error(e); BD.ready = true; drawAuthBox(); if ($("#board")) mountBoard(); });
+}
+function drawAuthBox(){
+  const el = $("#authBox"); if (!el) return;
+  if (!BD.api) { el.innerHTML = ""; return; }
+  const u = BD.user;
+  /* 로그인 버튼은 자유게시판 화면에서만 보입니다. 다른 화면은 로그인 없이 그대로 이용합니다. */
+  if (!u && !location.hash.startsWith("#/news/free")) { el.innerHTML = ""; return; }
+  el.innerHTML = u
+    ? `<button type="button" id="abMe">${esc(maskName(u.name))}님${BD.admin?" (관리자)":""}</button><button type="button" id="abOut">로그아웃</button>`
+    : `<button type="button" id="abIn">로그인</button>`;
+  if (u) { $("#abMe").onclick = () => openAccount(); $("#abOut").onclick = () => BD.api.logout(); }
+  else $("#abIn").onclick = () => openLogin();
+}
+
+/* 로그인 창 */
+let lgPrevFocus = null;
+function lgShow(html){
+  const el = $("#lg"); $("#lgBody").innerHTML = html;
+  if (!el.classList.contains("on")) { lgPrevFocus = document.activeElement; el.classList.add("on"); el.setAttribute("aria-hidden","false"); document.body.style.overflow = "hidden"; }
+  const f = el.querySelector("input,button:not(.lg-x)"); if (f) f.focus();
+}
+function closeLogin(){
+  const el = $("#lg"); if (!el || !el.classList.contains("on")) return;
+  el.classList.remove("on"); el.setAttribute("aria-hidden","true"); document.body.style.overflow = "";
+  if (lgPrevFocus && lgPrevFocus.focus && document.contains(lgPrevFocus)) lgPrevFocus.focus();
+}
+function openLogin(why, after, tab){
+  if (!BD.api) { alert("로그인 기능을 준비하고 있어요."); return; }
+  if (after) BD.after = after;
+  if (BD.user && !BD.user.verified) return openVerify();
+  const signup = tab === "signup";
+  lgShow(`
+    <h2 id="lgT">${signup ? "회원가입" : "로그인"}</h2>
+    ${why ? `<p class="lg-why">${esc(why)}</p>` : ""}
+    <div class="lg-tabs" role="tablist"><button type="button" role="tab" aria-selected="${!signup}" data-tab="login">로그인</button><button type="button" role="tab" aria-selected="${signup}" data-tab="signup">회원가입</button></div>
+    <button type="button" class="lg-google" id="lgG"><svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>구글 계정으로 ${signup ? "가입하기" : "로그인"}</button>
+    <div class="lg-or"><span>또는 이메일로</span></div>
+    <form id="lgF" novalidate>
+      ${signup ? `<label>이름(별명) <small>게시판에는 홍*동처럼 가려서 보여요</small><input id="lgN" maxlength="20" autocomplete="nickname" required></label>` : ""}
+      <label>이메일<input id="lgE" type="email" autocomplete="email" required></label>
+      <label>비밀번호${signup ? " <small>6자 이상</small>" : ""}<input id="lgP" type="password" autocomplete="${signup ? "new-password" : "current-password"}" minlength="6" required></label>
+      ${signup ? `<div class="lg-agree"><b>개인정보 수집·이용 안내</b><br>항목: 이메일, 이름(별명) · 목적: 회원 확인과 자유게시판 이용 · 보유: 회원 탈퇴 때까지<br><a href="#/info/privacy">개인정보처리방침 보기</a>
+        <label class="lg-chk"><input type="checkbox" id="lgA"> 개인정보 수집·이용에 동의합니다(필수)</label></div>` : ""}
+      <p class="lg-err" id="lgErr" role="alert"></p>
+      <button class="lg-go" type="submit">${signup ? "가입하고 인증 메일 받기" : "로그인"}</button>
+    </form>
+    ${signup ? `<p class="lg-small">구글 계정으로 처음 로그인해도 회원으로 가입되며, 위 개인정보 수집·이용에 동의한 것으로 봅니다.</p>`
+             : `<p class="lg-small"><button type="button" class="lk" id="lgR">비밀번호를 잊으셨나요?</button></p>`}
+    ${BD.demo ? `<p class="lg-demo">내 컴퓨터 시험 모드: 실제 계정과 연결되지 않아요.</p>` : ""}`);
+  document.querySelectorAll("#lg [data-tab]").forEach(b => b.onclick = () => openLogin(why, null, b.dataset.tab));
+  const err = m => { $("#lgErr").textContent = m; };
+  $("#lgG").onclick = async () => { err(""); if (signup && !$("#lgA").checked) return err("개인정보 수집·이용에 동의해 주세요.");
+    try { await BD.api.google(); } catch(e) { err(errMsg(e)); } };
+  if (!signup) $("#lgR").onclick = () => openReset();
+  $("#lgF").onsubmit = async e => {
+    e.preventDefault(); err("");
+    const em = $("#lgE").value.trim(), pw = $("#lgP").value;
+    if (!em) return err("이메일을 입력해 주세요.");
+    if (!pw) return err("비밀번호를 입력해 주세요.");
+    const btn = e.target.querySelector(".lg-go"); btn.disabled = true;
+    try {
+      if (signup) {
+        const nm = $("#lgN").value.trim();
+        if (!nm) throw {message:"이름(별명)을 입력해 주세요."};
+        if (pw.length < 6) throw {code:"auth/weak-password"};
+        if (!$("#lgA").checked) throw {message:"개인정보 수집·이용에 동의해 주세요."};
+        await BD.api.signup(em, pw, nm);
+        BD.user = {...(BD.user || {}), name:nm, email:em, verified:false};
+        openVerify(true);
+      } else await BD.api.login(em, pw);
+    } catch(x) { err(errMsg(x)); btn.disabled = false; }
+  };
+}
+function openVerify(justSent){
+  lgShow(`
+    <h2 id="lgT">이메일 인증이 필요해요</h2>
+    <p>${justSent ? "가입을 환영해요! " : ""}<b>${esc(BD.user && BD.user.email || "")}</b>로 보낸 인증 메일의 링크를 눌러 주세요. 메일이 안 보이면 스팸함도 확인해 주세요.</p>
+    <p class="lg-err" id="lgErr" role="alert"></p>
+    <button class="lg-go" type="button" id="lgDone">인증을 마쳤어요</button>
+    <p class="lg-small"><button type="button" class="lk" id="lgAgain">인증 메일 다시 보내기</button> · <button type="button" class="lk" id="lgOut">로그아웃</button></p>`);
+  $("#lgDone").onclick = async () => {
+    try { const u = await BD.api.reload(); BD.user = u; drawAuthBox();
+      if (!u.verified) return $("#lgErr").textContent = "아직 인증되지 않았어요. 메일의 링크를 먼저 눌러 주세요.";
+      const f = BD.after; BD.after = null; closeLogin(); if (f) f(); else if ($("#board")) mountBoard();
+    } catch(e) { $("#lgErr").textContent = errMsg(e); } };
+  $("#lgAgain").onclick = async () => { try { await BD.api.resend(); $("#lgErr").textContent = "인증 메일을 다시 보냈어요."; } catch(e) { $("#lgErr").textContent = errMsg(e); } };
+  $("#lgOut").onclick = async () => { await BD.api.logout(); closeLogin(); };
+}
+function openReset(){
+  lgShow(`
+    <h2 id="lgT">비밀번호 찾기</h2>
+    <p>가입한 이메일을 적어 주시면 비밀번호를 새로 정하는 메일을 보내 드려요. (구글 계정으로 가입하셨다면 구글 로그인을 이용해 주세요.)</p>
+    <form id="lgF" novalidate><label>이메일<input id="lgE" type="email" autocomplete="email" required></label>
+    <p class="lg-err" id="lgErr" role="alert"></p><button class="lg-go" type="submit">메일 보내기</button></form>
+    <p class="lg-small"><button type="button" class="lk" id="lgBack">로그인으로 돌아가기</button></p>`);
+  $("#lgBack").onclick = () => openLogin();
+  $("#lgF").onsubmit = async e => { e.preventDefault(); const em = $("#lgE").value.trim();
+    if (!em) return $("#lgErr").textContent = "이메일을 입력해 주세요.";
+    try { await BD.api.reset(em); $("#lgErr").textContent = "메일을 보냈어요. 받은편지함(또는 스팸함)을 확인해 주세요."; } catch(x) { $("#lgErr").textContent = errMsg(x); } };
+}
+function openAccount(){
+  const u = BD.user; if (!u) return openLogin();
+  if (!u.verified) return openVerify();
+  lgShow(`
+    <h2 id="lgT">내 정보</h2>
+    <div class="tbl-wrap"><table><tbody>
+      <tr><th>이름</th><td class="l">${esc(u.name)} <small style="color:var(--muted)">(게시판 표시: ${esc(maskName(u.name))})</small></td></tr>
+      <tr><th>이메일</th><td class="l">${esc(u.email)}</td></tr>
+      <tr><th>로그인 방법</th><td class="l">${u.google ? "구글 계정" : "이메일"}</td></tr></tbody></table></div>
+    <p class="lg-err" id="lgErr" role="alert"></p>
+    <button class="lg-go" type="button" id="lgOut">로그아웃</button>
+    <p class="lg-small"><button type="button" class="lk" id="lgDel">회원 탈퇴</button><br>탈퇴해도 이미 쓴 글과 댓글은 지워지지 않아요. 지우고 싶은 글은 탈퇴 전에 먼저 삭제해 주세요.</p>`);
+  $("#lgOut").onclick = async () => { await BD.api.logout(); closeLogin(); };
+  $("#lgDel").onclick = async () => {
+    if (!confirm("정말 탈퇴하시겠어요? 계정 정보(이메일·이름)가 바로 삭제되고 되돌릴 수 없어요.")) return;
+    try { await BD.api.remove(); closeLogin(); alert("탈퇴되었어요. 그동안 이용해 주셔서 감사합니다."); }
+    catch(e) { $("#lgErr").textContent = errMsg(e); } };
+}
+function needLogin(why, after){
+  if (BD.user && BD.user.verified) return after();
+  openLogin(why, after);
+}
+
+/* 자유게시판 화면 */
+const BOARD_RULE = `<div class="bd-rule"><b>자유게시판 이용 안내</b>
+  <ul><li>누구나 읽을 수 있고, 글과 댓글은 로그인한 회원이 쓸 수 있어요.</li>
+  <li>욕설·비방, 광고·홍보, 선거·정치 관련 글, 남의 개인정보(이름·전화번호·주소 등)가 담긴 글은 알리지 않고 지울 수 있어요.</li>
+  <li>도움이 필요한 이웃 이야기는 이곳 대신 <a href="#/news/report">위기가구 알리기</a>나 보건복지상담센터 129로 알려 주세요.</li></ul></div>`;
+P.news.free = () => `<div id="board" aria-live="polite"><p class="bd-load">불러오는 중…</p></div>`;
+async function mountBoard(){
+  const el = $("#board"); if (!el) return;
+  const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
+  const id = parts[2] || "", mode = parts[3] || "";
+  if (!BD.ready) return;
+  if (!BD.api) { el.innerHTML = `${BOARD_RULE}<div class="bd-empty">자유게시판은 준비 중이에요. 조금만 기다려 주세요.</div>`; return; }
+  try {
+    if (!id) return el.innerHTML = await boardList(), bindBoardList();
+    if (id === "write") return boardForm(null);
+    if (mode === "edit") return boardForm(id);
+    el.innerHTML = await boardView(id); bindBoardView(id);
+  } catch(e) { console.error(e); el.innerHTML = `<div class="bd-empty">${esc(errMsg(e))}<br><a class="btn line" href="#/news/free" style="margin-top:14px">목록으로</a></div>`; }
+}
+let bdQ = "", bdPage = 1;
+async function boardList(){
+  const all = BD.cache || (BD.cache = await BD.api.list());
+  const rows = all.filter(p => !bdQ || p.title.includes(bdQ) || p.body.includes(bdQ));
+  const pages = Math.max(1, Math.ceil(rows.length / BD.PER)); bdPage = Math.min(bdPage, pages);
+  const pg = rows.slice((bdPage-1)*BD.PER, bdPage*BD.PER);
+  return `${BOARD_RULE}
+    ${BD.demo ? `<p class="lg-demo" style="margin-bottom:12px">내 컴퓨터 시험 모드예요. Firebase 설정을 넣으면 실제 게시판으로 바뀌어요.</p>` : ""}
+    <div class="board-top">
+      <span class="cnt">전체 <b>${rows.length}</b>건</span>
+      <form class="search" id="bSearch" role="search"><input type="search" placeholder="제목·내용 검색" value="${esc(bdQ)}" aria-label="검색어"><button>검색</button></form>
+    </div>
+    <div class="tbl-wrap"><table class="bd-tbl"><thead><tr><th style="width:70px">번호</th><th>제목</th><th style="width:100px">글쓴이</th><th style="width:110px">등록일</th></tr></thead><tbody>
+      ${pg.map((p,i) => `<tr><td>${rows.length - (bdPage-1)*BD.PER - i}</td><td class="l"><a href="#/news/free/${encodeURIComponent(p.id)}">${esc(p.title)}</a>${p.commentCount ? ` <span class="bd-cc">[${p.commentCount}]</span>` : ""}${isNew(fmtDT(p.createdAt)) ? ' <span class="badge new">NEW</span>' : ""}<span class="bd-m">${esc(p.name)} · ${fmtDT(p.createdAt)}</span></td><td class="bd-h">${esc(p.name)}</td><td class="bd-h">${fmtDT(p.createdAt)}</td></tr>`).join("")
+        || `<tr><td colspan="4" style="padding:40px 0">${bdQ ? "검색 결과가 없어요." : "아직 글이 없어요. 첫 글을 남겨 주세요!"}</td></tr>`}
+    </tbody></table></div>
+    <div class="bd-bottom">
+      <nav class="pager" aria-label="쪽 이동">${pages > 1 ? Array.from({length:pages}, (_, k) => `<button type="button" data-pg="${k+1}" ${k+1===bdPage?'aria-current="page" class="on"':""}>${k+1}</button>`).join("") : ""}</nav>
+      <button type="button" class="btn g" id="bWrite">글쓰기</button>
+    </div>`;
+}
+function bindBoardList(){
+  $("#bSearch").onsubmit = e => { e.preventDefault(); bdQ = e.target.querySelector("input").value.trim(); bdPage = 1; mountBoard(); };
+  document.querySelectorAll("[data-pg]").forEach(b => b.onclick = () => { bdPage = +b.dataset.pg; mountBoard(); $("#board").scrollIntoView({behavior:"smooth"}); });
+  $("#bWrite").onclick = () => needLogin("글을 쓰려면 로그인해 주세요.", () => { location.hash = "#/news/free/write"; });
+}
+async function boardView(id){
+  const p = await BD.api.get(id);
+  if (!p) return `<div class="bd-empty">글을 찾을 수 없어요. 지워졌을 수 있어요.<br><a class="btn line" href="#/news/free" style="margin-top:14px">목록으로</a></div>`;
+  const cs = await BD.api.comments(id), u = BD.user, mine = u && u.uid === p.uid, can = mine || BD.admin;
+  return `
+    <div class="view-head"><h3>${esc(p.title)}</h3><div class="meta"><span>글쓴이 ${esc(p.name)}</span><span>등록 ${fmtDTL(p.createdAt)}</span>${p.updatedAt && p.updatedAt - p.createdAt > 60000 ? `<span>수정 ${fmtDTL(p.updatedAt)}</span>` : ""}</div></div>
+    <div class="view-body">${esc(p.body)}</div>
+    <div class="bd-acts">${mine ? `<a class="btn line" href="#/news/free/${encodeURIComponent(id)}/edit">수정</a>` : ""}${can ? `<button type="button" class="btn line" id="bDel">${mine ? "삭제" : "관리자 삭제"}</button>` : ""}<a class="btn g" href="#/news/free">목록</a></div>
+    <section class="cmt" aria-labelledby="cmtT">
+      <h4 id="cmtT">댓글 <b>${cs.length}</b></h4>
+      <ul>${cs.map(c => `<li><div class="cm-h"><b>${esc(c.name)}</b><span>${fmtDTL(c.createdAt)}</span>${u && (u.uid === c.uid || BD.admin) ? `<button type="button" class="lk" data-dc="${esc(c.id)}">삭제</button>` : ""}</div><p>${esc(c.body)}</p></li>`).join("") || `<li class="none">첫 댓글을 남겨 주세요.</li>`}</ul>
+      ${u && u.verified
+        ? `<form id="cForm" class="cm-f"><label for="cBody" class="sr">댓글 쓰기</label><textarea id="cBody" maxlength="1000" placeholder="댓글을 입력해 주세요. (1,000자까지)" required></textarea><button class="btn g" type="submit">등록</button></form>`
+        : `<button type="button" class="cm-login" id="cLogin">댓글을 쓰려면 로그인해 주세요</button>`}
+    </section>`;
+}
+function bindBoardView(id){
+  const d = $("#bDel");
+  if (d) d.onclick = async () => { if (!confirm("이 글을 삭제할까요? 댓글도 함께 지워지고 되돌릴 수 없어요.")) return;
+    try { await BD.api.del(id); BD.cache = null; location.hash = "#/news/free"; } catch(e) { alert(errMsg(e)); } };
+  const cl = $("#cLogin"); if (cl) cl.onclick = () => needLogin("댓글을 쓰려면 로그인해 주세요.", () => mountBoard());
+  const f = $("#cForm");
+  if (f) f.onsubmit = async e => { e.preventDefault(); const b = $("#cBody").value.trim(); if (!b) return;
+    f.querySelector("button").disabled = true;
+    try { await BD.api.addComment(id, b); BD.cache = null; mountBoard(); } catch(x) { alert(errMsg(x)); f.querySelector("button").disabled = false; } };
+  document.querySelectorAll("[data-dc]").forEach(b => b.onclick = async () => { if (!confirm("댓글을 삭제할까요?")) return;
+    try { await BD.api.delComment(id, b.dataset.dc); BD.cache = null; mountBoard(); } catch(x) { alert(errMsg(x)); } });
+}
+async function boardForm(id){
+  const el = $("#board"), u = BD.user;
+  if (!u || !u.verified) {
+    el.innerHTML = `<div class="bd-empty">글을 쓰려면 로그인해 주세요.<br><button type="button" class="btn g" id="bLogin" style="margin-top:14px">로그인</button> <a class="btn line" href="#/news/free" style="margin-top:14px">목록</a></div>`;
+    const go = () => needLogin("글을 쓰려면 로그인해 주세요.", () => mountBoard());
+    $("#bLogin").onclick = go; go(); return;
+  }
+  let p = null;
+  if (id) { p = await BD.api.get(id);
+    if (!p || p.uid !== u.uid) { el.innerHTML = `<div class="bd-empty">내가 쓴 글만 고칠 수 있어요.<br><a class="btn line" href="#/news/free" style="margin-top:14px">목록</a></div>`; return; } }
+  el.innerHTML = `
+    <form id="wForm" class="bd-w" novalidate>
+      <p class="bd-who">글쓴이: <b>${esc(maskName(u.name))}</b> <small>(이름은 가려서 보여요)</small></p>
+      <label>제목<input id="wT" maxlength="100" value="${p ? esc(p.title) : ""}" required></label>
+      <label>내용<textarea id="wB" maxlength="5000" required>${p ? esc(p.body) : ""}</textarea></label>
+      <p class="bd-warn">주민등록번호·전화번호·주소 같은 개인정보는 적지 마세요. 누구나 볼 수 있어요.</p>
+      <p class="lg-err" id="wErr" role="alert"></p>
+      <div class="bd-acts"><a class="btn line" href="#/news/free${id ? "/" + encodeURIComponent(id) : ""}">취소</a><button class="btn g" type="submit">${id ? "고치기" : "등록하기"}</button></div>
+    </form>`;
+  $("#wForm").onsubmit = async e => {
+    e.preventDefault(); const t = $("#wT").value.trim(), b = $("#wB").value.trim(), er = $("#wErr");
+    if (!t) return er.textContent = "제목을 입력해 주세요."; if (!b) return er.textContent = "내용을 입력해 주세요.";
+    if (/\d{6}\s*-\s*[1-4]\d{6}/.test(b + t)) return er.textContent = "주민등록번호로 보이는 내용이 있어요. 지우고 다시 등록해 주세요.";
+    const btn = e.target.querySelector("button[type=submit]"); btn.disabled = true;
+    try { const nid = id ? (await BD.api.update(id, t, b), id) : await BD.api.create(t, b); BD.cache = null; location.hash = "#/news/free/" + encodeURIComponent(nid); }
+    catch(x) { er.textContent = errMsg(x); btn.disabled = false; }
+  };
+}
+document.addEventListener("click", e => { if (e.target.id === "lg" || e.target.closest(".lg-x")) { BD.after = null; closeLogin(); } });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#lg") && $("#lg").classList.contains("on")) { BD.after = null; closeLogin(); } });
+
+/* 캐릭터 이름 공모 팝업 */
+function namePopup(){
+  const c = SITE.namePopup, el = $("#npop");
+  if (!c || !c.show || !el) return;
+  const d = new Date(), today = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  if (today > c.until || location.hash.replace(/^#\/?/, "") !== "") return;
+  let hideDay = null; try { hideDay = localStorage.getItem("npopHide"); } catch(e) {}
+  if (hideDay === today) return;
+  const f = s => { const t = new Date(s + "T00:00:00"); return `${t.getMonth()+1}. ${t.getDate()}.(${"일월화수목금토"[t.getDay()]})`; };
+  $("#npopP").textContent = `${f(c.start)} ~ ${f(c.until)}`;
+  $("#npopGo").href = c.url;
+  const close = () => {
+    if ($("#npopToday").checked) { try { localStorage.setItem("npopHide", today); } catch(e) {} }
+    el.classList.remove("on"); el.setAttribute("aria-hidden", "true");
+    document.removeEventListener("keydown", onKey);
+  };
+  const onKey = e => {
+    if (e.key === "Escape") close();
+    if (e.key === "Tab") { const f = [...el.querySelectorAll("a,button,input")], a = f[0], z = f[f.length-1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); } }
+  };
+  $("#npopX").onclick = close; $("#npopClose").onclick = close;
+  el.onclick = e => { if (e.target === el) close(); };
+  document.addEventListener("keydown", onKey);
+  el.classList.add("on"); el.setAttribute("aria-hidden", "false");
+  $("#npopGo").focus({preventScroll:true});
 }
 
 fill(); buildMenu(); render();
+initAuth();
+namePopup();
 window.addEventListener("hashchange", render);
+window.addEventListener("hashchange", drawAuthBox);
 </script>
 </body>
 </html>

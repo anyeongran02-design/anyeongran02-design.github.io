@@ -1694,13 +1694,11 @@ function drawAuthBox(){
   const el = $("#authBox"); if (!el) return;
   if (!BD.api) { el.innerHTML = ""; return; }
   const u = BD.user;
-  /* 로그인 버튼은 자유게시판 화면에서만 보입니다. 다른 화면은 로그인 없이 그대로 이용합니다. */
-  if (!u && !location.hash.startsWith("#/news/free")) { el.innerHTML = ""; return; }
   el.innerHTML = u
     ? `<button type="button" id="abMe">${esc(maskName(u.name))}님${BD.admin?" (관리자)":""}</button><button type="button" id="abOut">로그아웃</button>`
-    : `<button type="button" id="abIn">로그인</button>`;
+    : `<button type="button" id="abIn">로그인</button><button type="button" id="abUp">회원가입</button>`;
   if (u) { $("#abMe").onclick = () => openAccount(); $("#abOut").onclick = () => BD.api.logout(); }
-  else $("#abIn").onclick = () => openLogin();
+  else { $("#abIn").onclick = () => openLogin(); $("#abUp").onclick = () => openLogin(null, null, "signup"); }
 }
 
 /* 로그인 창 */
@@ -1949,7 +1947,6 @@ fill(); buildMenu(); render();
 initAuth();
 namePopup();
 window.addEventListener("hashchange", render);
-window.addEventListener("hashchange", drawAuthBox);
 </script>
 </body>
 </html>

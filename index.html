@@ -1713,23 +1713,39 @@ const sheetDate = v => { const n = String(v).match(/\d+/g); if (!n || n.length <
 const sheetTime = v => { v = String(v).trim(); const m = v.match(/(\d{1,2}):(\d{2})/); if (!m) return v;
   let h = +m[1]; if (/오후|PM/i.test(v) && h < 12) h += 12; if (/오전|AM/i.test(v) && h === 12) h = 0;
   return `${String(h).padStart(2,"0")}:${m[2]}`; };
+/* 주요일정 불러오기: ① 공유폴더 월간계획.xlsx → schedule.json(사무국 컴퓨터가 10분마다 올림) ② 구글 시트.
+   둘 다 불러와 합치고(같은 날·같은 일정명은 한 번만), 둘 다 없으면 아래 SCHEDULE을 씀 */
 async function loadSheetSchedule(){
-  if (!SITE.scheduleSheet) return;
+  const lists = await Promise.all([loadJsonSchedule(), loadCsvSchedule()]);
+  const seen = new Set(), all = [];
+  lists.flat().forEach(s => { const k = s.date + "|" + s.title.replace(/\s/g, ""); if (!seen.has(k)) { seen.add(k); all.push(s); } });
+  if (!all.length) return;   /* 둘 다 비었거나 못 불러오면 SCHEDULE 그대로 */
+  SCHEDULE = all;
+  renderCal(); renderSchedPage();
+}
+async function loadJsonSchedule(){
+  try {
+    const r = await fetch("schedule.json?t=" + Math.floor(Date.now()/6e4), {cache:"no-store"});
+    if (!r.ok) return [];
+    const j = await r.json();
+    return Array.isArray(j) ? j.filter(s => s && /^\d{4}-\d{2}-\d{2}$/.test(s.date) && s.title) : [];
+  } catch (e) { console.warn("schedule.json을 불러오지 못했습니다:", e); return []; }
+}
+async function loadCsvSchedule(){
+  if (!SITE.scheduleSheet) return [];
   try {
     const r = await fetch(SITE.scheduleSheet + (SITE.scheduleSheet.includes("?") ? "&" : "?") + "t=" + Math.floor(Date.now()/3e5), {cache:"no-store"});
     if (!r.ok) throw new Error(r.status);
     const rows = parseCSV(await r.text()).filter(x => x.some(c => c.trim()));
-    const hi = rows.findIndex(x => x.some(c => c.trim() === "날짜")); if (hi < 0) return;
+    const hi = rows.findIndex(x => x.some(c => c.trim() === "날짜")); if (hi < 0) return [];
     const H = rows[hi].map(c => c.trim()), col = n => H.findIndex(h => h.startsWith(n));
     const [cD, cT, cN, cP, cC, cM, cO] = ["날짜","시간","일정","장소","구분","비고","공개"].map(col);
     const got = rows.slice(hi + 1).map(x => ({ date: sheetDate(x[cD]||""), time: cT>=0 ? sheetTime(x[cT]||"") : "", title: (x[cN]||"").trim(),
         place: cP>=0 ? (x[cP]||"").trim() : "", cat: cC>=0 ? (x[cC]||"").trim() : "", note: cM>=0 ? (x[cM]||"").trim() : "",
         hide: cO>=0 && /^(x|X|아니오|비공개|N)$/.test((x[cO]||"").trim()) }))
       .filter(s => s.date && s.title && !s.hide);
-    if (!got.length) return;   /* 시트가 비어 있으면 아래 SCHEDULE을 그대로 씀 */
-    SCHEDULE = got;            /* 시트를 불러오면 시트 일정이 기준 */
-    renderCal(); renderSchedPage();
-  } catch (e) { console.warn("주요일정 시트를 불러오지 못했습니다:", e); }
+    return got;
+  } catch (e) { console.warn("주요일정 시트를 불러오지 못했습니다:", e); return []; }
 }
 
 function noticeList(q=""){

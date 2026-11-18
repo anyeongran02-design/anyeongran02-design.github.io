@@ -385,6 +385,25 @@ tbody tr:hover{background:#fafbf9}
 @media(max-width:700px){.dash-embed iframe{height:720px}}
 .kccwp-link{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;padding:16px 18px;border:1px solid var(--line,#dde3ea);border-left:4px solid var(--brand);border-radius:var(--radius);background:#fff}
 .kccwp-link b{font-size:1.05em}.kccwp-link p{margin:4px 0 0;color:var(--muted,#5b6876)}
+/* 함께모아 행복금고 */
+.hf-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:center;padding:22px;border-radius:var(--radius);background:linear-gradient(135deg,#fff5f5,#fffaf2);border:1px solid #f6dede}
+.hf-hero h3{margin:10px 0 8px;font-size:1.3rem}.hf-hero p{margin:0}
+.hf-hero figure{margin:0}.hf-hero figure .ph{border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+.hf-hero figure img{width:100%;height:100%;object-fit:cover;display:block}
+.hf-hero figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;text-align:center}
+.hf-tag{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:#c0392b;background:#fff;border:1px solid #f3c6c6;border-radius:999px;padding:3px 12px}
+.hf-flow{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:none}
+.hf-flow li{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;position:relative}
+.hf-flow li b{display:block;margin:8px 0 4px;font-size:1.02rem}.hf-flow li p{margin:0;font-size:.9rem;color:var(--muted)}
+.hf-flow li:not(:last-child)::after{content:"›";position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--brand);background:var(--bg,#f5f7fa);line-height:1;padding:0 1px}
+.hf-year{border-left:4px solid var(--brand);padding:4px 0 4px 16px;margin:16px 0}
+.hf-year h4{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 8px}.hf-year h4 span{font-size:1.15rem;color:var(--brand)}
+.hf-year h4 small{font-size:.88rem;color:var(--muted);font-weight:600}
+.hf-towns{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.hf-towns div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff;display:flex;flex-direction:column;gap:2px}
+.hf-towns b{color:var(--brand-dark)}.hf-towns span{font-size:.9rem}
+.hf-src{font-size:.8rem;color:var(--muted);margin:6px 0 0}
+@media(max-width:760px){.hf-hero{grid-template-columns:1fr;padding:16px}.hf-flow{grid-template-columns:1fr 1fr}.hf-flow li::after{display:none}}
 /* 기수별 지역사회보장계획 */
 .gen-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:0 0 20px}
 .gen-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border:1px solid var(--line);border-radius:12px;background:#fff;text-align:center}
@@ -933,6 +952,21 @@ const GALLERY = [
   {title:"생명사랑분과 생명존중 캠페인", date:"2026-03-24", img:"g-life"}
 ];
 
+/* 함께모아 행복금고 화면 [읍·면 협의체 › 함께모아 행복금고] (공문 근거: 2025년 읍면협의체 지원사업 안내, 26년 행복금고 1차 계획서·2차 수행안내)
+   해마다 맨 위에 새 해를 추가하세요. towns: 읍·면별 [읍·면, 지원 내용] */
+const HAPPYFUND = [
+  {year:2026, items:[
+    ["1차 · 봉화군 취약계층 지원","취약계층 아동 발달·장애 진단검사비, 건강검진, 언어·정서 발달 지원, 공부방·주거환경 개선, 겨울철 난방 지원, 행복공작소 집수리, 생계·의료 긴급지원"],
+    ["2차 · 제철과일 꾸러미 「비타민 바구니」","취약계층 아동·청소년·장애인·어르신 240명에게 7·8·10월 세 차례 과일 꾸러미 전달"],
+    ["2차 · 법전면 협의체 「행복한 공간 만들기」","주거 취약가구 1가구 집수리(싱크대·도배·장판 교체 등)"],
+    ["2차 · 재산면 협의체 특화사업","주거환경 개선 1가구, 이불·난방유 등 계절 물품 5가구"]]},
+  {year:2025, note:"읍·면 협의체 지원사업 · 10개 읍·면 각 400만 원(모두 4,000만 원)", towns:[
+    ["봉화읍","주거환경 개선 1가구, 겨울철 난방비 5가구"],["물야면","주거환경 개선 1가구"],["봉성면","주거환경 개선 1가구"],
+    ["법전면","주거환경 개선 2가구"],["춘양면","겨울철 난방비 8가구"],["소천면","생계비 4명, 겨울철 난방비 4가구"],
+    ["석포면","겨울철 난방비 8가구"],["재산면","생계비 6가구, 난방유 2가구"],["명호면","주거환경 개선 1가구"],["상운면","주거환경 개선 1가구"]]},
+  {year:2024, items:[["법전면 영양죽 「봉화의 죽쑤니들과 함께 하는 사랑 한 그릇」","이장·부녀회장·봉사회원이 직접 영양죽을 쑤어 저소득 어르신 362명에게 전달하며 안부 확인"]]}
+];
+
 const PROJECTS = [
   {key:"fund", title:"함께모아 행복금고", desc:"경북사랑의열매와 함께 모은 성금으로 읍·면 협의체가 찾은 위기가구를 긴급 지원합니다.", hue:340, icon:"gift",
    detail:["읍·면 협의체 위원이 도움이 필요한 이웃을 직접 발굴하여 연계","긴급생계비, 집수리, 실내화장실 설치 등 생활 밀착형 지원","2023년 수해 피해 주민 지원과 수해성금 배분"]},
@@ -1047,7 +1081,7 @@ const MENU = [
   {k:"group", t:"협의체 조직운영", s:"조직운영", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"]]},
   {k:"plan", t:"지역사회보장계획", items:[["intro","개요"],["docs","지역사회보장계획"],["opinion","주민의견수렴"],["monitor","모니터링·평가"]]},
   {k:"director", t:"사회복지법인 외부이사추천제도", s:"외부이사추천", items:[["guide","신청제도 개요"]]},
-  {k:"town", t:"읍·면 협의체", items:[["intro","읍·면 협의체 소개"],["minutes","회의자료실"],["photos","활동사진첩"]]},
+  {k:"town", t:"읍·면 협의체", items:[["intro","읍·면 협의체 소개"],["fund","함께모아 행복금고"],["minutes","회의자료실"],["photos","활동사진첩"]]},
   {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["schedule","주요일정"],["special","특화사업"],["report","위기가구 알리기"],["donate","후원·나눔 참여"],["data","지역자원 및 자료실"],["gallery","포토갤러리"],["video","활동영상"],["free","자유게시판"]]}
 ];
 /* 예전 메뉴 주소 → 새 주소 (검색·유튜브 등에 남은 옛 링크용) */
@@ -1179,7 +1213,7 @@ function home(){
         <li><a href="#/town/intro"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
         <li><a href="#/plan/docs"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
         <li><a href="#/plan/opinion"><span class="ic">${icon("heart")}</span>주민의견수렴</a></li>
-        <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
+        <li><a href="#/town/fund"><span class="ic">${icon("gift")}</span>행복금고 기부</a></li>
       </ul>
     </nav>
   </section>
@@ -1219,7 +1253,7 @@ function home(){
   <section class="blk wrap">
     <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/news/special">전체보기 +</a></div>
     <div class="biz">
-      ${PROJECTS.map((p,i)=>`<a href="#/news/special"><div class="bz-top"><span class="bz-ic">${icon(p.icon,28)}</span><span class="bz-no">0${i+1}</span></div><h3>${p.title}</h3><p>${p.desc}</p><span class="bz-more">자세히 보기 →</span></a>`).join("")}
+      ${PROJECTS.map((p,i)=>`<a href="${p.key==="fund" ? "#/town/fund" : "#/news/special"}"><div class="bz-top"><span class="bz-ic">${icon(p.icon,28)}</span><span class="bz-no">0${i+1}</span></div><h3>${p.title}</h3><p>${p.desc}</p><span class="bz-more">자세히 보기 →</span></a>`).join("")}
     </div>
   </section>
 
@@ -1453,7 +1487,7 @@ const P = {
       <p class="note">입력한 내용은 지금 쓰는 컴퓨터의 브라우저에만 저장되며, 다른 사람이나 다른 컴퓨터와 공유되지 않습니다. 취합할 때는 대시보드 아래 [JSON 백업]으로 파일을 받아 사무국에 보내 주세요. 개인정보는 입력하지 마세요.</p>`,
     special:()=>`
       <p>협의체가 봉화의 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
-      ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>${p.key==="fund"?fundForm():""}`).join("")}`
+      ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p>${p.key==="fund" ? fundLink() : `<ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>`}`).join("")}`
   },
   news:{
     notice:(id, q)=> id ? noticeView(id) : noticeList(q),
@@ -1481,10 +1515,10 @@ const P = {
     donate:()=>`
       <p>여러분의 나눔은 협의체를 통해 도움이 꼭 필요한 봉화의 이웃에게 전달됩니다.</p>
       <div class="grid3" style="margin-top:16px">
-        ${[["gift","함께모아 행복금고","경북사랑의열매와 함께하는 모금으로 긴급생계비·집수리 등 위기가구를 지원합니다."],["people","재능 나눔","도배, 집수리, 이미용, 상담 등 가진 재능으로 함께해 주세요."],["heart","자원봉사","영양죽 나눔, 과일 꾸러미 전달, 안부 살피기 활동에 참여할 수 있습니다."]]
-          .map(t=>`<div class="tile"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></div>`).join("")}
+        ${[["gift","함께모아 행복금고","경북사랑의열매와 함께하는 모금으로 긴급생계비·집수리 등 위기가구를 지원합니다.","#/town/fund"],["people","재능 나눔","도배, 집수리, 이미용, 상담 등 가진 재능으로 함께해 주세요."],["heart","자원봉사","영양죽 나눔, 과일 꾸러미 전달, 안부 살피기 활동에 참여할 수 있습니다."]]
+          .map(t=>t[3] ? `<a class="tile" href="${t[3]}"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></a>` : `<div class="tile"><h4>${icon(t[0],22)}${t[1]}</h4><p>${t[2]}</p></div>`).join("")}
       </div>
-      ${fundForm()}
+      ${fundLink("행복금고 기부하기")}
       <h3 style="margin-top:30px">참여 방법</h3>
       <ul class="dot"><li>전화 문의: ${SITE.tel} (협의체 사무국)</li><li>방문 접수: ${SITE.place} 3층 사무국 또는 가까운 읍·면 행정복지센터</li><li>자원봉사 신청: <a href="https://www.1365.go.kr" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:underline">1365 자원봉사포털</a></li></ul>`,
     services:()=>`
@@ -1521,6 +1555,7 @@ P.director = { guide: P.group.director };
 P.town = {
   intro: P.group.town,
   minutes: (id) => townMinutes(id),
+  fund: () => fundPage(),
   photos: () => {
     const list = GALLERY.filter(g => g.town);
     return `<p>${SITE.towns.length}개 읍·면 지역사회보장협의체가 마을에서 함께한 활동 사진입니다.</p>
@@ -1592,6 +1627,55 @@ function townMinutes(town){
     </tbody></table></div>
     <p class="note">회의록은 개인정보(대상자 이름·사례, 위원 연락처)를 가린 뒤 게시합니다. 원문 열람은 해당 읍·면 행정복지센터 맞춤형복지팀으로 문의해 주세요.</p>`;
 }
+
+/* 함께모아 행복금고 화면 (읍·면 협의체 아래) */
+function fundPage(){
+  const flow = [["기부","군민·기관·단체가 행복금고에 성금을 냅니다. 읍·면을 지정할 수 있습니다."],
+                ["모금·배분","경북사회복지공동모금회(사랑의열매)가 모아 봉화군협의체에 배분합니다."],
+                ["발굴·심의","읍·면 협의체 위원과 행정복지센터가 도움이 필요한 이웃을 찾고, 협의체가 지원 대상을 심의합니다."],
+                ["지원·보고","생계·의료·주거·난방 등을 지원하고 결과를 모금회에 보고합니다."]];
+  const yearBlock = y => `
+    <div class="hf-year"><h4><span>${y.year}년</span>${y.note ? `<small>${y.note}</small>` : ""}</h4>
+      ${y.towns ? `<div class="hf-towns">${y.towns.map(t=>`<div><b>${t[0]}</b><span>${t[1]}</span></div>`).join("")}</div><p class="hf-src">사업 계획(산출목표) 기준</p>`
+        : `<ul class="dot">${y.items.map(t=>`<li><b>${t[0]}</b> — ${t[1]}</li>`).join("")}</ul>`}
+    </div>`;
+  const pic = GALLERY.find(g => g.img === "g-vitamin");
+  return `
+    <div class="hf-hero">
+      <div><span class="hf-tag">${icon("gift",18)} 경북사회복지공동모금회 연합모금</span>
+        <h3>이웃이 모은 정성으로, 우리 마을 이웃을 돕습니다</h3>
+        <p>함께모아 행복금고는 군민이 낸 성금을 사랑의열매를 거쳐 봉화로 다시 모아, 읍·면 협의체가 찾은 어려운 이웃에게 전하는 <b>주민 참여형 나눔 사업</b>입니다.</p>
+        <div class="cta-row"><a class="btn g" href="#/town/fund" onclick="window.scrollTo({top:document.getElementById('hfGive').getBoundingClientRect().top+scrollY-100});return false">기부 신청서 받기</a><a class="btn line" href="#/news/report">도움이 필요한 이웃 알리기</a></div>
+      </div>
+      ${pic ? `<figure>${gimg(pic)}<figcaption>제철과일 꾸러미 「비타민 바구니」 (행복금고 지원)</figcaption></figure>` : ""}
+    </div>
+
+    <h3>이렇게 쓰입니다</h3>
+    <ol class="hf-flow">${flow.map((f,i)=>`<li><span class="num">${i+1}</span><b>${f[0]}</b><p>${f[1]}</p></li>`).join("")}</ol>
+
+    <h3>누가, 무엇을 지원받나요?</h3>
+    <div class="grid2">
+      <div class="tile"><h4>${icon("people",22)}지원 대상</h4><p>봉화군에 사는 <b>중위소득 100% 이하</b> 저소득 주민 (기초생활수급, 차상위 등). 갑작스러운 어려움을 겪는 위기가구를 먼저 살핍니다.</p></div>
+      <div class="tile"><h4>${icon("home",22)}지원 내용</h4><p>생계비·의료비 긴급지원, 집수리·도배·장판 등 주거환경 개선, 겨울철 난방비·난방용품, 제철과일·영양죽 등 건강 지원, 취약계층 아동 발달·건강 지원</p></div>
+    </div>
+
+    <h3>연도별 지원 내용</h3>
+    ${HAPPYFUND.map(yearBlock).join("")}
+    <p class="note">2023년에는 행복금고로 수해 피해 주민을 지원하고 수해성금을 배분했습니다. 지원받은 분의 이름 등 개인정보는 공개하지 않습니다.</p>
+
+    <h3 id="hfGive">행복금고에 기부하기</h3>
+    <p>신청서의 지정내용 칸에 원하는 <b>읍·면 이름</b>을 적으시면, 그 읍·면의 이웃을 돕는 데 쓰입니다.</p>
+    ${fundForm()}
+    <ul class="dot"><li>제출·문의: 협의체 사무국 ${SITE.tel} (팩스 ${SITE.fax}) 또는 가까운 읍·면 행정복지센터</li><li>기부금 영수증 등 자세한 내용은 사무국으로 문의해 주세요.</li></ul>
+    <div class="opinion-cta"><div><b>주변에 도움이 필요한 이웃이 있나요?</b><p>알려 주시면 읍·면 협의체 위원과 행정복지센터가 찾아가 살핍니다.</p></div><a class="btn g" href="#/news/report">위기가구 알리기 →</a></div>`;
+}
+
+/* 행복금고로 가는 짧은 안내 (특화사업·후원 화면에 붙음) */
+const fundLink = (t = "함께모아 행복금고 자세히 보기·기부하기") => `
+      <div class="kccwp-link" style="margin:12px 0 8px">
+        <div><b>${icon("gift",20)} 함께모아 행복금고</b><p>모금·지원 방식, 읍·면별 지원 내용, 기부 신청서(PDF·HWP)를 한곳에 모았습니다.</p></div>
+        <a class="btn g" href="#/town/fund">${t} →</a>
+      </div>`;
 
 /* 주요일정 화면: 달마다 목록으로 */
 let schedYM = null;

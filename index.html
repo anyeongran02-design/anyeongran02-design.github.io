@@ -62,7 +62,7 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .logo small{display:block;font-size:.7rem;font-weight:500;color:var(--muted);letter-spacing:0}
 .gnb{display:flex;gap:4px}
 .gnb>li{list-style:none;position:relative}
-.gnb>li>a{display:block;padding:26px 18px;font-weight:700;font-size:1.02rem}
+.gnb>li>a{display:block;padding:26px 12px;font-weight:700;font-size:1.02rem;white-space:nowrap}
 .gnb>li>a:hover,.gnb>li.on>a{color:var(--brand)}
 .gnb .sub{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px;min-width:170px;display:none}
 .gnb>li:hover .sub,.gnb>li:focus-within .sub{display:block}
@@ -385,6 +385,55 @@ tbody tr:hover{background:#fafbf9}
 @media(max-width:700px){.dash-embed iframe{height:720px}}
 .kccwp-link{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;padding:16px 18px;border:1px solid var(--line,#dde3ea);border-left:4px solid var(--brand);border-radius:var(--radius);background:#fff}
 .kccwp-link b{font-size:1.05em}.kccwp-link p{margin:4px 0 0;color:var(--muted,#5b6876)}
+/* 기수별 지역사회보장계획 */
+.gen-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:0 0 20px}
+.gen-tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border:1px solid var(--line);border-radius:12px;background:#fff;text-align:center}
+.gen-tabs a b{font-size:1rem}.gen-tabs a span{font-size:.8rem;color:var(--muted)}
+.gen-tabs a:hover{border-color:var(--brand);color:var(--brand)}
+.gen-tabs a.on{background:var(--brand);border-color:var(--brand);color:#fff}.gen-tabs a.on span{color:#dbe8f8}
+.gen-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:2px solid var(--text);margin-bottom:16px}
+.gen-head small{color:var(--brand);font-weight:700}.gen-head h3{margin:2px 0 0;font-size:1.25rem}
+.gen-head .cnt{font-size:.9rem;color:var(--muted)}.gen-head .cnt b{color:var(--brand)}
+.doc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:16px}.doc-grid>*{min-width:0}
+.doc-card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff}
+.doc-card.main{background:var(--brand-soft);border-color:transparent;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.doc-card h4{font-size:1.1rem;margin:0}.doc-card p{margin:0;color:var(--muted);font-size:.93rem}
+.doc-tag{display:inline-block;font-size:.78rem;font-weight:700;color:var(--brand);background:#fff;border:1px solid var(--brand);border-radius:999px;padding:2px 10px}
+.doc-card.main .doc-btn{margin-top:auto}
+.doc-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;font-size:.88rem;white-space:nowrap}
+.doc-btn::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 4v11M7 10l5 5 5-5M5 20h14'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 4v11M7 10l5 5 5-5M5 20h14'/%3E%3C/svg%3E") center/contain no-repeat}
+.doc-btn:hover{background:var(--brand-dark)}
+.doc-tbl{min-width:0}.doc-tbl td,.doc-tbl th{text-align:center;padding-left:6px;padding-right:6px}
+.doc-tbl .doc-btn{background:#fff;color:var(--brand);border:1.5px solid var(--brand);padding:5px 12px}
+.doc-tbl .doc-btn:hover{background:var(--brand);color:#fff}
+.doc-none{color:var(--muted);font-size:.88rem}
+.gen-line{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;margin:14px 0 6px;border-top:3px solid var(--brand-soft)}
+.gen-line a{position:relative;padding:18px 6px 6px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.gen-line a::before{content:"";position:absolute;top:-9px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#fff;border:3px solid var(--brand)}
+.gen-line a:last-child::before{background:var(--brand)}
+.gen-line b{color:var(--brand)}.gen-line span{font-size:.88rem}.gen-line small{font-size:.75rem;color:var(--muted)}
+.gen-line a:hover b{text-decoration:underline}
+.steps{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:8px 0 0;counter-reset:st}
+.steps li{counter-increment:st;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font-weight:600;font-size:.93rem}
+.steps li::before{content:counter(st);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;border-radius:50%;background:var(--brand);color:#fff;font-size:.78rem}
+/* 주요일정 */
+.sch-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.sch-head h3{margin:0;font-size:1.2rem}
+.sch-head button{padding:8px 14px;border-radius:999px;background:var(--brand-soft);color:var(--brand);font-weight:700;font-size:.9rem}
+.sch-tbl tr.today td{background:#fff8e6}.sch-tbl tr.past td{color:var(--muted)}
+.sch-tbl .w{font-size:.85rem;color:var(--muted)}.sch-tbl .w.sun{color:#d33}.sch-tbl .w.sat{color:#2a6fc0}
+.cal-more{display:block;text-align:right;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--brand)}
+@media(max-width:760px){
+  .gen-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .doc-grid{grid-template-columns:1fr}
+  .doc-card{padding:14px}
+  .doc-tbl th:first-child{width:56px!important}
+  .doc-tbl .doc-btn{padding:4px 8px;font-size:.8rem}
+  .doc-tbl .doc-btn::before{display:none}
+  .gen-line{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:14px;border-top:0}
+  .gen-line a{border-top:3px solid var(--brand-soft)}
+  .sch-head button{padding:6px 10px;font-size:.82rem}
+}
 .video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;margin-top:8px}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video-cap{font-size:.9rem;color:var(--muted);margin-top:8px}
@@ -402,8 +451,12 @@ footer .fi p{margin-bottom:4px}
 footer .copy{margin-top:10px;color:#7f8c86}
 
 /* 반응형 */
+@media (max-width:1240px){
+  .gnb>li>a{padding:26px 8px;font-size:.95rem}
+}
 @media (max-width:1080px){
-  .gnb>li>a{padding:26px 11px;font-size:.96rem}
+  .gnb,.report-btn.d{display:none}
+  .menu-btn{display:block}
 }
 @media (max-width:960px){
   .gnb,.report-btn.d{display:none}
@@ -809,6 +862,12 @@ const SITE = {
   yearFolder: "https://drive.google.com/drive/folders/1iqhQxFyyQ2P1QFD8asU-pSHfm_LOCSek",
   /* 지역사회보장균형발전지원센터의 봉화군 지역사회보장계획·연차별 시행계획 화면 */
   kccwpPlan: "http://www.kccwp.or.kr/kccwp/sub02_view.asp?sido=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84&gugun=%EB%B4%89%ED%99%94%EA%B5%B0",
+  /* 센터 파일 내려받기 주소(PLAN_DOCS의 c1:·c2: 파일에 붙습니다) */
+  kccwpDown: "http://www.kccwp.or.kr/kccwp/j_download.asp",
+  /* 주요일정(월간계획) 구글 시트: 시트에서 [파일 → 공유 → 웹에 게시 → 쉼표로 구분된 값(.csv)]으로 받은 주소를 넣으세요.
+     넣으면 사무국이 시트에 적은 일정이 첫 화면 달력·주요일정 화면에 저절로 뜹니다(시트 고친 뒤 약 5분 안에 반영).
+     비워 두거나 시트를 못 불러오면 아래 SCHEDULE에 적힌 일정이 보입니다. 시트 서식: 공유폴더 Z:\홈페이지_월간계획 */
+  scheduleSheet: "",
   /* 연차별 시행계획 모니터링 대시보드(같은 폴더의 monitoring.html) */
   monitorDash: "monitoring.html",
   /* 네이버 지도를 페이지 안에 띄우려면 네이버 클라우드 플랫폼 Maps의 Client ID를 넣으세요.
@@ -842,7 +901,7 @@ const NOTICES = [
   {id:6, cat:"소식", title:"울릉군·구미시 진미동 협의체, 봉화군협의체 벤치마킹 방문", date:"2026-10-14", views:0,
    body:"봉화군지역사회보장협의체는 10월 13일과 14일 이틀 동안 울릉군지역사회보장협의체와 구미시 진미동 지역사회보장협의체의 벤치마킹 방문을 받았습니다.\n\n○ 10. 13.(화) 울릉군지역사회보장협의체 (봉화군평생학습관 3층)\n  - 협의체 구성과 운영체계, 실무분과 운영, 지역사회보장계획 연계, 읍·면 협의체 운영사례 공유\n\n○ 10. 14.(수) 구미시 진미동 지역사회보장협의체\n  - 10개 읍·면 협의체 특화사업 운영체계, 위원 역량강화 교육, 행복금고를 통한 위기가구 발굴·지원 사례 공유\n\n서로의 경험을 나누는 교류가 각 지역의 복지 안전망을 더 촘촘히 하는 계기가 되기를 바랍니다."},
   {id:5, cat:"공지", title:"제6기(2027~2030) 봉화군 지역사회보장계획 수립 안내", date:"2026-09-30", views:0,
-   body:"앞으로 4년간 봉화군 사회보장의 방향을 담은 제6기(2027~2030) 봉화군 지역사회보장계획을 수립하였습니다.\n\n○ 비전: 사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화\n○ 주민공고: 2026. 8. 20. ~ 9. 8.\n○ 봉화군지역사회보장협의체 심의: 2026. 8. 31.\n○ 봉화군의회 보고: 2026. 9. 3.\n○ 경상북도 제출: 2026. 9. 30.\n\n계획서 전문은 [주요사업 › 지역사회보장계획] 메뉴에서 누구나 열람하실 수 있습니다."},
+   body:"앞으로 4년간 봉화군 사회보장의 방향을 담은 제6기(2027~2030) 봉화군 지역사회보장계획을 수립하였습니다.\n\n○ 비전: 사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화\n○ 주민공고: 2026. 8. 20. ~ 9. 8.\n○ 봉화군지역사회보장협의체 심의: 2026. 8. 31.\n○ 봉화군의회 보고: 2026. 9. 3.\n○ 경상북도 제출: 2026. 9. 30.\n\n계획서 전문은 [지역사회보장계획 › 지역사회보장계획] 메뉴에서 누구나 열람하실 수 있습니다."},
   {id:4, cat:"회의", title:"2026년 연차별 시행계획 모니터링 회의 개최", date:"2026-09-29", views:0,
    body:"2026년 지역사회보장 연차별 시행계획이 계획대로 추진되고 있는지 점검하는 모니터링 회의를 개최하였습니다.\n\n○ 1차 회의: 2026. 9. 18.\n○ 2차 회의: 2026. 9. 29.\n○ 장소: 봉화군평생학습관 3층\n○ 참석: 연차별 TF팀 및 모니터링단\n\n모니터링 결과는 세부사업 담당자에게 전달하여 예산·성과목표 조정 등 환류 의견을 받아 다음 계획에 반영합니다."},
   {id:3, cat:"소식", title:"제6기 지역사회보장계획 중간보고회 및 주민공청회 개최", date:"2026-08-27", views:0,
@@ -869,7 +928,7 @@ const GALLERY = [
   {title:"협의체 위원 힐링 프로그램", date:"2026-10-29", img:"g-healing"},
   {title:"제6기 계획 주민공청회", date:"2026-08-27", img:"g-hearing"},
   {title:"제6기 지역사회보장계획(안) 자료집", date:"2026-08-27", img:"g-plan"},
-  {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", img:"g-town"},
+  {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", img:"g-town", town:"10개 읍·면"},
   {title:"생명사랑분과 생명존중 캠페인", date:"2026-03-24", img:"g-life"}
 ];
 
@@ -894,8 +953,8 @@ const TEAMS = [
 ];
 
 /* 회의록: 맨 위에 새 회의를 추가하세요.
-   body  : rep(대표협의체) / work(실무협의체) / team(실무분과) / ops(운영회의)
-   team  : 실무분과일 때 분과 이름
+   body  : rep(대표협의체) / work(실무협의체) / team(실무분과) / ops(운영회의) / town(읍·면 협의체)
+   team  : 실무분과일 때 분과 이름 · 읍·면 협의체일 때는 town:"봉화읍"처럼 읍·면 이름
    date  : "2026-08-31" 또는 날짜를 모르면 "2026-01"
    agenda: 주요 안건 (선택)
    file  : 회의록 PDF 경로. assets/minutes/ 폴더에 넣고 "assets/minutes/파일이름.pdf"처럼 적습니다.
@@ -922,8 +981,9 @@ const MINUTES = [
   {body:"team", team:"생명사랑분과", date:"2026-03-10", title:"생명사랑분과 제1차 회의", agenda:"", file:""},
   ...["10","09","08","07","06","05","04","03","02","01"].map(m => ({body:"ops", date:`2026-${m}`, title:`2026년 ${+m}월 운영회의`, agenda:"", file:""}))
 ];
-/* 월간일정: 첫 화면 달력에 표시됩니다. date는 "2026-11-11"처럼 적고, 순서는 상관없습니다. */
-const SCHEDULE = [
+/* 월간일정: 첫 화면 달력과 [커뮤니티 › 주요일정]에 표시됩니다. date는 "2026-11-11"처럼 적고, 순서는 상관없습니다.
+   SITE.scheduleSheet(구글 시트)를 연결하면 시트 일정이 대신 보이고, 이 목록은 시트를 못 불러올 때만 쓰입니다. */
+let SCHEDULE = [
   {date:"2026-10-07", title:"10월 운영회의"},
   {date:"2026-10-13", title:"울릉군지역사회보장협의체 벤치마킹 방문", place:"봉화군평생학습관 3층"},
   {date:"2026-10-14", title:"구미시 진미동 지역사회보장협의체 벤치마킹 방문"},
@@ -950,14 +1010,50 @@ const RELATED = [
    desc:"전국 지역사회보장계획 현황·평가, 지역사회보장지표, 연차별 시행계획 수립 매뉴얼을 제공합니다."}
 ];
 
-/* 메뉴 (포항시지역사회보장협의체 홈페이지 구성 참고) */
-const MENU = [
-  {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","개요·주요기능"],["history","연혁"],["org","조직기구"],["map","찾아오시는 길"]]},
-  {k:"group", t:"협의체 운영", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"],["town","읍·면 협의체"],["director","사회복지법인 외부이사"]]},
-  {k:"biz", t:"지역사회복지", items:[["plan","지역사회보장계획"],["opinion","주민 의견"],["monitor","모니터링·평가"],["special","특화사업"],["services","복지서비스 안내"]]},
-  {k:"lib", t:"복지자료실", items:[["data","자료실"],["gallery","활동 갤러리"],["video","활동영상"]]},
-  {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["free","자유게시판"],["report","위기가구 알리기"],["donate","후원·나눔 참여"]]}
+/* 기수별 지역사회보장계획 자료 (지역사회보장균형발전지원센터 봉화군 화면 기준, 2026-11-18 확인)
+   plan  : 중장기 계획(본계획) 파일
+   years : 연도별 [연도, 연차별 시행계획 파일, 시행결과 보고서 파일]
+   파일 적는 법
+     - 센터 파일: "c1:파일이름.pdf"(계획 자료) / "c2:파일이름.pdf"(결과 자료)
+     - 홈페이지에 직접 올린 파일: "assets/plans/파일이름.pdf"
+     - 그 밖의 주소: "https://..." (구글 드라이브 등)
+     - 빈칸("")이면 '자료 없음' 또는 '시행 예정'으로 보입니다. */
+const PLAN_DOCS = [
+  {gen:6, period:"2027~2030", plan:"drive:plan", years:[[2027,"",""],[2028,"",""],[2029,"",""],[2030,"",""]]},
+  {gen:5, period:"2023~2026", plan:"c1:경상북도봉화군_5기.pdf", years:[
+    [2023,"c1:경상북도봉화군_계획23.pdf","c2:경상북도봉화군_결과23.pdf"],
+    [2024,"","c2:경상북도봉화군_결과24.pdf"],
+    [2025,"c1:경상북도봉화군_계획25.pdf",""],
+    [2026,"c1:20.봉화군 2026 연차별 시행계획.pdf",""]]},
+  {gen:4, period:"2019~2022", plan:"c1:경상북도봉화군_4기.pdf", years:[
+    [2019,"c1:경상북도봉화군_계획19.pdf",""],
+    [2020,"c1:경상북도봉화군_계획20.pdf","c2:경상북도봉화군_결과20.pdf"],
+    [2021,"c1:경상북도봉화군_계획21.pdf","c2:경상북도봉화군_결과21.pdf"],
+    [2022,"c1:경상북도봉화군_계획22.pdf","c2:경상북도봉화군_결과22.pdf"]]},
+  {gen:3, period:"2015~2018", plan:"c1:경상북도봉화군_3기.pdf", years:[
+    [2015,"c1:경상북도봉화군_계획15.pdf","c2:경상북도봉화군_결과15.pdf"],
+    [2016,"c1:경상북도봉화군_계획16.pdf","c2:경상북도봉화군_결과16.pdf"],
+    [2017,"c1:경상북도봉화군_계획17.pdf","c2:경상북도봉화군_결과17.pdf"],
+    [2018,"c1:경상북도봉화군_계획18.pdf","c2:경상북도봉화군_결과18.pdf"]]},
+  {gen:2, period:"2011~2014", plan:"c1:경상북도봉화군_2기.pdf", years:[[2011,"",""],[2012,"",""],[2013,"",""],[2014,"",""]]},
+  {gen:1, period:"2007~2010", plan:"", years:[[2007,"",""],[2008,"",""],[2009,"",""],[2010,"",""]]}
 ];
+const planName = g => g.gen <= 2 ? "지역사회복지계획" : "지역사회보장계획";   /* 1·2기는 '지역사회복지계획' 시절 */
+
+/* 메뉴 (제주시지역사회보장협의체 홈페이지 구성 참고, 2026-11-18) */
+const MENU = [
+  {k:"about", t:"협의체 소개", items:[["greeting","인사말"],["purpose","개요·주요기능"],["history","연혁"],["org","조직도"],["map","찾아오시는 길"]]},
+  {k:"group", t:"협의체 조직운영", s:"조직운영", items:[["rep","대표협의체"],["work","실무협의체"],["team","실무분과"],["ops","운영회의"]]},
+  {k:"plan", t:"지역사회보장계획", items:[["intro","개요"],["docs","지역사회보장계획"],["opinion","주민의견수렴"],["monitor","모니터링·평가"]]},
+  {k:"director", t:"사회복지법인 외부이사추천제도", s:"외부이사추천", items:[["guide","신청제도 개요"]]},
+  {k:"town", t:"읍·면 협의체", items:[["intro","읍·면 협의체 소개"],["minutes","회의자료실"],["photos","활동사진첩"]]},
+  {k:"news", t:"커뮤니티", items:[["notice","공지사항"],["schedule","주요일정"],["special","특화사업"],["report","위기가구 알리기"],["donate","후원·나눔 참여"],["data","지역자원 및 자료실"],["gallery","포토갤러리"],["video","활동영상"],["free","자유게시판"]]}
+];
+/* 예전 메뉴 주소 → 새 주소 (검색·유튜브 등에 남은 옛 링크용) */
+const OLD_ROUTES = {
+  "biz/plan":"plan/docs", "biz/opinion":"plan/opinion", "biz/monitor":"plan/monitor", "biz/special":"news/special", "biz/services":"news/data",
+  "group/town":"town/intro", "group/director":"director/guide", "lib/data":"news/data", "lib/gallery":"news/gallery", "lib/video":"news/video"
+};
 /* 회의자료 표: 각 협의체 페이지 아래에 붙습니다 */
 const fmtD = d => d.split("-").map(Number).join(". ") + ".";
 const minutesBlock = (body, team) => {
@@ -1006,7 +1102,7 @@ const ph = (hue, ic="photo", label="") => `<div class="ph" style="background:lin
 
 /* 메뉴 생성 */
 function buildMenu(){
-  $("#gnb").innerHTML = MENU.map(m => `<li data-k="${m.k}"><a href="#/${m.k}/${m.items[0][0]}">${m.t}</a><div class="sub">${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}</div></li>`).join("");
+  $("#gnb").innerHTML = MENU.map(m => `<li data-k="${m.k}"><a href="#/${m.k}/${m.items[0][0]}">${m.s || m.t}</a><div class="sub">${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}</div></li>`).join("");
   $("#mnavList").innerHTML = `<a href="#/news/report" class="report-btn" style="display:block;text-align:center;border:0;margin-top:10px">위기가구 알리기</a>` +
     MENU.map(m => `<h3>${m.t}</h3>${m.items.map(i=>`<a href="#/${m.k}/${i[0]}">${i[1]}</a>`).join("")}`).join("");
 }
@@ -1078,10 +1174,10 @@ function home(){
     <nav class="quick q2 qx" aria-label="바로가기">
       <ul>
         <li><a href="#/news/report"><span class="ic">${icon("sos")}</span>위기가구 알리기</a></li>
-        <li><a href="#/biz/services"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
-        <li><a href="#/group/town"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
-        <li><a href="#/biz/plan"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
-        <li><a href="#/biz/opinion"><span class="ic">${icon("heart")}</span>주민 의견</a></li>
+        <li><a href="#/news/data"><span class="ic">${icon("search")}</span>복지서비스 안내</a></li>
+        <li><a href="#/town/intro"><span class="ic">${icon("people")}</span>읍·면 협의체</a></li>
+        <li><a href="#/plan/docs"><span class="ic">${icon("doc")}</span>지역사회보장계획</a></li>
+        <li><a href="#/plan/opinion"><span class="ic">${icon("heart")}</span>주민의견수렴</a></li>
         <li><a href="#/about/map"><span class="ic">${icon("map")}</span>찾아오시는 길</a></li>
       </ul>
     </nav>
@@ -1114,25 +1210,25 @@ function home(){
         <a href="#/group/rep"><b>대표협의체</b><strong>17<small>명</small></strong><span>계획 심의·주요 사항 결정</span></a>
         <a href="#/group/work"><b>실무협의체</b><strong>16<small>명</small></strong><span>안건 사전 검토·실무 조정</span></a>
         <a href="#/group/team"><b>실무분과</b><strong>${TEAMS.length}<small>개 분과</small></strong><span>분과위원 66명·특화사업</span></a>
-        <a href="#/group/town"><b>읍·면 협의체</b><strong>${SITE.towns.length}<small>곳</small></strong><span>마을 위기가구 발굴·지원</span></a>
+        <a href="#/town/intro"><b>읍·면 협의체</b><strong>${SITE.towns.length}<small>곳</small></strong><span>마을 위기가구 발굴·지원</span></a>
       </div>
     </div>
   </section>
 
   <section class="blk wrap">
-    <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/biz/special">전체보기 +</a></div>
+    <div class="blk-head"><div><h2>주요 사업</h2><p>봉화의 실정에 맞춰 협의체가 직접 기획하고 운영합니다.</p></div><a class="more" href="#/news/special">전체보기 +</a></div>
     <div class="biz">
-      ${PROJECTS.map((p,i)=>`<a href="#/biz/special"><div class="bz-top"><span class="bz-ic">${icon(p.icon,28)}</span><span class="bz-no">0${i+1}</span></div><h3>${p.title}</h3><p>${p.desc}</p><span class="bz-more">자세히 보기 →</span></a>`).join("")}
+      ${PROJECTS.map((p,i)=>`<a href="#/news/special"><div class="bz-top"><span class="bz-ic">${icon(p.icon,28)}</span><span class="bz-no">0${i+1}</span></div><h3>${p.title}</h3><p>${p.desc}</p><span class="bz-more">자세히 보기 →</span></a>`).join("")}
     </div>
   </section>
 
   <section class="blk wrap">
-    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/lib/gallery">더보기 +</a></div>
-    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/lib/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
+    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
+    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
   </section>
 
   <section class="blk wrap yt-home">
-    <div class="blk-head"><div><h2>협의체 유튜브</h2><p>영상으로 만나는 봉화군지역사회보장협의체</p></div><a class="more" href="#/lib/video">전체 영상 +</a></div>
+    <div class="blk-head"><div><h2>협의체 유튜브</h2><p>영상으로 만나는 봉화군지역사회보장협의체</p></div><a class="more" href="#/news/video">전체 영상 +</a></div>
     <div class="yt-main">
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${VIDEOS[0].id}" title="${VIDEOS[0].title}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       <div class="yt-side">
@@ -1289,10 +1385,16 @@ const P = {
       <div class="towns">${SITE.towns.map(t=>`<div class="town"><b>${t}</b><span>지역사회보장협의체</span></div>`).join("")}</div>
       <p class="note">읍·면 협의체 문의는 해당 읍·면 행정복지센터 맞춤형복지팀으로 해 주세요.</p>`
   },
-  biz:{
-    plan:()=>`
+  plan:{
+    intro:()=>`
       <h3>지역사회보장계획이란?</h3>
       <p>군민의 복지 욕구와 지역 자원을 조사하여 4년마다 수립하는 법정 중·장기 계획입니다. 매년 연차별 시행계획을 세우고, 그 결과를 점검·평가합니다.</p>
+      <div class="grid3" style="margin-top:14px">
+        ${[["법적 근거","「사회보장급여의 이용·제공 및 수급권자 발굴에 관한 법률」 제35조에 따라 시장·군수·구청장이 수립합니다."],["중장기 계획 (4년)","지역사회보장조사로 군민의 욕구를 살펴 4년 동안의 비전·추진전략·세부사업을 정합니다."],["연차별 시행계획·결과","해마다 시행계획을 세우고, 다음 해에 시행결과를 점검·평가해 계획에 반영합니다."]]
+          .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
+      </div>
+      <h3>수립 절차</h3>
+      <ol class="steps">${["지역사회보장조사","계획(안) 마련","주민 의견 수렴 (공고·공청회)","지역사회보장협의체 심의","군의회 보고","경상북도 제출"].map(s=>`<li>${s}</li>`).join("")}</ol>
       <div class="vision"><small>제6기(2027~2030) 비전</small><b>${SITE.vision}</b></div>
       <h3>안내영상으로 보기</h3>
       <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${SITE.planVideo}" title="봉화군 제6기 지역사회보장계획 안내영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -1307,24 +1409,15 @@ const P = {
         ${[["사회보장급여 이용·제공 및 수급권자 발굴","찾아가는 맞춤형 복지서비스, 인적 안전망을 통한 사각지대 발굴"],["담당인력 역량강화","사회복지사 역량강화, 읍·면 협의체 교육, 돌봄 종사자 처우 개선"],["지역사회 거버넌스 구축","협의체 기능 확대, 읍·면 맞춤형 특화사업, 민간복지자원 발굴"],["지역사회보장 인프라 확충","순환형 DRT 교통망, 교통약자 이동권, 시니어 라이프케어 허브"]]
           .map((t,i)=>`<div class="tile"><h4><span class="num">${i+1}</span>${t[0]}</h4><p>${t[1]}</p></div>`).join("")}
       </div>
-      <h3>계획서 열람</h3>
-      <p>로그인 없이 누구나 열람하실 수 있습니다. 아래 버튼을 누르면 지역사회보장균형발전지원센터 누리집의 봉화군 화면으로 이동합니다.</p>
-      <div class="cta-row">${ext(SITE.kccwpPlan,"제6기(2027~2030) 봉화군 지역사회보장계획")}${ext(SITE.kccwpPlan,"제6기 연차별 시행계획 및 결과")}</div>
-      <div class="kccwp-link">
-        <div><b>지역사회보장균형발전지원센터에서 보기</b><p>봉화군 화면에서 기수(제6기 계획 등)를 누르면 본계획과 연도별 연차별 시행계획·시행결과 보고서를 내려받을 수 있습니다.</p></div>
-        <a class="btn g" href="${SITE.kccwpPlan}" target="_blank" rel="noopener">봉화군 계획·연차별 시행계획 보기 ↗</a>
-      </div>
-      <h3>연차별 시행계획 모니터링 대시보드</h3>
-      <p>제6기 세부사업·과업 41개의 사업추진율과 예산집행률을 한눈에 보고, 1차·2차·결과확인 단계별 점검 내용을 입력합니다.</p>
-      <div class="dash-embed"><iframe src="${SITE.monitorDash}" title="연차별 시행계획 모니터링 대시보드" loading="lazy"></iframe></div>
-      <div class="cta-row">${ext(SITE.monitorDash,"대시보드 새 창에서 크게 보기")}</div>
-      <p class="note">입력한 내용은 지금 쓰는 컴퓨터의 브라우저에만 저장되며, 다른 사람이나 다른 컴퓨터와 공유되지 않습니다. 취합할 때는 대시보드 아래 [JSON 백업]으로 파일을 받아 사무국에 보내 주세요. 개인정보는 입력하지 마세요.</p>
+      <h3>봉화군 지역사회보장계획 기수</h3>
+      <p>2007년 제1기 지역사회복지계획부터 제6기 지역사회보장계획까지, 기수별 <b>중장기 계획</b>·<b>연차별 시행계획</b>·<b>시행결과 보고서</b>를 [지역사회보장계획] 화면에서 누구나 내려받을 수 있습니다.</p>
+      <div class="gen-line">${PLAN_DOCS.slice().reverse().map(g=>`<a href="#/plan/docs/${g.gen}"><b>제${g.gen}기</b><span>${g.period}</span><small>${planName(g)}</small></a>`).join("")}</div>
       <h3>연관기관</h3>
       <p>지역사회보장계획과 관련된 전국 통계·조사자료와 다른 시·군의 계획 현황은 아래 기관 누리집에서 보실 수 있습니다.</p>
       <div class="grid2 rel-orgs">
         ${RELATED.map(r=>`<a class="tile" href="${r.url}" target="_blank" rel="noopener"><h4>${icon("search",22)}${r.name} <span class="ext-i" aria-hidden="true">↗</span></h4><p><b>${r.org}</b><br>${r.desc}</p></a>`).join("")}
       </div>
-      <div class="opinion-cta"><div><b>계획에 바라는 점이 있으신가요?</b><p>군민 여러분의 의견은 연차별 시행계획과 다음 계획 수립에 반영됩니다.</p></div><a class="btn g" href="#/biz/opinion">주민 의견 남기기 →</a></div>`,
+      <div class="opinion-cta"><div><b>계획에 바라는 점이 있으신가요?</b><p>군민 여러분의 의견은 연차별 시행계획과 다음 계획 수립에 반영됩니다.</p></div><a class="btn g" href="#/plan/opinion">주민 의견 남기기 →</a></div>`,
     opinion:()=>`
       <p>봉화군 지역사회보장계획은 군민의 목소리로 만들어집니다. 우리 동네에 필요한 복지, 불편한 점, 새로운 아이디어를 자유롭게 들려주세요. 보내주신 의견은 실무분과와 대표협의체 논의를 거쳐 <b>연차별 시행계획과 다음 계획 수립에 반영</b>합니다.</p>
       <div class="grid3" style="margin-top:16px">
@@ -1352,7 +1445,11 @@ const P = {
       </div>
       <h3>2026년 추진 현황</h3>
       <ul class="dot"><li>2026. 9. 18. 연차별 시행계획 1차 모니터링 회의</li><li>2026. 9. 29. 연차별 시행계획 2차 모니터링 회의</li><li>2026. 10. 세부사업 담당자 환류 의견 수렴</li></ul>
-      <div class="cta-row">${ext(SITE.monitorDash,"모니터링 대시보드 열기")}${ext(SITE.kccwpPlan,"연차별 시행계획 및 결과 보기")}</div>`,
+      <h3>연차별 시행계획 모니터링 대시보드</h3>
+      <p>제6기 세부사업·과업 41개의 사업추진율과 예산집행률을 한눈에 보고, 1차·2차·결과확인 단계별 점검 내용을 입력합니다.</p>
+      <div class="dash-embed"><iframe src="${SITE.monitorDash}" title="연차별 시행계획 모니터링 대시보드" loading="lazy"></iframe></div>
+      <div class="cta-row">${ext(SITE.monitorDash,"대시보드 새 창에서 크게 보기")}<a class="btn line" href="#/plan/docs">기수별 시행계획·결과 보고서 보기</a></div>
+      <p class="note">입력한 내용은 지금 쓰는 컴퓨터의 브라우저에만 저장되며, 다른 사람이나 다른 컴퓨터와 공유되지 않습니다. 취합할 때는 대시보드 아래 [JSON 백업]으로 파일을 받아 사무국에 보내 주세요. 개인정보는 입력하지 마세요.</p>`,
     special:()=>`
       <p>협의체가 봉화의 실정에 맞게 직접 기획·운영하는 사업입니다.</p>
       ${PROJECTS.map(p=>`<h3>${p.title}</h3><p>${p.desc}</p><ul class="dot">${p.detail.map(d=>`<li>${d}</li>`).join("")}</ul>${p.key==="fund"?fundForm():""}`).join("")}`
@@ -1415,17 +1512,141 @@ const P = {
   }
 };
 P.info.map = P.about.map;
-/* 메뉴 재구성에 따른 연결 */
+/* 메뉴 재구성에 따른 연결 (제주시 협의체 구성 참고) */
 P.news.report = P.join.report;
 P.news.donate = P.join.donate;
-P.biz.services = P.join.services;
-P.lib = {
-  data: P.news.data,
-  gallery: P.news.gallery,
-  video: () => `
-    <div class="yt-sub"><div><b>봉화군지역사회보장협의체 유튜브</b><p>협의체 소식과 활동 영상을 가장 먼저 받아 보세요.</p></div><a class="btn yt" href="${YT_SUB}" target="_blank" rel="noopener">${icon("play",18)} 구독하기</a></div>
-    <div class="yt-grid">${VIDEOS.map(v=>ytThumb(v, true)).join("")}</div>`
+P.news.special = P.plan.special; delete P.plan.special;
+P.director = { guide: P.group.director };
+P.town = {
+  intro: P.group.town,
+  minutes: (id) => townMinutes(id),
+  photos: () => {
+    const list = GALLERY.filter(g => g.town);
+    return `<p>${SITE.towns.length}개 읍·면 지역사회보장협의체가 마을에서 함께한 활동 사진입니다.</p>
+      ${list.length ? `<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-top:16px">${list.map(g=>`<div>${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`
+        : `<div class="bd-empty" style="margin-top:16px">등록된 사진이 없습니다.</div>`}
+      <p class="note">사진은 얼굴이 나온 분의 동의를 받은 것만 올립니다. 전체 활동 사진은 <a href="#/news/gallery" style="color:var(--brand);text-decoration:underline">커뮤니티 › 포토갤러리</a>에서 보실 수 있습니다.</p>`;
+  }
 };
+delete P.group.town; delete P.group.director;
+P.plan.docs = (gen) => planDocs(gen);
+P.news.schedule = () => `<div id="schedPage" aria-live="polite"></div>
+  <p class="note">일정은 사정에 따라 바뀔 수 있습니다. 자세한 내용은 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>`;
+P.news.data = () => P.join.services() + `<h3 style="margin-top:30px">자료실</h3>` + P.news._data();
+P.news._data = () => (`
+      <div class="tbl-wrap"><table><thead><tr><th style="width:60px">번호</th><th>자료명</th><th style="width:110px">열람</th></tr></thead><tbody>
+        <tr><td>3</td><td class="l">기수별 지역사회보장계획·연차별 시행계획·시행결과 보고서</td><td><a href="#/plan/docs" style="color:var(--brand);font-weight:700">바로가기</a></td></tr>
+        <tr><td>2</td><td class="l">제6기(2027~2030) 봉화군 지역사회보장계획</td><td><a href="${SITE.planFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
+        <tr><td>1</td><td class="l">제6기 연차별 시행계획 및 결과</td><td><a href="${SITE.yearFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
+      </tbody></table></div>
+      <p class="note">제6기 자료는 협의체 구글 드라이브 공개 폴더로 연결되며, 로그인 없이 볼 수 있습니다.</p>`);
+P.news.video = () => `
+    <div class="yt-sub"><div><b>봉화군지역사회보장협의체 유튜브</b><p>협의체 소식과 활동 영상을 가장 먼저 받아 보세요.</p></div><a class="btn yt" href="${YT_SUB}" target="_blank" rel="noopener">${icon("play",18)} 구독하기</a></div>
+    <div class="yt-grid">${VIDEOS.map(v=>ytThumb(v, true)).join("")}</div>`;
+
+/* 기수별 지역사회보장계획 화면 */
+const docUrl = f => !f ? "" : f === "drive:plan" ? SITE.planFolder : /^c[12]:/.test(f)
+  ? `${SITE.kccwpDown}?filename=${encodeURIComponent(f.slice(3))}&fol=t_file0${f[1]}` : f;
+const docBtn = (f, label, future) => {
+  const u = docUrl(f);
+  if (u) return `<a class="doc-btn" href="${u}" target="_blank" rel="noopener">${label}</a>`;
+  return `<span class="doc-none">${future ? "시행 예정" : "센터 미등록"}</span>`;
+};
+function planDocs(gen){
+  const yr = new Date().getFullYear();
+  const g = PLAN_DOCS.find(x => x.gen == gen) || PLAN_DOCS.find(x => x.years.some(y => y[0] === yr)) || PLAN_DOCS[0];
+  const nm = planName(g), thisYear = new Date().getFullYear();
+  const tabs = `<div class="gen-tabs" role="tablist">${PLAN_DOCS.map(x=>`<a role="tab" href="#/plan/docs/${x.gen}" aria-selected="${x===g}" class="${x===g?"on":""}"><b>제${x.gen}기</b><span>${x.period}</span></a>`).join("")}</div>`;
+  const rows = g.years.map(([y, p, r]) => `<tr><th scope="row">${y}년</th><td>${docBtn(p, "시행계획 PDF", y > thisYear)}</td><td>${docBtn(r, "결과보고서 PDF", y >= thisYear)}</td></tr>`).join("");
+  const cnt = [g.plan, ...g.years.flatMap(y => [y[1], y[2]])].filter(Boolean).length;
+  return `${tabs}
+    <div class="gen-head"><div><small>제${g.gen}기 · ${g.period}</small><h3>제${g.gen}기(${g.period}) 봉화군 ${nm}</h3></div><span class="cnt">자료 <b>${cnt}</b>건</span></div>
+    <div class="doc-grid">
+      <section class="doc-card main">
+        <span class="doc-tag">중장기 계획</span>
+        <h4>제${g.gen}기 봉화군 ${nm}</h4>
+        <p>${g.period} 4년 동안의 비전·추진전략·세부사업을 담은 본계획입니다.</p>
+        ${docBtn(g.plan, g.plan === "drive:plan" ? "계획서 열람 (구글 드라이브)" : "계획서 PDF 내려받기")}
+      </section>
+      <section class="doc-card">
+        <span class="doc-tag">연차별 계획 · 결과보고서</span>
+        <div class="tbl-wrap" style="margin:6px 0 0"><table class="doc-tbl"><thead><tr><th style="width:84px">연도</th><th>연차별 시행계획</th><th>시행결과 보고서</th></tr></thead><tbody>${rows}</tbody></table></div>
+      </section>
+    </div>
+    ${g.gen === 6 ? `<p class="note">제6기 계획서는 협의체 구글 드라이브에서 먼저 보실 수 있습니다. 지역사회보장균형발전지원센터에 등록되면 이곳에 연결합니다.</p>` : ""}
+    ${g.gen <= 2 ? `<p class="note">제1·2기는 「사회복지사업법」에 따른 <b>지역사회복지계획</b>이었고, 2015년 「사회보장급여법」 시행으로 제3기부터 지역사회보장계획이 되었습니다. 센터에 없는 자료는 협의체 사무국(${SITE.tel})으로 문의해 주세요.</p>` : ""}
+    <div class="kccwp-link" style="margin-top:22px">
+      <div><b>지역사회보장균형발전지원센터에서 보기</b><p>PDF는 센터 누리집에서 바로 내려받아집니다. 브라우저가 '안전하지 않은 다운로드'라고 막으면 [계속]을 누르거나, 센터 봉화군 화면에서 받아 주세요.</p></div>
+      <a class="btn g" href="${SITE.kccwpPlan}" target="_blank" rel="noopener">센터 봉화군 화면 ↗</a>
+    </div>`;
+}
+
+/* 읍·면 협의체 회의자료실 (제주시처럼 읍·면별로 골라 보기) */
+function townMinutes(town){
+  const t = SITE.towns.includes(town) ? town : "";
+  const rows = MINUTES.filter(m => m.body === "town" && (!t || m.town === t));
+  return `<div class="chips"><a href="#/town/minutes" class="${!t?"on":""}">전체</a>${SITE.towns.map(n=>`<a href="#/town/minutes/${encodeURIComponent(n)}" class="${t===n?"on":""}">${n}</a>`).join("")}</div>
+    <div class="tbl-wrap"><table class="min-tbl"><thead><tr><th style="width:56px">번호</th><th>회의명</th><th style="width:96px">읍·면</th><th style="width:120px">일자</th><th style="width:110px">회의록</th></tr></thead><tbody>
+      ${rows.map((m,i)=>`<tr><td>${rows.length-i}</td><td class="l"><b>${m.title}</b></td><td>${m.town||""}</td><td>${fmtD(m.date)}</td><td>${m.file?`<a href="${m.file}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">PDF 보기 ↗</a>`:`<span style="color:var(--muted)">준비 중</span>`}</td></tr>`).join("") || `<tr><td colspan="5" style="padding:28px;color:var(--muted)">등록된 회의자료가 없습니다.</td></tr>`}
+    </tbody></table></div>
+    <p class="note">회의록은 개인정보(대상자 이름·사례, 위원 연락처)를 가린 뒤 게시합니다. 원문 열람은 해당 읍·면 행정복지센터 맞춤형복지팀으로 문의해 주세요.</p>`;
+}
+
+/* 주요일정 화면: 달마다 목록으로 */
+let schedYM = null;
+function renderSchedPage(){
+  const el = $("#schedPage"); if (!el) return;
+  if (!schedYM) { const t = new Date(); schedYM = [t.getFullYear(), t.getMonth()]; }
+  const [y, m] = schedYM, ym = `${y}-${String(m+1).padStart(2,"0")}`, W = "일월화수목금토";
+  const list = SCHEDULE.filter(s => s.date.startsWith(ym)).sort((a,b) => (a.date+(a.time||"")).localeCompare(b.date+(b.time||"")));
+  const today = new Date().toISOString().slice(0,10);
+  el.innerHTML = `
+    <div class="sch-head"><button type="button" id="schPrev" aria-label="이전 달">‹ 이전 달</button><h3>${y}년 ${m+1}월 주요일정</h3><button type="button" id="schNext" aria-label="다음 달">다음 달 ›</button></div>
+    <div class="tbl-wrap"><table class="sch-tbl"><thead><tr><th style="width:110px">날짜</th><th style="width:80px">시간</th><th>일정</th><th style="width:28%">장소</th></tr></thead><tbody>
+      ${list.map(s => { const d = new Date(s.date); return `<tr class="${s.date===today?"today":""}${s.date<today?" past":""}"><td><b>${m+1}. ${+s.date.slice(8)}.</b> <span class="w${d.getDay()===0?" sun":d.getDay()===6?" sat":""}">(${W[d.getDay()]})</span></td><td>${esc(s.time||"")}</td><td class="l">${s.cat?`<span class="badge">${esc(s.cat)}</span> `:""}${esc(s.title)}${s.note?`<br><small>${esc(s.note)}</small>`:""}</td><td class="l">${esc(s.place||"")}</td></tr>`; }).join("")
+        || `<tr><td colspan="4" style="padding:28px;color:var(--muted)">등록된 일정이 없습니다.</td></tr>`}
+    </tbody></table></div>`;
+  $("#schPrev").onclick = () => { schedYM = m === 0 ? [y-1, 11] : [y, m-1]; renderSchedPage(); };
+  $("#schNext").onclick = () => { schedYM = m === 11 ? [y+1, 0] : [y, m+1]; renderSchedPage(); };
+}
+
+/* 구글 시트(월간계획) 불러오기: SITE.scheduleSheet에 '웹에 게시'한 CSV 주소가 있을 때 */
+function parseCSV(txt){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < txt.length; i++) { const c = txt[i];
+    if (q) { if (c === '"') { if (txt[i+1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && txt[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c; }
+  if (f || row.length) { row.push(f); rows.push(row); }
+  return rows;
+}
+const sheetDate = v => { const n = String(v).match(/\d+/g); if (!n || n.length < 3) return "";
+  let [a, b, c] = n.map(Number); if (c > 999) [a, b, c] = [c, a, b];   /* 11/4/2026 꼴 */
+  if (a < 100) a += 2000; if (b < 1 || b > 12 || c < 1 || c > 31) return "";
+  return `${a}-${String(b).padStart(2,"0")}-${String(c).padStart(2,"0")}`; };
+const sheetTime = v => { v = String(v).trim(); const m = v.match(/(\d{1,2}):(\d{2})/); if (!m) return v;
+  let h = +m[1]; if (/오후|PM/i.test(v) && h < 12) h += 12; if (/오전|AM/i.test(v) && h === 12) h = 0;
+  return `${String(h).padStart(2,"0")}:${m[2]}`; };
+async function loadSheetSchedule(){
+  if (!SITE.scheduleSheet) return;
+  try {
+    const r = await fetch(SITE.scheduleSheet + (SITE.scheduleSheet.includes("?") ? "&" : "?") + "t=" + Math.floor(Date.now()/3e5), {cache:"no-store"});
+    if (!r.ok) throw new Error(r.status);
+    const rows = parseCSV(await r.text()).filter(x => x.some(c => c.trim()));
+    const hi = rows.findIndex(x => x.some(c => c.trim() === "날짜")); if (hi < 0) return;
+    const H = rows[hi].map(c => c.trim()), col = n => H.findIndex(h => h.startsWith(n));
+    const [cD, cT, cN, cP, cC, cM, cO] = ["날짜","시간","일정","장소","구분","비고","공개"].map(col);
+    const got = rows.slice(hi + 1).map(x => ({ date: sheetDate(x[cD]||""), time: cT>=0 ? sheetTime(x[cT]||"") : "", title: (x[cN]||"").trim(),
+        place: cP>=0 ? (x[cP]||"").trim() : "", cat: cC>=0 ? (x[cC]||"").trim() : "", note: cM>=0 ? (x[cM]||"").trim() : "",
+        hide: cO>=0 && /^(x|X|아니오|비공개|N)$/.test((x[cO]||"").trim()) }))
+      .filter(s => s.date && s.title && !s.hide);
+    if (!got.length) return;   /* 시트가 비어 있으면 아래 SCHEDULE을 그대로 씀 */
+    SCHEDULE = got;            /* 시트를 불러오면 시트 일정이 기준 */
+    renderCal(); renderSchedPage();
+  } catch (e) { console.warn("주요일정 시트를 불러오지 못했습니다:", e); }
+}
 
 function noticeList(q=""){
   const rows = NOTICES.filter(n => !q || n.title.includes(q));
@@ -1470,6 +1691,8 @@ function initMap(){
 function render(){
   clearInterval(slTimer);
   const [, k, s, id] = (location.hash.replace(/^#/, "") || "/").split("/").map(decodeURIComponent);
+  const moved = OLD_ROUTES[`${k}/${s}`];
+  if (moved) { location.replace(`#/${moved}${id ? "/" + encodeURIComponent(id) : ""}`); return; }
   const main = $("#main");
   document.querySelectorAll(".gnb>li").forEach(li => li.classList.toggle("on", li.dataset.k === k));
   if (!k){ main.innerHTML = home(); bindHome(); }
@@ -1541,7 +1764,8 @@ function renderCal(){
   el.innerHTML = `
     <div class="cal-head"><button type="button" id="calPrev" aria-label="이전 달">‹</button><h2>${y}년 ${m+1}월</h2><button type="button" id="calNext" aria-label="다음 달">›</button></div>
     <div class="cal-grid">${["일","월","화","수","목","금","토"].map((w,i)=>`<em class="${i===0?"sun":i===6?"sat":""}">${w}</em>`).join("")}${cells.join("")}</div>
-    <ul class="cal-list" id="calList">${monthEv.map(item).join("") || `<li class="none">등록된 일정이 없습니다.</li>`}</ul>`;
+    <ul class="cal-list" id="calList">${monthEv.map(item).join("") || `<li class="none">등록된 일정이 없습니다.</li>`}</ul>
+    <a class="cal-more" href="#/news/schedule">주요일정 전체 보기 →</a>`;
   $("#calPrev").onclick = () => { calYM = m === 0 ? [y-1, 11] : [y, m-1]; renderCal(); };
   $("#calNext").onclick = () => { calYM = m === 11 ? [y+1, 0] : [y, m+1]; renderCal(); };
   el.querySelectorAll(".d.has").forEach(b => b.onclick = () => {
@@ -1576,6 +1800,7 @@ function bindSub(){
     location.href = `mailto:${SITE.email}?subject=${encodeURIComponent("[주민 의견] " + v("of2"))}&body=${encodeURIComponent(body)}`;
   };
   initMap();
+  renderSchedPage();
   if ($("#board")) mountBoard();
 }
 
@@ -1944,6 +2169,7 @@ function namePopup(){
 }
 
 fill(); buildMenu(); render();
+loadSheetSchedule();
 initAuth();
 namePopup();
 window.addEventListener("hashchange", render);

@@ -788,6 +788,74 @@ footer .copy{color:#7d8aa0}
 .npop-foot label{display:flex;align-items:center;gap:6px;cursor:pointer}
 .npop-foot input{width:17px;height:17px;accent-color:#fff}
 .npop-foot button{color:#fff;font-weight:700}
+/* 조직도 */
+.oc{--ln:#a9bdd3;position:relative;max-width:1000px;margin:8px auto 0;padding:8px 0 0}
+.oc-node{display:flex;align-items:center;justify-content:center;gap:12px;color:#fff;border-radius:16px;padding:14px 26px;box-shadow:0 6px 16px rgba(20,50,90,.16);text-align:center;position:relative;z-index:1}
+.oc-node div{display:flex;flex-direction:column;line-height:1.25}
+.oc-node b{font-size:1.25rem;font-weight:800;letter-spacing:-.02em}
+.oc-node small{font-size:.92rem;font-weight:600;opacity:.92}
+a.oc-node:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.oc-ic{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.22);flex-shrink:0}
+.oc-ic svg{width:26px;height:26px}
+.oc-node.rep{background:linear-gradient(135deg,#3489e0,#1d5fb5);padding:18px 40px;min-width:300px}
+.oc-node.rep b{font-size:1.6rem}
+.oc-node.sec{background:linear-gradient(135deg,#2fb0c4,#1a8aa3);min-width:170px;padding:12px 20px;flex-shrink:0}
+.oc-node.sec b{letter-spacing:.2em}
+.oc-node.work{background:linear-gradient(135deg,#78c246,#4f9d2b)}
+.oc-node.town{background:linear-gradient(135deg,#f7a443,#e8742a)}
+.oc-node.team{background:linear-gradient(135deg,#ffe58a,#f9cc45);color:#4d3a00}
+.oc-node.team .oc-ic{background:rgba(120,80,0,.14);color:#8a5a00}
+.oc-info{list-style:none;margin:0;padding:12px 18px;background:#fff;border:1.5px solid #cfe0f2;border-radius:12px;font-size:.93rem;line-height:1.75;box-shadow:0 3px 10px rgba(20,50,90,.06)}
+.oc-info li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#1d5fb5;margin:0 9px 2px 0;vertical-align:middle}
+.oc-info li{white-space:nowrap}
+.oc-info em{display:block;font-style:normal;font-size:.84rem;color:#5b6676;line-height:1.35;margin:0 0 4px 16px;white-space:normal}
+.oc-info b{font-weight:700}
+.oc-info b::after{content:" :"}
+.oc-note{margin:10px 0 0;padding:8px 14px;border-radius:10px;font-size:.92rem;text-align:center;background:#fff;border:1.5px solid}
+.oc-note b::after{content:" :"}
+.oc-note.g{border-color:#cfe8bf;background:#f6fbf1}
+.oc-note.o{border-color:#fbd6b4;background:#fff8f1}
+/* 연결선 (넓은 화면) */
+.oc-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:22px}
+.oc-top .oc-node{grid-column:2}
+.oc-top .oc-info{grid-column:3;justify-self:start}
+.oc-mid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:22px 0}
+.oc-mid::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--ln)}
+.oc-secwrap{grid-column:2;display:flex;align-items:center;gap:14px;padding-left:36px;position:relative}
+.oc-secwrap::before{content:"";position:absolute;left:0;top:50%;width:36px;height:2px;background:var(--ln)}
+.oc-split{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding-top:30px}
+.oc-split::before{content:"";position:absolute;top:0;left:25%;right:25%;height:2px;background:var(--ln);margin-left:-10px;margin-right:-10px}
+.oc-col{display:flex;flex-direction:column;align-items:center;position:relative}
+.oc-col::before{content:"";position:absolute;top:-30px;left:50%;width:2px;height:30px;background:var(--ln);margin-left:-1px}
+.oc-col .oc-node{min-width:300px}
+.oc-v{width:2px;height:24px;background:var(--ln)}
+.oc-col:first-child::after{content:"";width:2px;height:30px;background:var(--ln)}
+.oc-teams{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;padding-top:30px}
+.oc-teams::before{content:"";position:absolute;top:0;left:calc((100% - 60px)/12);right:calc((100% - 60px)/12);height:2px;background:var(--ln)}
+.oc-team{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--bg);border:1.5px solid color-mix(in srgb,var(--c) 30%,#fff);border-radius:14px;padding:16px 8px 0;color:#25303d;box-shadow:0 4px 12px rgba(20,50,90,.07)}
+.oc-team::before{content:"";position:absolute;top:-31px;left:50%;width:2px;height:30px;background:var(--ln);margin-left:-1px}
+.oc-team:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(20,50,90,.12)}
+.oc-team .oc-ic{width:50px;height:50px;background:#fff;color:var(--c);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.oc-team b{margin-top:10px;font-size:1.08rem;font-weight:800;line-height:1.3}
+.oc-team small{font-size:.92rem;color:#5b6676;margin:2px 0 12px}
+.oc-team .oc-lead{margin:auto 0 0;align-self:stretch;border-top:1.5px solid color-mix(in srgb,var(--c) 22%,#fff);background:rgba(255,255,255,.7);border-radius:0 0 12px 12px;padding:9px 4px;font-size:.88rem;font-weight:700}
+.oc-addr{display:flex;align-items:center;justify-content:center;gap:8px;margin:26px auto 0;max-width:700px;padding:12px 18px;border-radius:12px;background:#eef4fb;border:1.5px solid #d3e2f3;font-weight:600;color:#2b3a4c;text-align:center}
+.oc-addr svg{color:#2a6fc0;flex-shrink:0}
+@media (max-width:860px){
+  .oc-top{grid-template-columns:1fr;justify-items:center;gap:12px}
+  .oc-top .oc-node,.oc-top .oc-info{grid-column:1;justify-self:center}
+  .oc-mid{grid-template-columns:1fr;padding:12px 0}
+  .oc{display:flex;flex-direction:column}
+  .oc-mid::before,.oc-secwrap::before,.oc-split::before,.oc-col::before,.oc-team::before,.oc-teams::before{display:none}
+  .oc-split{display:contents}
+  .oc-col:first-child{order:1;margin-top:12px} .oc-teams{order:2} .oc-col:last-child{order:3;margin-top:26px} .oc-addr{order:4}
+  .oc-secwrap{grid-column:1;flex-direction:column;padding:0;gap:10px}
+  .oc-col:first-child::after{display:none}
+  .oc-col .oc-node,.oc-node.rep{min-width:0;width:100%;max-width:360px}
+  .oc-teams{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:22px}
+  .oc-node.rep{padding:16px 20px}
+  .oc-node.rep b{font-size:1.4rem}
+}
 /* 복지캐릭터: 로고 옆 + 첫 화면 인사 */
 /* 로고: 마크 + 본고딕 굵은 글씨 2줄 + 봉이·이음이 */
 .logo{gap:9px}
@@ -980,7 +1048,9 @@ const SITE = {
   term: "2026. 7. 11. ~ 2028. 7. 10.",
   chairPublic: "최기영", chairPublicRole: "봉화군수",
   chairPrivate: "조석현", chairPrivateRole: "사회복지법인 하눌 대표이사",
-  viceChair: "이순희",
+  viceChair: "이순희", viceChairRole: "자원봉사센터 센터장",
+  /* 사무국 직원 (조직도에 표시) */
+  office: [["사무국장","정현정"],["사회복지사","안영란"]],
   workChair: "손현정", workChairRole: "봉화군정신건강복지센터 팀장",
   vision: "사람이 모이는 봉화, 함께 돌보며 더욱 행복한 봉화",
   stats: [ ["함께하는 위원", "209", "명"], ["대표·실무협의체", "33", "명"], ["실무분과", "6", "개"], ["읍·면 협의체", "10", "개"] ],
@@ -1143,13 +1213,14 @@ const PROJECTS = [
    detail:["노인분과: 노인인권 교육과 도자기 체험 「행복을 담음, 인생을 빚음」","장애인분과: 장애인식개선 체험 「우리 같이 가까이」","가족돌봄분과: 아동권리 체험 「알록달록 권리놀이터」","생명사랑분과: 생명존중·자살예방 캠페인","고용자활분과: 일자리·자활 정보 안내 리플릿 제작"]}
 ];
 
+/* 실무분과: [이름, 분야, 소개, 위원 수, 분과장] — 위원 수·분과장은 조직도에 표시 */
 const TEAMS = [
-  ["가족돌봄분과","아동·가족 돌봄","아동권리와 가족 돌봄을 지원합니다. 2026년 「알록달록 권리놀이터」로 아동권리·아동학대 예방 체험을 운영했습니다."],
-  ["고용자활분과","일자리·자활","일자리와 자활 정보를 연계하고, 군민이 알기 쉬운 고용·자활 안내 리플릿을 만듭니다."],
-  ["노인분과","어르신","어르신의 권리와 일상을 지킵니다. 2026년 노인인권 교육과 도자기 체험 「행복을 담음, 인생을 빚음」을 운영했습니다."],
-  ["생명사랑분과","자살예방","생명존중 문화를 확산합니다. 자살예방 캠페인과 생명지킴이 양성 등 마음 건강 안전망을 만듭니다."],
-  ["장애인분과","장애인","장애를 ‘다름’으로 이해하는 지역을 만듭니다. 2026년 장애인식개선 체험 「우리 같이 가까이」를 운영했습니다."],
-  ["통합사례관리분과","통합사례관리","여러 어려움이 겹친 가구를 함께 논의하고, 기관별 자원을 묶어 맞춤 지원을 연결합니다."]
+  ["가족돌봄분과","아동·가족 돌봄","아동권리와 가족 돌봄을 지원합니다. 2026년 「알록달록 권리놀이터」로 아동권리·아동학대 예방 체험을 운영했습니다.",11,"이재숙"],
+  ["고용자활분과","일자리·자활","일자리와 자활 정보를 연계하고, 군민이 알기 쉬운 고용·자활 안내 리플릿을 만듭니다.",9,"단금희"],
+  ["노인분과","어르신","어르신의 권리와 일상을 지킵니다. 2026년 노인인권 교육과 도자기 체험 「행복을 담음, 인생을 빚음」을 운영했습니다.",10,"최현자"],
+  ["생명사랑분과","자살예방","생명존중 문화를 확산합니다. 자살예방 캠페인과 생명지킴이 양성 등 마음 건강 안전망을 만듭니다.",11,"손현정"],
+  ["장애인분과","장애인","장애를 ‘다름’으로 이해하는 지역을 만듭니다. 2026년 장애인식개선 체험 「우리 같이 가까이」를 운영했습니다.",10,"주미숙"],
+  ["통합사례관리분과","통합사례관리","여러 어려움이 겹친 가구를 함께 논의하고, 기관별 자원을 묶어 맞춤 지원을 연결합니다.",15,"이상득"]
 ];
 
 /* 회의록: 맨 위에 새 회의를 추가하세요.
@@ -1506,20 +1577,59 @@ const P = {
            ["2011.","제2기(2011~2014) 봉화군 지역사회복지계획 수립"]]
            .map(h=>`<li><b>${h[0]}</b>${h[1]}</li>`).join("")}
       </ul>`,
-    org:()=>`
-      <div class="org">
-        <div class="box">대표협의체 (17명)<small>공동위원장 ${SITE.chairPublic}(${SITE.chairPublicRole}) · ${SITE.chairPrivate}(민간위원장)</small></div>
-        <div class="vline"></div>
-        <div class="box lt">실무협의체 (16명)<small>실무위원장 ${SITE.workChair} · 대표협의체 안건 사전 검토</small></div>
-        <div class="vline"></div>
-        <div class="row">${TEAMS.map(t=>`<div class="box lt">${t[0]}<small>${t[1]}</small></div>`).join("")}</div>
-        <div class="vline"></div>
-        <div class="box ac">읍·면 지역사회보장협의체 (110명)<small>${SITE.towns.length}개 읍·면 · 복지 사각지대 발굴</small></div>
+    org:()=>{
+      const I = {
+        people: ICONS.people,
+        folder: '<path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.2h7.5A2.5 2.5 0 0 1 21 9.7v7.8a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5z"/>',
+        gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+        home: '<path d="M4 11l8-7 8 7v9H4z"/><path d="M12 17.5s-3-1.8-3-3.9a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2.1-3 3.9-3 3.9z"/>',
+        sprout: '<path d="M12 13V8.5"/><path d="M12 8.5c0-3 2-5 5-5 0 3-2 5-5 5zM12 9.5c0-2.6-1.8-4.2-4.2-4.2 0 2.6 1.8 4.2 4.2 4.2z"/><path d="M3 15.5h3.5l3 1.8H13a1.5 1.5 0 0 1 0 3H8.5"/><path d="M3 21h10.5l6.2-4a1.5 1.5 0 0 0-1.9-2.3L14 17.3"/>',
+        elder: '<circle cx="10" cy="4.8" r="2"/><path d="M10 8c-2.2 0-3.4 2-3.4 4.4V15h2l.9 6M10 8c1.6 0 2.6 1.3 3.1 3.2l.9 2.3h2.5M16.5 13.5V21"/>',
+        pulse: '<path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/><path d="M6.5 12h3l1.5-2.6 2 5 1.4-2.4h3"/>',
+        wheel: '<circle cx="11" cy="4.3" r="1.9"/><path d="M11 7v6.2h5.2l2 4.8H20"/><path d="M11 10.2h4.5"/><path d="M8.2 10.6a5.6 5.6 0 1 0 7.9 7.2"/>'
+      };
+      const ic = n => `<span class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg></span>`;
+      const teamLook = [["home","#e0565b","#fde8e9"],["sprout","#2a74c5","#e4effb"],["elder","#7b5fc7","#eee8fb"],["pulse","#2f9e55","#e4f4e7"],["wheel","#d9486c","#fde7ec"],["gear","#2a6fc0","#e5eefa"]];
+      const teamSum = TEAMS.reduce((s,t)=>s+(t[3]||0),0);
+      return `
+      <div class="oc">
+        <div class="oc-top">
+          <div class="oc-node rep">${ic("people")}<div><b>대표협의체</b><small>(17명)</small></div></div>
+          <ul class="oc-info">
+            <li><b>공동위원장</b> ${SITE.chairPublic}<em>${SITE.chairPublicRole}</em></li>
+            <li><b>민간위원장</b> ${SITE.chairPrivate}<em>${SITE.chairPrivateRole}</em></li>
+            <li><b>부위원장</b> ${SITE.viceChair}<em>${SITE.viceChairRole}</em></li>
+          </ul>
+        </div>
+        <div class="oc-mid">
+          <div class="oc-secwrap">
+            <div class="oc-node sec">${ic("folder")}<div><b>사 무 국</b><small>(${SITE.office.length}명)</small></div></div>
+            <ul class="oc-info">${SITE.office.map(o=>`<li><b>${o[0]}</b> ${o[1]}</li>`).join("")}</ul>
+          </div>
+        </div>
+        <div class="oc-split">
+          <div class="oc-col">
+            <a class="oc-node work" href="#/group/work">${ic("gear")}<div><b>실무협의체</b><small>(16명)</small></div></a>
+            <p class="oc-note g"><b>실무위원장</b> ${SITE.workChair} ${SITE.workChairRole.replace("봉화군","")}</p>
+            <div class="oc-v"></div>
+            <a class="oc-node team" href="#/group/team">${ic("people")}<div><b>실무분과</b><small>(${teamSum}명 / ${TEAMS.length}개 분과)</small></div></a>
+          </div>
+          <div class="oc-col">
+            <a class="oc-node town" href="#/town/intro">${ic("people")}<div><b>읍·면 협의체</b><small>(110명)</small></div></a>
+            <p class="oc-note o">${SITE.towns.length}개 읍·면 지역사회보장협의체</p>
+          </div>
+        </div>
+        <div class="oc-teams">
+          ${TEAMS.map((t,i)=>{ const [n,c,bg] = teamLook[i % teamLook.length];
+            return `<a class="oc-team" href="#/group/team/${encodeURIComponent(t[0])}" style="--c:${c};--bg:${bg}">
+              ${ic(n)}<b>${t[0].replace(/분과$/,"")}<br>분과</b><small>(${t[3]}명)</small><p class="oc-lead">분과장 : ${t[4]}</p></a>`; }).join("")}
+        </div>
+        <p class="oc-addr">${icon("map",20)} ${SITE.addr}</p>
       </div>
       <div class="grid2" style="margin-top:28px">
         <div class="tile"><h4>${icon("doc",22)}연차별 TF팀·모니터링단</h4><p>지역사회보장계획의 추진 상황을 점검하고 개선 의견을 냅니다.</p></div>
         <div class="tile"><h4>${icon("map",22)}사무국</h4><p>${SITE.place} 3층 · ☎ ${SITE.tel}</p></div>
-      </div>`,
+      </div>`; },
     map:()=>`${mapBlock()}
       <div class="tbl-wrap"><table><tbody>
         <tr><th>주소</th><td class="l">${SITE.addr}</td></tr>

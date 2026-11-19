@@ -23,7 +23,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/assets/icon-96.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"봉화군지역사회보장협의체","alternateName":"봉화지사협","url":"https://bonghwacsc.or.kr/","logo":"https://bonghwacsc.or.kr/assets/logo.jpg","telephone":"+82-54-673-6076","email":"bonghwa6076@naver.com","sameAs":["https://www.youtube.com/@bonghwa_csc"],"address":{"@type":"PostalAddress","streetAddress":"내성로5길 13, 봉화군평생학습관 3층","addressLocality":"봉화군 봉화읍","addressRegion":"경상북도","postalCode":"36238","addressCountry":"KR"}}
+{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"봉화군지역사회보장협의체","alternateName":"봉화지사협","url":"https://bonghwacsc.or.kr/","logo":"https://bonghwacsc.or.kr/assets/logo.jpg","telephone":"+82-54-673-6076","email":"bonghwa6076@naver.com","sameAs":["https://www.youtube.com/@bonghwa_csc","https://www.instagram.com/bonghwa_csc6076/"],"address":{"@type":"PostalAddress","streetAddress":"내성로5길 13, 봉화군평생학습관 3층","addressLocality":"봉화군 봉화읍","addressRegion":"경상북도","postalCode":"36238","addressCountry":"KR"}}
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
 <style>
@@ -556,6 +556,33 @@ header.site{border-bottom:0;box-shadow:0 1px 0 var(--line)}
 .stats span{opacity:1;color:var(--muted)}
 .gal .ph{background:#eee}
 .gal .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+/* 인스타그램 활동(포토갤러리) */
+.gal .ph{position:relative}
+.ig-badge{position:absolute;right:8px;top:8px;background:rgba(0,0,0,.55);color:#fff !important;font-size:.75rem !important;font-weight:700;padding:3px 8px;border-radius:999px}
+.ig-list{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.ig-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn.ig{background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888);color:#fff;white-space:nowrap}
+.btn.ig:hover{filter:brightness(.95)}
+.ig-meta{color:var(--muted);font-size:.9rem}
+.ig-title{font-size:1.3rem;margin:6px 0 16px;line-height:1.4}
+.ig-main{position:relative;display:block;background:#111;border-radius:var(--radius);overflow:hidden}
+.ig-main img{display:block;width:100%;max-height:70vh;object-fit:contain;margin:0 auto}
+.ig-arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.88);font-size:1.6rem;line-height:1;cursor:pointer;color:#222}
+.ig-arr.l{left:10px}.ig-arr.r{right:10px}
+.ig-cnt{position:absolute;right:12px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:.8rem;padding:3px 10px;border-radius:999px}
+.ig-thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 0 4px}
+.ig-thumbs button{flex:0 0 76px;height:56px;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:#eee;opacity:.7}
+.ig-thumbs button.on{border-color:var(--brand);opacity:1}
+.ig-thumbs img{width:100%;height:100%;object-fit:cover}
+.ig-video .ig-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;font-size:3rem;background:rgba(0,0,0,.25)}
+.ig-video .ig-play small{font-size:.95rem;font-weight:700}
+.ig-cap{margin:20px 0;line-height:1.85;white-space:normal;word-break:keep-all}
+.ig-cap .tag{color:var(--brand)}
+.ig-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;border-top:1px solid var(--line);padding-top:16px}
+.ig-nav a{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ig-nav a.r{text-align:right}
+.ig-nav small{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+@media (max-width:640px){.ig-nav{grid-template-columns:1fr}.ig-nav a.r{text-align:left}.ig-arr{width:36px;height:36px}}
 .gal a:hover .ph img{transform:scale(1.05)}
 .sub-hero{background:linear-gradient(120deg,var(--accent-soft),#fff7e8 50%,var(--green-soft));color:var(--text)}
 .sub-hero .crumb{color:var(--muted);opacity:1}
@@ -816,6 +843,7 @@ footer .copy{color:#7d8aa0}
       <a href="#/info/map">찾아오시는 길</a>
       <a href="https://map.naver.com/p/search/%EB%B4%89%ED%99%94%EA%B5%B0%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80" target="_blank" rel="noopener">네이버 지도</a>
       <a href="https://www.youtube.com/@bonghwa_csc" target="_blank" rel="noopener">유튜브</a>
+      <a href="https://www.instagram.com/bonghwa_csc6076/" target="_blank" rel="noopener">인스타그램</a>
     </div>
     <div class="fi">
       <div>
@@ -953,6 +981,63 @@ const GALLERY = [
   {title:"읍·면 협의체 교육 및 간담회", date:"2026-07-22", img:"g-town", town:"10개 읍·면"},
   {title:"생명사랑분과 생명존중 캠페인", date:"2026-03-24", img:"g-life"}
 ];
+
+/* 인스타그램 활동: instagram.json(사무국 컴퓨터가 인스타그램 게시물을 10분마다 반영)을 불러와
+   첫 화면 「활동 갤러리」와 [커뮤니티 › 포토갤러리]에 인스타그램과 같은 순서·글·사진으로 보여 줍니다.
+   못 불러오면 위 GALLERY 사진을 대신 보여 줍니다. */
+const IG_URL = "https://www.instagram.com/bonghwa_csc6076/";
+let INSTA = [];
+const igDate = d => String(d||"").replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_, y, m, dd) => `${y}. ${+m}. ${+dd}.`);
+const igCard = p => `<a href="#/news/gallery/${encodeURIComponent(p.code)}"><div class="ph">${p.photos[0] ? `<img src="${p.photos[0]}" alt="${esc(p.title)}" loading="lazy">` : ""}${p.type === "video" ? `<span class="ig-badge">▶ 영상</span>` : p.photos.length > 1 ? `<span class="ig-badge">${p.photos.length}장</span>` : ""}</div><h4>${esc(p.title)}</h4><span>${igDate(p.date)}</span></a>`;
+const homeGal = () => INSTA.length ? INSTA.slice(0,4).map(igCard).join("")
+  : GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("");
+const igCaption = t => esc(t).replace(/(^|\s)(#[^\s#]+)/g, '$1<span class="tag">$2</span>').replace(/\n/g, "<br>");
+function igPage(id){
+  if (!INSTA.length) return `<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`;
+  const i = id ? INSTA.findIndex(p => p.code === id) : -1;
+  if (id && i < 0) return `<p>게시물을 찾을 수 없습니다.</p><p style="margin-top:16px"><a class="btn line" href="#/news/gallery">목록으로</a></p>`;
+  if (i < 0) return `
+    <div class="ig-top"><span class="cnt">전체 <b>${INSTA.length}</b>건</span><a class="btn ig" href="${IG_URL}" target="_blank" rel="noopener">${icon("camera",18)} 인스타그램 @bonghwa_csc6076</a></div>
+    <p class="note">협의체 인스타그램에 올린 활동 소식이 이곳에도 같은 순서로 올라옵니다. 사진을 누르면 글과 사진을 모두 볼 수 있습니다.</p>
+    <div class="gal ig-list">${INSTA.map(igCard).join("")}</div>`;
+  const p = INSTA[i], prev = INSTA[i+1], next = INSTA[i-1], ig = `https://www.instagram.com/p/${p.code}/`;
+  const media = p.type === "video"
+    ? `<a class="ig-main ig-video" href="${ig}" target="_blank" rel="noopener">${p.photos[0] ? `<img src="${p.photos[0]}" alt="${esc(p.title)}">` : ""}<span class="ig-play">▶<small>인스타그램에서 영상 보기</small></span></a>`
+    : `<div class="ig-main"><img id="igImg" src="${p.photos[0]||""}" alt="${esc(p.title)} 사진 1">${p.photos.length > 1 ? `<button type="button" class="ig-arr l" id="igPrev" aria-label="이전 사진">‹</button><button type="button" class="ig-arr r" id="igNext" aria-label="다음 사진">›</button><span class="ig-cnt" id="igCnt">1 / ${p.photos.length}</span>` : ""}</div>
+       ${p.photos.length > 1 ? `<div class="ig-thumbs">${p.photos.map((s,k)=>`<button type="button" data-k="${k}" class="${k?"":"on"}" aria-label="사진 ${k+1}"><img src="${s}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}`;
+  return `
+    <p class="ig-meta"><span class="badge">인스타그램</span>활동일 ${igDate(p.date)}${p.posted && p.posted !== p.date ? ` · 올린 날 ${igDate(p.posted)}` : ""}</p>
+    <h3 class="ig-title">${esc(p.title)}</h3>
+    <div class="ig-view" data-photos='${esc(JSON.stringify(p.type === "video" ? [] : p.photos))}'>${media}</div>
+    <div class="ig-cap">${igCaption(p.caption)}</div>
+    <div class="cta-row"><a class="btn ig" href="${ig}" target="_blank" rel="noopener">${icon("camera",18)} 인스타그램에서 보기</a><a class="btn line" href="#/news/gallery">목록으로</a></div>
+    <nav class="ig-nav" aria-label="이전·다음 게시물">
+      ${next ? `<a href="#/news/gallery/${encodeURIComponent(next.code)}"><small>다음 소식</small>${esc(next.title)}</a>` : "<span></span>"}
+      ${prev ? `<a href="#/news/gallery/${encodeURIComponent(prev.code)}" class="r"><small>이전 소식</small>${esc(prev.title)}</a>` : "<span></span>"}
+    </nav>`;
+}
+function bindIg(){
+  const v = document.querySelector(".ig-view"); if (!v) return;
+  const photos = JSON.parse(v.dataset.photos || "[]"); if (photos.length < 2) return;
+  let k = 0; const img = $("#igImg"), cnt = $("#igCnt"), th = [...v.querySelectorAll(".ig-thumbs button")];
+  const go = n => { k = (n + photos.length) % photos.length; img.src = photos[k]; img.alt = img.alt.replace(/\d+$/, k+1);
+    cnt.textContent = `${k+1} / ${photos.length}`; th.forEach((b,j) => b.classList.toggle("on", j === k)); };
+  $("#igPrev").onclick = () => go(k-1); $("#igNext").onclick = () => go(k+1);
+  th.forEach(b => b.onclick = () => go(+b.dataset.k));
+  let x0 = null; const m = v.querySelector(".ig-main");
+  m.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, {passive:true});
+  m.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(dx < 0 ? k+1 : k-1); x0 = null; });
+}
+async function loadInsta(){
+  try {
+    const r = await fetch("instagram.json?t=" + Math.floor(Date.now()/6e4), {cache:"no-store"});
+    if (!r.ok) return;
+    const j = await r.json();
+    INSTA = Array.isArray(j) ? j.filter(p => p && p.code && Array.isArray(p.photos)) : [];
+  } catch (e) { console.warn("instagram.json을 불러오지 못했습니다:", e); return; }
+  const h = $("#homeGal"); if (h) h.innerHTML = homeGal();
+  const g = $("#igPage"); if (g) { g.innerHTML = igPage(g.dataset.id || ""); bindIg(); }
+}
 
 /* 함께모아 행복금고 화면 [읍·면 협의체 › 함께모아 행복금고] (공문 근거: 2025년 읍면협의체 지원사업 안내, 26년 행복금고 1차 계획서·2차 수행안내)
    해마다 맨 위에 새 해를 추가하세요. towns: 읍·면별 [읍·면, 지원 내용] */
@@ -1121,6 +1206,7 @@ const fill = () => {
 };
 
 const ICONS = {
+  camera:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>',
   heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
   home:'<path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/>',
   drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
@@ -1260,8 +1346,8 @@ function home(){
   </section>
 
   <section class="blk wrap">
-    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
-    <div class="gal">${GALLERY.slice(0,4).map(g=>`<a href="#/news/gallery">${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></a>`).join("")}</div>
+    <div class="blk-head"><div><h2>활동 갤러리</h2><p>이웃과 함께한 따뜻한 순간들 · 협의체 인스타그램 소식이 그대로 올라옵니다</p></div><a class="more" href="#/news/gallery">더보기 +</a></div>
+    <div class="gal" id="homeGal">${homeGal()}</div>
   </section>
 
   <section class="blk wrap yt-home">
@@ -1496,7 +1582,7 @@ const P = {
         <tr><td>1</td><td class="l">제6기 연차별 시행계획 및 결과</td><td><a href="${SITE.yearFolder}" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">열람 ↗</a></td></tr>
       </tbody></table></div>
       <p class="note">자료는 협의체 구글 드라이브 공개 폴더로 연결되며, 로그인 없이 볼 수 있습니다.</p>`,
-    gallery:()=>`<div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">${GALLERY.map(g=>`<div>${gimg(g)}<h4>${g.title}</h4><span>${g.date}</span></div>`).join("")}</div>`
+    gallery:(id)=>`<div id="igPage" data-id="${esc(id||"")}">${igPage(id)}</div>`
   },
   join:{
     report:()=>`
@@ -1807,7 +1893,7 @@ function render(){
         <nav class="lnb" aria-label="${grp.t} 하위 메뉴"><h2>${grp.t}</h2>${grp.items.map(i=>`<a href="#/${k}/${i[0]}" class="${i[0]===s?"on":""}" ${i[0]===s?'aria-current="page"':""}>${i[1]}</a>`).join("")}</nav>
         <article class="content"><h2>${title}</h2>${page(id, sessionQ)}</article>
       </div>`;
-    bindSub();
+    bindSub(); bindIg();
   }
   window.scrollTo({top:0, behavior:"instant"});
 }
@@ -2270,6 +2356,7 @@ function namePopup(){
 
 fill(); buildMenu(); render();
 loadSheetSchedule();
+loadInsta();
 initAuth();
 namePopup();
 window.addEventListener("hashchange", render);

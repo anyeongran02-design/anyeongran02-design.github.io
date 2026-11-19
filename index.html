@@ -785,6 +785,46 @@ footer .copy{color:#7d8aa0}
 .npop-foot label{display:flex;align-items:center;gap:6px;cursor:pointer}
 .npop-foot input{width:17px;height:17px;accent-color:#fff}
 .npop-foot button{color:#fff;font-weight:700}
+/* 복지캐릭터: 로고 옆 + 첫 화면 인사 */
+.logo .logo-char{height:52px;width:auto;margin:-4px 0 -6px}
+header.site .wrap{gap:14px}
+.gnb>li>a{padding:26px 10px}
+@media (max-width:1240px) and (min-width:1081px){
+  .logo{gap:6px} .logo .logo-char{height:40px;margin:0}
+  .gnb{gap:0} .gnb>li>a{padding:26px 7px;font-size:.93rem}
+}
+@media (max-width:600px){ .logo{gap:6px} .logo .logo-char{height:38px;margin:0} }
+@media (max-width:359px){ .logo .logo-char{display:none} }
+.hello{position:fixed;right:22px;bottom:18px;z-index:900;display:flex;flex-direction:column;align-items:flex-end;pointer-events:none}
+.hello[hidden]{display:none}
+.hello>*{pointer-events:auto}
+.hello-bub{position:relative;max-width:300px;margin:0 18px 6px 0;background:#fff;border:2.5px solid #5a3a26;border-radius:22px;padding:16px 38px 15px 20px;color:#5a3a26;font-size:1.02rem;line-height:1.5;letter-spacing:-.02em;box-shadow:0 10px 28px rgba(40,30,20,.18);transform-origin:85% 100%;opacity:0;transform:scale(.6) translateY(10px)}
+.hello-bub::after{content:"";position:absolute;right:52px;bottom:-12px;width:20px;height:20px;background:#fff;border-right:2.5px solid #5a3a26;border-bottom:2.5px solid #5a3a26;transform:rotate(45deg);border-bottom-right-radius:4px}
+.hello-bub b{display:block;font-size:1.25rem;color:#3c7a1c;font-weight:800}
+.hello-bub em{font-style:normal;font-weight:800;color:#d2557e}
+.hello-x{position:absolute;top:6px;right:8px;width:30px;height:30px;border-radius:50%;font-size:1.35rem;line-height:1;color:#8a7262}
+.hello-x:hover{background:#f4efe6;color:#5a3a26}
+.hello-pair{width:230px;height:auto;transform:translateY(130%);filter:drop-shadow(0 6px 10px rgba(40,30,20,.15))}
+.hello.on .hello-pair{animation:helloUp .7s cubic-bezier(.3,1.5,.5,1) forwards, helloBob 2.4s ease-in-out .9s infinite}
+.hello.on .hello-bub{animation:helloPop .45s cubic-bezier(.3,1.6,.5,1) .55s forwards}
+.hello.bye .hello-pair{animation:helloDown .5s ease-in forwards}
+.hello.bye .hello-bub{animation:helloOut .3s ease-in forwards}
+@keyframes helloUp{to{transform:translateY(0)}}
+@keyframes helloBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-1.5deg)}}
+@keyframes helloPop{to{opacity:1;transform:none}}
+@keyframes helloOut{from{opacity:1;transform:none}to{opacity:0;transform:scale(.7)}}
+@keyframes helloDown{from{transform:translateY(0)}to{transform:translateY(130%)}}
+@media (max-width:600px){
+  .hello{right:10px;bottom:10px}
+  .hello-pair{width:140px}
+  .hello-bub{max-width:240px;font-size:.92rem;padding:13px 34px 12px 16px;margin-right:10px}
+  .hello-bub b{font-size:1.1rem}
+  .hello-bub::after{right:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hello.on .hello-pair,.hello.on .hello-bub{animation:none;transform:none;opacity:1}
+  .hello.bye{display:none}
+}
 </style>
 </head>
 <body>
@@ -810,6 +850,7 @@ footer .copy{color:#7d8aa0}
 <header class="site">
   <div class="wrap">
     <a class="logo" href="#/" aria-label="봉화군지역사회보장협의체 홈으로">
+      <img class="logo-char" src="assets/character/pair.webp" alt="" width="196" height="104">
       <img src="assets/logo.jpg" alt="봉화군지역사회보장협의체" width="267" height="42">
     </a>
     <ul class="gnb" id="gnb"></ul>
@@ -865,6 +906,15 @@ footer .copy{color:#7d8aa0}
     <button type="button" class="lg-x" aria-label="닫기">×</button>
     <div id="lgBody"></div>
   </div>
+</div>
+
+<div class="hello" id="hello" hidden>
+  <div class="hello-bub" role="status">
+    <button type="button" class="hello-x" id="helloX" aria-label="인사 닫기">×</button>
+    <b>안녕하세요~</b>
+    <span><em>봉화군지역사회보장협의체</em><br>홈페이지 방문을 환영합니다!</span>
+  </div>
+  <img class="hello-pair" src="assets/character/pair.webp" alt="봉화 복지캐릭터 둘이 하트를 들고 손을 흔드는 모습" width="196" height="104">
 </div>
 
 <div class="npop" id="npop" aria-hidden="true">
@@ -2354,11 +2404,28 @@ function namePopup(){
   $("#npopGo").focus({preventScroll:true});
 }
 
+/* 첫 화면 캐릭터 인사: 한 번 열 때(탭 세션) 한 번, 9초 뒤 들어감 */
+function hello(){
+  const el = $("#hello");
+  if (!el || location.hash.replace(/^#\/?/, "") !== "") return;
+  try { if (sessionStorage.getItem("helloSeen")) return; sessionStorage.setItem("helloSeen", "1"); } catch(e) {}
+  let t;
+  const bye = () => {
+    clearTimeout(t); window.removeEventListener("hashchange", bye);
+    el.classList.add("bye");
+    setTimeout(() => { el.hidden = true; el.classList.remove("on", "bye"); }, 550);
+  };
+  $("#helloX").onclick = bye;
+  window.addEventListener("hashchange", bye);
+  setTimeout(() => { el.hidden = false; el.classList.add("on"); t = setTimeout(bye, 9000); }, 700);
+}
+
 fill(); buildMenu(); render();
 loadSheetSchedule();
 loadInsta();
 initAuth();
 namePopup();
+hello();
 window.addEventListener("hashchange", render);
 </script>
 </body>

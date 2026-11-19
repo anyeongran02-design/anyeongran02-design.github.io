@@ -804,7 +804,11 @@ header.site .wrap{gap:14px}
 .hello-bub em{font-style:normal;font-weight:800;color:#d2557e}
 .hello-x{position:absolute;top:6px;right:8px;width:30px;height:30px;border-radius:50%;font-size:1.35rem;line-height:1;color:#8a7262}
 .hello-x:hover{background:#f4efe6;color:#5a3a26}
-.hello-pair{width:230px;height:auto;transform:translateY(130%);filter:drop-shadow(0 6px 10px rgba(40,30,20,.15))}
+.hello-pair{position:relative;width:230px;padding-bottom:16px;transform:translateY(130%)}
+.hello-pair img{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 10px rgba(40,30,20,.15))}
+.hello-nm{position:absolute;bottom:0;transform:translateX(-50%);padding:3px 13px;border-radius:999px;font-size:.88rem;font-weight:800;white-space:nowrap;box-shadow:0 2px 6px rgba(40,30,20,.15)}
+.hello-nm.bong{left:26%;background:#cde8a4;color:#2f5f14}
+.hello-nm.ieum{left:72%;background:#fbd3dd;color:#a83659}
 .hello.on .hello-pair{animation:helloUp .7s cubic-bezier(.3,1.5,.5,1) forwards, helloBob 2.4s ease-in-out .9s infinite}
 .hello.on .hello-bub{animation:helloPop .45s cubic-bezier(.3,1.6,.5,1) .55s forwards}
 .hello.bye .hello-pair{animation:helloDown .5s ease-in forwards}
@@ -816,7 +820,8 @@ header.site .wrap{gap:14px}
 @keyframes helloDown{from{transform:translateY(0)}to{transform:translateY(130%)}}
 @media (max-width:600px){
   .hello{right:10px;bottom:10px}
-  .hello-pair{width:140px}
+  .hello-pair{width:150px;padding-bottom:14px}
+  .hello-nm{font-size:.78rem;padding:2px 10px}
   .hello-bub{max-width:240px;font-size:.92rem;padding:13px 34px 12px 16px;margin-right:10px}
   .hello-bub b{font-size:1.1rem}
   .hello-bub::after{right:40px}
@@ -850,7 +855,7 @@ header.site .wrap{gap:14px}
 <header class="site">
   <div class="wrap">
     <a class="logo" href="#/" aria-label="봉화군지역사회보장협의체 홈으로">
-      <img class="logo-char" src="assets/character/pair.webp" alt="" width="196" height="104">
+      <img class="logo-char" src="assets/character/pair.webp" alt="" title="봉화 복지캐릭터 봉이와 이음이" width="196" height="104">
       <img src="assets/logo.jpg" alt="봉화군지역사회보장협의체" width="267" height="42">
     </a>
     <ul class="gnb" id="gnb"></ul>
@@ -914,7 +919,10 @@ header.site .wrap{gap:14px}
     <b>안녕하세요~</b>
     <span><em>봉화군지역사회보장협의체</em><br>홈페이지 방문을 환영합니다!</span>
   </div>
-  <img class="hello-pair" src="assets/character/pair.webp" alt="봉화 복지캐릭터 둘이 하트를 들고 손을 흔드는 모습" width="196" height="104">
+  <div class="hello-pair">
+    <img src="assets/character/pair.webp" alt="봉화 복지캐릭터 봉이와 이음이가 하트를 들고 손을 흔드는 모습" width="196" height="104">
+    <span class="hello-nm bong">봉이</span><span class="hello-nm ieum">이음이</span>
+  </div>
 </div>
 
 <div class="npop" id="npop" aria-hidden="true">
